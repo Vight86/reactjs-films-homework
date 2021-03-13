@@ -12,5 +12,9 @@
   },
   "author": "Vova Pekun",
   "license": "ISC",
-  "homepage": "https://github.com/Vight86/reactjs-films-homework#readme"
+  "homepage": "https://github.com/Vight86/reactjs-films-homework#readme",
+  "devDependencies": {
+    "express": "^4.17.1",
+    "open": "^8.0.2"
+  }
 }
