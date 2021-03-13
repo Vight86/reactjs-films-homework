@@ -11,6 +11,15 @@ module.exports = {
     clean: true,
     publicPath: '/',
   },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /(node_modules|bower_components)/,
+        use: 'babel-loader',
+      }
+    ]
+  },
   plugins: [
     new HtmlWebpackPlugin(),
   ],
