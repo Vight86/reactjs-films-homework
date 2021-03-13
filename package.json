@@ -1,0 +1,16 @@
+{
+  "name": "reactjs-films-homework",
+  "version": "1.0.0",
+  "description": "Made by Vova Pekun.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vight86/reactjs-films-homework.git"
+  },
+  "author": "Vova Pekun",
+  "license": "ISC",
+  "homepage": "https://github.com/Vight86/reactjs-films-homework#readme"
+}
