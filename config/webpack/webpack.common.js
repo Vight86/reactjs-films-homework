@@ -1,9 +1,10 @@
 const path = require('path');
+// eslint-disable-next-line import/no-extraneous-dependencies
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: ['./src/index.js']
+    app: ['./src/index.js'],
   },
   output: {
     filename: 'js/[name].[contenthash].js',
@@ -17,10 +18,10 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         use: 'babel-loader',
-      }
-    ]
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin(),
   ],
-}
+};

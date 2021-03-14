@@ -1,7 +1,10 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 const { merge } = require('webpack-merge');
-const common = require('./webpack.common.js');
+// eslint-disable-next-line import/no-extraneous-dependencies
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// eslint-disable-next-line import/no-extraneous-dependencies
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
   mode: 'production',
@@ -24,7 +27,7 @@ module.exports = merge(common, {
             loader: 'file-loader',
             options: {
               name: '[name].[contenthash].[ext]',
-              outputPath: 'assets/images'
+              outputPath: 'assets/images',
             },
           },
         ],
@@ -36,16 +39,16 @@ module.exports = merge(common, {
             loader: 'file-loader',
             options: {
               name: '[name].[contenthash].[ext]',
-              outputPath: 'assets/fonts'
+              outputPath: 'assets/fonts',
             },
           },
         ],
       },
-    ]
+    ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/[name].[contenthash].css'
+      filename: 'css/[name].[contenthash].css',
     }),
     new ImageMinimizerPlugin({
       minimizerOptions: {
@@ -67,5 +70,5 @@ module.exports = merge(common, {
       },
       loader: false,
     }),
-  ]
+  ],
 });

@@ -1,11 +1,13 @@
+/* eslint-disable import/no-extraneous-dependencies */
+// eslint-disable-next-line import/no-extraneous-dependencies
 const { merge } = require('webpack-merge');
-const common = require('./webpack.common.js');
 const webpack = require('webpack');
+const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
   mode: 'development',
   entry: {
-    app: ['webpack-hot-middleware/client']
+    app: ['webpack-hot-middleware/client'],
   },
   devtool: 'inline-source-map',
   module: {
@@ -22,10 +24,10 @@ module.exports = merge(common, {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
       },
-    ]
+    ],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
   ],
-})
+});
