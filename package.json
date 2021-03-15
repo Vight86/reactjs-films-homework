@@ -4,7 +4,11 @@
   "description": "Made by Vova Pekun.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start​ ": "webpack --config webpack.dev.js && node server.js",
+    "build ": "webpack --config webpack.prod.js",
+    "lint ": "eslint src --ext .js,.jsx && stylelint 'src/**/*.scss'",
+    "test ": "jest",
+    "prod ": "webpack --config webpack.prod.js && node server.js",
     "prepare": "husky install"
   },
   "repository": {
