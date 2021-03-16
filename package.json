@@ -6,7 +6,7 @@
   "scripts": {
     "start​ ": "webpack --config webpack.dev.js && node server.js",
     "build ": "webpack --config webpack.prod.js",
-    "lint": "eslint src --ext .js,.jsx && stylelint 'src/**/*.scss'",
+    "lint": "eslint --ext .js,.jsx src/ && stylelint './src/**/*.scss'",
     "test": "jest",
     "prod": "webpack --config webpack.prod.js && node server.js",
     "prepare": "husky install"
