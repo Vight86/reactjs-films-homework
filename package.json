@@ -2,7 +2,7 @@
   "name": "reactjs-films-homework",
   "version": "1.0.0",
   "description": "Made by Vova Pekun.",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "start​ ": "webpack --config webpack.dev.js && node server.js",
     "build ": "webpack --config webpack.prod.js",
