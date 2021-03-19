@@ -21,6 +21,9 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    extensions: ['.wasm', '.mjs', '.js', '.jsx', '.json'],
+  },
   plugins: [
     new HtmlWebpackPlugin(),
   ],
