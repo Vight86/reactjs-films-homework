@@ -25,6 +25,8 @@ module.exports = {
     extensions: ['.wasm', '.mjs', '.js', '.jsx', '.json'],
   },
   plugins: [
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
   ],
 };
