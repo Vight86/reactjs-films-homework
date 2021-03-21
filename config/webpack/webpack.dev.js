@@ -7,14 +7,22 @@ const common = require('./webpack.common.js');
 module.exports = merge(common, {
   mode: 'development',
   entry: {
-    app: ['webpack-hot-middleware/client'],
+    app: ['webpack-hot-middleware/client', 'react-hot-loader/patch'],
   },
   devtool: 'inline-source-map',
   module: {
     rules: [
       {
         test: /\.(scss|css)$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: ['style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+            },
+          },
+          'postcss-loader',
+          'sass-loader'],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
