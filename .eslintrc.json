@@ -1,11 +1,14 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "jest/globals": true
     },
     "extends": [
         "plugin:react/recommended",
-        "airbnb"
+        "airbnb",
+        "plugin:jest/recommended",
+        "plugin:jest/style"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -15,9 +18,8 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "jest"
     ],
-    "rules": {
-    },
     "ignorePatterns": ["**/*.min.js", "**/build/**/*.js"]
 }
