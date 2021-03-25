@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Signature component render component with props 1`] = `
+<div>
+  Vova
+</div>
+`;
+
+exports[`render Signature component render component without props 1`] = `
+<div>
+  Vova Pekun
+</div>
+`;
