@@ -1,10 +1,12 @@
 {
   "extends": [
     "stylelint-config-standard",
-    "stylelint-config-idiomatic-order"
+    "stylelint-config-idiomatic-order",
+    "stylelint-config-recommended-scss"
   ],
   "plugins": [
-		"stylelint-order"
+		"stylelint-order",
+    "stylelint-scss"
 	],
   "ignoreFiles": ["**/*.min.css", "**/build/**/*.css"]
 }
