@@ -18,7 +18,9 @@ module.exports = merge(common, {
           {
             loader: 'css-loader',
             options: {
-              modules: true,
+              modules: {
+                localIdentName: '[hash:base64]',
+              },
             },
           },
           'postcss-loader',
@@ -27,27 +29,17 @@ module.exports = merge(common, {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[contenthash].[ext]',
-              outputPath: 'assets/images',
-            },
-          },
-        ],
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/images/[name][hash][ext]',
+        },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[contenthash].[ext]',
-              outputPath: 'assets/fonts',
-            },
-          },
-        ],
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[name][hash][ext]',
+        },
       },
     ],
   },
@@ -56,21 +48,13 @@ module.exports = merge(common, {
       filename: 'css/[name].[contenthash].css',
     }),
     new ImageMinimizerPlugin({
+      severityError: 'warning',
       minimizerOptions: {
         plugins: [
           ['gifsicle', { interlaced: true }],
           ['jpegtran', { progressive: true }],
           ['optipng', { optimizationLevel: 5 }],
-          [
-            'svgo',
-            {
-              plugins: [
-                {
-                  removeViewBox: false,
-                },
-              ],
-            },
-          ],
+          ['svgo'],
         ],
       },
       loader: false,
