@@ -1,9 +1,8 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import style from './Signature.scss';
 
 const Signature = ({ name }) => (
-  <div className={style.sign}>{name}</div>
+  <span>{name}</span>
 );
 
 Signature.propTypes = {

@@ -1,3 +1,1 @@
-import Signature from './Signature';
-
-export default Signature;
+export { default } from './Signature';
