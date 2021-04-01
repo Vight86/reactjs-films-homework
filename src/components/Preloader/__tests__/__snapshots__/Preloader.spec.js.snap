@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Preloader component render component correctly 1`] = `
+<div
+  className="preloader"
+>
+  <div
+    className="preloader__circles"
+  >
+    <span
+      className="preloader__circle"
+    />
+    <span
+      className="preloader__circle"
+    />
+    <span
+      className="preloader__circle"
+    />
+  </div>
+  <p
+    className="preloader__text"
+  >
+    Loading
+  </p>
+</div>
+`;
