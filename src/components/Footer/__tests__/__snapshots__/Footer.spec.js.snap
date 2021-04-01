@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Footer correctly should render children correctly 1`] = `
+<footer
+  className="footer"
+>
+  <Logo
+    theme="secondary"
+  />
+  <p
+    className="footer__copyRight"
+  >
+    Copyright © 2018 FILMS.
+     
+    <Signature
+      name="by Vova Pekun"
+    />
+  </p>
+</footer>
+`;
