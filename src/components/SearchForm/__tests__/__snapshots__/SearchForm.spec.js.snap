@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render form component handle onChange event correctly 1`] = `
+<form
+  className="searchForm"
+>
+  <input
+    className="searchForm__input"
+    onChange={[Function]}
+    value="test"
+  />
+  <button
+    aria-label="Search"
+    className="searchForm__button"
+    type="submit"
+  />
+</form>
+`;
+
+exports[`render form component render component correctly 1`] = `
+<form
+  className="searchForm"
+>
+  <input
+    className="searchForm__input"
+    onChange={[Function]}
+    value=""
+  />
+  <button
+    aria-label="Search"
+    className="searchForm__button"
+    type="submit"
+  />
+</form>
+`;
