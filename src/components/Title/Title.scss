@@ -1,0 +1,33 @@
+@import '../../utils/variables';
+
+.title {
+  overflow: hidden;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: normal;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.primary {
+  @extend .title;
+
+  margin: 0 0 0.5em 0;
+  color: $color-light;
+  font-size: 6em;
+}
+
+.secondary {
+  @extend .title;
+
+  margin: 0 0 0.71em 0;
+  color: $text-tertiary;
+  font-size: 2.8em;
+}
+
+.tertiary {
+  @extend .secondary;
+
+  color: $color-light;
+}
