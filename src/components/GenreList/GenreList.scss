@@ -1,0 +1,13 @@
+@import '../../utils/variables';
+
+.genreList {
+  margin: 0;
+}
+
+.secondary {
+  @extend .genreList;
+
+  color: $color-tertiary;
+  font-size: 2.2em;
+  font-weight: 500;
+}
