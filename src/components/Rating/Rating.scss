@@ -1,0 +1,45 @@
+@import '../../utils/variables';
+
+.rating {
+  display: flex;
+  width: 32em;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 1.5em 0;
+}
+
+.ratingNumber {
+  display: inline-block;
+  width: 2.5em;
+  height: 1.5em;
+  border-radius: 0.17em;
+  font-size: 2.4em;
+  font-weight: 500;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.stars {
+  display: inline-block;
+  height: 4em;
+  background: url('./stars.svg');
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: auto 4em;
+}
+
+.primary {
+  @extend .ratingNumber;
+
+  flex-shrink: 0;
+  border: 2px solid $color-tertiary;
+  color: $color-light;
+}
+
+.secondary {
+  @extend .ratingNumber;
+
+  border: 2px solid currentColor;
+  margin: 0 0 0 auto;
+  color: $color-tertiary;
+}
