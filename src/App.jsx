@@ -1,11 +1,20 @@
 import { hot } from 'react-hot-loader/root';
 import React from 'react';
-import Signature from './components/Signature/index';
+import Header from './components/Header/index';
+import Logo from './components/Logo/index';
+import SearchForm from './components/SearchForm/index';
+import HomePage from './pages/HomePage/index';
+import Footer from './components/Footer/index';
 
-function App() {
-  return (
-    <Signature name="Vova Pekun" />
-  );
-}
+const App = () => (
+  <>
+    <Header className="primary">
+      <Logo />
+      <SearchForm />
+    </Header>
+    <HomePage />
+    <Footer />
+  </>
+);
 
 export default hot(App);
