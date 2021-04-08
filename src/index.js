@@ -4,9 +4,6 @@ import styles from './index.scss';
 import App from './App';
 
 render(
-  React.createElement(
-    App,
-    { style: styles },
-  ),
+  <App style={styles} />,
   document.getElementById('root'),
 );
