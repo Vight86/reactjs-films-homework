@@ -1,0 +1,337 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render HomePage component render component without props 1`] = `
+<main
+  className="main"
+>
+  <Header
+    className="secondary"
+  >
+    <FilterList>
+      <Button
+        className="filterButton"
+        onClick={[Function]}
+      >
+        Trending
+      </Button>
+      <Button
+        className="filterButton"
+        onClick={[Function]}
+      >
+        Top rated
+      </Button>
+      <Button
+        className="filterButton"
+        onClick={[Function]}
+      >
+        Coming soon
+      </Button>
+      <SelectButton
+        genres={
+          Array [
+            "action",
+            "scifi",
+          ]
+        }
+      />
+    </FilterList>
+    <ToggleButton
+      className="toggleGridButton"
+    />
+  </Header>
+  <MovieList
+    movies={
+      Array [
+        Object {
+          "genre": Array [
+            "scifi",
+            "comedy",
+          ],
+          "image": Object {
+            "canInstrument": true,
+            "createTransformer": [Function],
+            "getCacheKey": [Function],
+            "process": [Function],
+          },
+          "info": "There are growing dangers in
+    the wizarding world of 1926 New York.
+    Something mysterious is leaving a path of destruction in the streets,
+    threatening to expose the wizarding",
+          "rating": "3.9",
+          "title": "Independance day",
+        },
+        Object {
+          "genre": Array [
+            "scifi",
+            "comedy",
+          ],
+          "image": Object {
+            "canInstrument": true,
+            "createTransformer": [Function],
+            "getCacheKey": [Function],
+            "process": [Function],
+          },
+          "info": "There are growing dangers in
+    the wizarding world of 1926 New York.
+    Something mysterious is leaving a path of destruction in the streets,
+    threatening to expose the wizarding",
+          "rating": "3.9",
+          "title": "Independance day",
+        },
+        Object {
+          "genre": Array [
+            "scifi",
+            "comedy",
+          ],
+          "image": Object {
+            "canInstrument": true,
+            "createTransformer": [Function],
+            "getCacheKey": [Function],
+            "process": [Function],
+          },
+          "info": "There are growing dangers in
+    the wizarding world of 1926 New York.
+    Something mysterious is leaving a path of destruction in the streets,
+    threatening to expose the wizarding",
+          "rating": "3.9",
+          "title": "Independance day",
+        },
+        Object {
+          "genre": Array [
+            "scifi",
+            "comedy",
+          ],
+          "image": Object {
+            "canInstrument": true,
+            "createTransformer": [Function],
+            "getCacheKey": [Function],
+            "process": [Function],
+          },
+          "info": "There are growing dangers in
+    the wizarding world of 1926 New York.
+    Something mysterious is leaving a path of destruction in the streets,
+    threatening to expose the wizarding",
+          "rating": "3.9",
+          "title": "Independance day",
+        },
+        Object {
+          "genre": Array [
+            "scifi",
+            "comedy",
+          ],
+          "image": Object {
+            "canInstrument": true,
+            "createTransformer": [Function],
+            "getCacheKey": [Function],
+            "process": [Function],
+          },
+          "info": "There are growing dangers in
+    the wizarding world of 1926 New York.
+    Something mysterious is leaving a path of destruction in the streets,
+    threatening to expose the wizarding",
+          "rating": "3.9",
+          "title": "Independance day",
+        },
+        Object {
+          "genre": Array [
+            "scifi",
+            "comedy",
+          ],
+          "image": Object {
+            "canInstrument": true,
+            "createTransformer": [Function],
+            "getCacheKey": [Function],
+            "process": [Function],
+          },
+          "info": "There are growing dangers in
+    the wizarding world of 1926 New York.
+    Something mysterious is leaving a path of destruction in the streets,
+    threatening to expose the wizarding",
+          "rating": "3.9",
+          "title": "Independance day",
+        },
+        Object {
+          "genre": Array [
+            "scifi",
+            "comedy",
+          ],
+          "image": Object {
+            "canInstrument": true,
+            "createTransformer": [Function],
+            "getCacheKey": [Function],
+            "process": [Function],
+          },
+          "info": "There are growing dangers in
+    the wizarding world of 1926 New York.
+    Something mysterious is leaving a path of destruction in the streets,
+    threatening to expose the wizarding",
+          "rating": "3.9",
+          "title": "Independance day",
+        },
+        Object {
+          "genre": Array [
+            "scifi",
+            "comedy",
+          ],
+          "image": Object {
+            "canInstrument": true,
+            "createTransformer": [Function],
+            "getCacheKey": [Function],
+            "process": [Function],
+          },
+          "info": "There are growing dangers in
+    the wizarding world of 1926 New York.
+    Something mysterious is leaving a path of destruction in the streets,
+    threatening to expose the wizarding",
+          "rating": "3.9",
+          "title": "Independance day",
+        },
+        Object {
+          "genre": Array [
+            "scifi",
+            "comedy",
+          ],
+          "image": Object {
+            "canInstrument": true,
+            "createTransformer": [Function],
+            "getCacheKey": [Function],
+            "process": [Function],
+          },
+          "info": "There are growing dangers in
+    the wizarding world of 1926 New York.
+    Something mysterious is leaving a path of destruction in the streets,
+    threatening to expose the wizarding",
+          "rating": "3.9",
+          "title": "Independance day",
+        },
+        Object {
+          "genre": Array [
+            "scifi",
+            "comedy",
+          ],
+          "image": Object {
+            "canInstrument": true,
+            "createTransformer": [Function],
+            "getCacheKey": [Function],
+            "process": [Function],
+          },
+          "info": "There are growing dangers in
+    the wizarding world of 1926 New York.
+    Something mysterious is leaving a path of destruction in the streets,
+    threatening to expose the wizarding",
+          "rating": "3.9",
+          "title": "Independance day",
+        },
+        Object {
+          "genre": Array [
+            "scifi",
+            "comedy",
+          ],
+          "image": Object {
+            "canInstrument": true,
+            "createTransformer": [Function],
+            "getCacheKey": [Function],
+            "process": [Function],
+          },
+          "info": "There are growing dangers in
+    the wizarding world of 1926 New York.
+    Something mysterious is leaving a path of destruction in the streets,
+    threatening to expose the wizarding",
+          "rating": "3.9",
+          "title": "Independance day",
+        },
+        Object {
+          "genre": Array [
+            "scifi",
+            "comedy",
+          ],
+          "image": Object {
+            "canInstrument": true,
+            "createTransformer": [Function],
+            "getCacheKey": [Function],
+            "process": [Function],
+          },
+          "info": "There are growing dangers in
+    the wizarding world of 1926 New York.
+    Something mysterious is leaving a path of destruction in the streets,
+    threatening to expose the wizarding",
+          "rating": "3.9",
+          "title": "Independance day",
+        },
+        Object {
+          "genre": Array [
+            "scifi",
+            "comedy",
+          ],
+          "image": Object {
+            "canInstrument": true,
+            "createTransformer": [Function],
+            "getCacheKey": [Function],
+            "process": [Function],
+          },
+          "info": "There are growing dangers in
+    the wizarding world of 1926 New York.
+    Something mysterious is leaving a path of destruction in the streets,
+    threatening to expose the wizarding",
+          "rating": "3.9",
+          "title": "Independance day",
+        },
+        Object {
+          "genre": Array [
+            "scifi",
+            "comedy",
+          ],
+          "image": Object {
+            "canInstrument": true,
+            "createTransformer": [Function],
+            "getCacheKey": [Function],
+            "process": [Function],
+          },
+          "info": "There are growing dangers in
+    the wizarding world of 1926 New York.
+    Something mysterious is leaving a path of destruction in the streets,
+    threatening to expose the wizarding",
+          "rating": "3.9",
+          "title": "Independance day",
+        },
+        Object {
+          "genre": Array [
+            "scifi",
+            "comedy",
+          ],
+          "image": Object {
+            "canInstrument": true,
+            "createTransformer": [Function],
+            "getCacheKey": [Function],
+            "process": [Function],
+          },
+          "info": "There are growing dangers in
+    the wizarding world of 1926 New York.
+    Something mysterious is leaving a path of destruction in the streets,
+    threatening to expose the wizarding",
+          "rating": "3.9",
+          "title": "Independance day",
+        },
+        Object {
+          "genre": Array [
+            "scifi",
+            "comedy",
+          ],
+          "image": Object {
+            "canInstrument": true,
+            "createTransformer": [Function],
+            "getCacheKey": [Function],
+            "process": [Function],
+          },
+          "info": "There are growing dangers in
+    the wizarding world of 1926 New York.
+    Something mysterious is leaving a path of destruction in the streets,
+    threatening to expose the wizarding",
+          "rating": "3.9",
+          "title": "Independance day",
+        },
+      ]
+    }
+  />
+</main>
+`;
