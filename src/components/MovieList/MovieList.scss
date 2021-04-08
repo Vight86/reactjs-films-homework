@@ -1,0 +1,16 @@
+@import '../../utils/variables';
+
+.movieList {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(40em, 1fr));
+  grid-template-rows: auto;
+
+  & > * {
+    justify-items: stretch;
+  }
+
+  @media screen and (max-width: 460px) {
+    grid-template-columns: 1fr;
+  }
+}
