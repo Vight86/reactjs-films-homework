@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render toggleGridButton component render component with props 1`] = `
+<button
+  className="testClass"
+  type="button"
+>
+  <span
+    className="toggleGridButtonMask"
+  />
+</button>
+`;
+
+exports[`render toggleGridButton component render component without props 1`] = `
+<button
+  className="toggleGridButton"
+  type="button"
+>
+  <span
+    className="toggleGridButtonMask"
+  />
+</button>
+`;
