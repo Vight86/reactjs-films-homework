@@ -1,0 +1,13 @@
+.filterList {
+  margin-bottom: -1px;
+
+  & > ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    & > li {
+      display: inline-block;
+    }
+  }
+}
