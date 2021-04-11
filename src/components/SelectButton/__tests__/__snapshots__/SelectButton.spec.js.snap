@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render SelectButton component render with props 1`] = `
+<span
+  className="selectButton"
+>
+  <Button
+    className="filterButton"
+    onClick={[Function]}
+  >
+    Genre
+  </Button>
+  <span
+    className="selectArrow"
+  />
+  <ul
+    className="selectOptionsList"
+  >
+    <li
+      className="selectOption"
+      data-value="Genre"
+    >
+      Genre
+    </li>
+    <li
+      className="selectOption"
+      data-value="item1"
+    >
+      item1
+    </li>
+    <li
+      className="selectOption"
+      data-value="item2"
+    >
+      item2
+    </li>
+  </ul>
+</span>
+`;
+
+exports[`render SelectButton component render without props 1`] = `
+<span
+  className="selectButton"
+>
+  <Button
+    className="filterButton"
+    onClick={[Function]}
+  >
+    Genre
+  </Button>
+  <span
+    className="selectArrow"
+  />
+  <ul
+    className="selectOptionsList"
+  >
+    <li
+      className="selectOption"
+      data-value="Genre"
+    >
+      Genre
+    </li>
+    <li
+      className="selectOption"
+      data-value=""
+    >
+      
+    </li>
+    <li
+      className="selectOption"
+      data-value=""
+    >
+      
+    </li>
+  </ul>
+</span>
+`;
