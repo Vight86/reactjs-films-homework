@@ -7,6 +7,7 @@ module.exports = {
     '**/*.{js,jsx}',
     '!**/node_modules/**',
     '!**/coverage/**',
+    '!./index.js',
   ],
   coverageThreshold: {
     global: {
