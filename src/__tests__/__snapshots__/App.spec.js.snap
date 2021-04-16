@@ -10,7 +10,7 @@ exports[`App renders correctly 1`] = `
     />
     <SearchForm />
   </Header>
-  <HomePage />
+  <MovieDetailsPage />
   <Footer />
 </React.Fragment>
 `;
