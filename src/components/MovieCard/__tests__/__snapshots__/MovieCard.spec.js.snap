@@ -8,7 +8,7 @@ exports[`render MovieCard component render component with props 1`] = `
     className="poster"
   >
     <figure
-      className="cover"
+      className="inCard"
     >
       <img
         alt=""
@@ -125,7 +125,7 @@ exports[`render MovieCard component render component without props 1`] = `
     className="poster"
   >
     <figure
-      className="cover"
+      className="inCard"
     >
       <img
         alt=""
