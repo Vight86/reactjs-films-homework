@@ -1,0 +1,35 @@
+@import '../../utils/variables';
+
+.header {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  padding-right: $pr;
+  padding-left: $pl;
+
+  @media screen and (max-width: $bp-xxlarge) {
+    padding-right: $pr-small;
+    padding-left: $pl-small;
+  }
+}
+
+.primary {
+  @extend .header;
+
+  height: 15em;
+  padding-top: 3em;
+  background: linear-gradient(to bottom, #8a8b8b, transparent);
+}
+
+.secondary {
+  @extend .header;
+
+  padding: 0;
+  border-bottom: 1px solid transparentize($color: $text-tertiary, $amount: 0.9);
+  margin-bottom: 4em;
+
+  @media screen and (max-width: $bp-xxxsmall) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
