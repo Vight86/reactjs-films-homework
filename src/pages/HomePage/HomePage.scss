@@ -1,4 +1,6 @@
+@import '../../utils/variables';
+
 .main {
-  padding-right: max(calc((100% - 2120px) / 2), 2em);
-  padding-left: max(calc((100% - 2120px) / 2), 2em);
+  padding-right: $pr;
+  padding-left: $pl;
 }
