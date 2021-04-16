@@ -38,28 +38,6 @@
   margin: 0 0 5.5em 0;
 }
 
-.cover {
-  position: relative;
-  width: 100%;
-  margin: 0;
-  background-color: $color-secondary;
-
-  &::before {
-    display: block;
-    padding-top: 88%;
-    content: '';
-  }
-
-  & > img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 100%;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-  }
-}
-
 .watchNowText {
   display: block;
   margin-bottom: 11%;

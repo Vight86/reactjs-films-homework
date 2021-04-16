@@ -5,6 +5,7 @@ import Button from '../Button/index';
 import Title from '../Title/index';
 import GenreList from '../GenreList/index';
 import Rating from '../Rating/index';
+import Cover from '../Cover/index';
 
 const MovieCard = ({ movie }) => {
   const {
@@ -17,9 +18,9 @@ const MovieCard = ({ movie }) => {
   return (
     <article className={styles.movieCard}>
       <section className={styles.poster}>
-        <figure className={styles.cover}>
+        <Cover className="inCard">
           <img src={image} alt={title} />
-        </figure>
+        </Cover>
         <div className={styles.viewInfo}>
           <Button className="playButton" />
           <span className={styles.watchNowText}>Watch Now</span>
