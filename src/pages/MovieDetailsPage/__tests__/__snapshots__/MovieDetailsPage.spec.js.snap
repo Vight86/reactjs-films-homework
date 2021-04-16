@@ -1,0 +1,313 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render MovieDetailsPage component render <View Info> button clicks correctly 1`] = `
+<section
+  className="movieDetails"
+>
+  <figure
+    className="inHeroSection"
+  >
+    <img
+      alt="Independance day"
+      src={
+        Object {
+          "canInstrument": true,
+          "createTransformer": [Function],
+          "getCacheKey": [Function],
+          "process": [Function],
+        }
+      }
+    />
+  </figure>
+  <div
+    className="movieInfo"
+  >
+    <div
+      className="movieInfo__left"
+    >
+      <h1
+        className="primary"
+      >
+        Independance day
+      </h1>
+      <div
+        className="movieSubInfo"
+      >
+        <ul
+          className="primary"
+          style={
+            Object {
+              "order": null,
+            }
+          }
+        >
+          <li>
+            scifi
+          </li>
+          <li>
+            comedy
+          </li>
+        </ul>
+        <span
+          className="runtime"
+        >
+          4h
+        </span>
+      </div>
+      <div
+        className="rating"
+      >
+        <span
+          className="stars"
+          style={
+            Object {
+              "width": "10.4em",
+            }
+          }
+        />
+        <span
+          className="primary"
+        >
+          1.9
+        </span>
+      </div>
+    </div>
+    <p
+      className="primary active"
+    >
+      <span>
+        There are growing dangers in
+    the wizarding world of 1926 New York.
+    Something mysterious is leaving a path of destruction in the streets,
+    threatening to expose the wizarding
+      </span>
+    </p>
+    <div
+      className="movieInfo__right"
+    >
+      <button
+        className="secondary"
+        onClick={[Function]}
+        type="button"
+      >
+        Watch Now
+      </button>
+      <button
+        className="secondary"
+        onClick={[Function]}
+        type="button"
+      >
+        View Info
+      </button>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`render MovieDetailsPage component render <View Info> button clicks correctly 2`] = `
+<section
+  className="movieDetails"
+>
+  <figure
+    className="inHeroSection"
+  >
+    <img
+      alt="Independance day"
+      src={
+        Object {
+          "canInstrument": true,
+          "createTransformer": [Function],
+          "getCacheKey": [Function],
+          "process": [Function],
+        }
+      }
+    />
+  </figure>
+  <div
+    className="movieInfo"
+  >
+    <div
+      className="movieInfo__left"
+    >
+      <h1
+        className="primary"
+      >
+        Independance day
+      </h1>
+      <div
+        className="movieSubInfo"
+      >
+        <ul
+          className="primary"
+          style={
+            Object {
+              "order": null,
+            }
+          }
+        >
+          <li>
+            scifi
+          </li>
+          <li>
+            comedy
+          </li>
+        </ul>
+        <span
+          className="runtime"
+        >
+          4h
+        </span>
+      </div>
+      <div
+        className="rating"
+      >
+        <span
+          className="stars"
+          style={
+            Object {
+              "width": "10.4em",
+            }
+          }
+        />
+        <span
+          className="primary"
+        >
+          1.9
+        </span>
+      </div>
+    </div>
+    <p
+      className="primary"
+    >
+      <span>
+        There are growing dangers in
+    the wizarding world of 1926 New York.
+    Something mysterious is leaving a path of destruction in the streets,
+    threatening to expose the wizarding
+      </span>
+    </p>
+    <div
+      className="movieInfo__right"
+    >
+      <button
+        className="secondary"
+        onClick={[Function]}
+        type="button"
+      >
+        Watch Now
+      </button>
+      <button
+        className="secondary"
+        onClick={[Function]}
+        type="button"
+      >
+        View Info
+      </button>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`render MovieDetailsPage component render component correctly 1`] = `
+<section
+  className="movieDetails"
+>
+  <figure
+    className="inHeroSection"
+  >
+    <img
+      alt="Independance day"
+      src={
+        Object {
+          "canInstrument": true,
+          "createTransformer": [Function],
+          "getCacheKey": [Function],
+          "process": [Function],
+        }
+      }
+    />
+  </figure>
+  <div
+    className="movieInfo"
+  >
+    <div
+      className="movieInfo__left"
+    >
+      <h1
+        className="primary"
+      >
+        Independance day
+      </h1>
+      <div
+        className="movieSubInfo"
+      >
+        <ul
+          className="primary"
+          style={
+            Object {
+              "order": null,
+            }
+          }
+        >
+          <li>
+            scifi
+          </li>
+          <li>
+            comedy
+          </li>
+        </ul>
+        <span
+          className="runtime"
+        >
+          4h
+        </span>
+      </div>
+      <div
+        className="rating"
+      >
+        <span
+          className="stars"
+          style={
+            Object {
+              "width": "10.4em",
+            }
+          }
+        />
+        <span
+          className="primary"
+        >
+          1.9
+        </span>
+      </div>
+    </div>
+    <p
+      className="primary"
+    >
+      <span>
+        There are growing dangers in
+    the wizarding world of 1926 New York.
+    Something mysterious is leaving a path of destruction in the streets,
+    threatening to expose the wizarding
+      </span>
+    </p>
+    <div
+      className="movieInfo__right"
+    >
+      <button
+        className="secondary"
+        onClick={[Function]}
+        type="button"
+      >
+        Watch Now
+      </button>
+      <button
+        className="secondary"
+        onClick={[Function]}
+        type="button"
+      >
+        View Info
+      </button>
+    </div>
+  </div>
+</section>
+`;
