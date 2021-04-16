@@ -1,0 +1,29 @@
+@import '../../utils/variables';
+
+.movieDetails {
+  position: relative;
+  width: 100%;
+}
+
+.movieInfo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: $pr;
+  padding-bottom: 3%;
+  padding-left: $pl;
+  grid-template-columns: minmax(0, 1fr) 45em;
+
+  &__right {
+    display: flex;
+    align-self: end;
+    justify-content: space-between;
+
+    button {
+      margin: 0;
+    }
+  }
+}
