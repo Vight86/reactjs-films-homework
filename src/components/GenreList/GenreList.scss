@@ -11,3 +11,11 @@
   font-size: 2.2em;
   font-weight: 500;
 }
+
+.primary {
+  @extend .genreList;
+
+  color: $color-light;
+  font-size: 2.4em;
+  font-weight: normal;
+}
