@@ -1,0 +1,28 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest/globals": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "plugin:jest/recommended",
+        "plugin:jest/style"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "rules": {
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    },
+    "plugins": [
+        "react",
+        "jest"
+    ],
+    "ignorePatterns": ["**/*.min.js", "**/build/**/*.js"]
+}
