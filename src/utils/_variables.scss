@@ -9,3 +9,6 @@ $bg-color: #f5f6f6;
 $text-tertiary: #242b2d;
 
 $width: 2120px;
+
+$pr: max(calc((100% - #{$width}) / 2), 2em);
+$pl: max(calc((100% - #{$width}) / 2), 2em);
