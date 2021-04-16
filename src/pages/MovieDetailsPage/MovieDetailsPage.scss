@@ -16,6 +16,7 @@
   padding-bottom: 3%;
   padding-left: $pl;
   grid-template-columns: minmax(0, 1fr) 45em;
+  grid-template-rows: auto;
 
   &__right {
     display: flex;
