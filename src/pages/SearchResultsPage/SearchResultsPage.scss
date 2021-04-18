@@ -1,0 +1,11 @@
+@import '../../utils/variables';
+
+.main {
+  padding-right: $pr;
+  padding-left: $pl;
+
+  @media screen and (max-width: $bp-xxlarge) {
+    padding-right: $pr-small;
+    padding-left: $pl-small;
+  }
+}
