@@ -1,0 +1,93 @@
+@import '../../utils/variables';
+
+.movieSynopsis {
+  margin: 0;
+  color: $color-light;
+  font-size: 2.6em;
+  line-height: 1.65;
+}
+
+.primary {
+  @extend .movieSynopsis;
+
+  position: absolute;
+  right: 1em;
+  bottom: 55%;
+  max-width: 18em;
+  box-sizing: border-box;
+  padding: 1.15em;
+  background-color: transparentize($color: #000, $amount: 0.36);
+  border-radius: 3px;
+  pointer-events: none;
+  transform: scale(0);
+  transform-origin: bottom center;
+  transition: transform 0.3s ease-in;
+
+  @media screen and (max-width: $bp-xxlarge) {
+    bottom: 53%;
+  }
+
+  @media screen and (max-width: $bp-medium) {
+    transform-origin: 78% bottom;
+  }
+
+  @media screen and (max-width: $bp-xxsmall) {
+    top: -3em;
+    right: 10em;
+    left: 2em;
+    max-width: none;
+    transform-origin: right 25%;
+  }
+
+  & > span {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  &::after {
+    position: absolute;
+    right: 50%;
+    bottom: -1.05em;
+    display: block;
+    width: 1.9em;
+    height: 1.1em;
+    background: url('./arrowDown.svg') no-repeat center 100%;
+    content: '';
+    transform: translateX(-50%);
+
+    @media screen and (max-width: $bp-xxlarge) {
+      right: 10%;
+    }
+
+    @media screen and (max-width: $bp-xxsmall) {
+      top: 26%;
+      right: -1.5em;
+      transform: rotate(-90deg);
+    }
+
+    @media screen and (max-width: $bp-xxxxsmall) {
+      top: 30%;
+    }
+  }
+
+  &.active {
+    pointer-events: all;
+    transform: scale(1);
+    transition: transform 0.3s cubic-bezier(0.43, 1.95, 0.66, 0.63);
+  }
+}
+
+.secondary {
+  @extend .movieSynopsis;
+
+  overflow: hidden;
+  max-height: 8.1em;
+  padding: 0 8% 0 8%;
+  margin: 9.5% 0 10.7% 0;
+
+  @media screen and (max-width: $bp-xlarge) {
+    margin: 0 0 8% 0;
+  }
+}
