@@ -9,18 +9,13 @@ const setUp = (name) => {
 };
 
 describe('render Signature component', () => {
-  it('tag should be span', () => {
+  it('render without props', () => {
     const result = setUp();
-    expect(result.type).toBe('span');
+    expect(result).toMatchSnapshot();
   });
 
-  it('render component without props', () => {
-    const result = setUp();
-    expect(result.props.children).toBe('Vova Pekun');
-  });
-
-  it('render component with props', () => {
+  it('render with props', () => {
     const result = setUp('Vova');
-    expect(result.props.children).toBe('Vova');
+    expect(result).toMatchSnapshot();
   });
 });

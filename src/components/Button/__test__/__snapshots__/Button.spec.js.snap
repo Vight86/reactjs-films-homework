@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Button component render component with props 1`] = `
+<button
+  className="class"
+  onClick={null}
+  type="button"
+>
+  test
+</button>
+`;
+
+exports[`render Button component render component without props 1`] = `
+<button
+  className=""
+  onClick={[Function]}
+  type="button"
+>
+  
+</button>
+`;
+
+exports[`render Button component render onClick without props 1`] = `undefined`;

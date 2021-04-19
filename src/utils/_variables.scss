@@ -7,5 +7,21 @@ $color-secondary: #0aaee4;
 $color-tertiary: #47c3f0;
 $bg-color: #f5f6f6;
 $text-tertiary: #242b2d;
+$color-fourtiary: #3bb4e0;
 
 $width: 2120px;
+
+$pr: max(calc((100% - #{$width}) / 2), 17em);
+$pl: max(calc((100% - #{$width}) / 2), 17em);
+$pr-small: 2em;
+$pl-small: 2em;
+
+$bp-xxlarge: 2200px;
+$bp-xlarge: 1950px;
+$bp-large: 1750px;
+$bp-medium: 1410px;
+$bp-small: 1250px;
+$bp-xsmall: 1150px;
+$bp-xxsmall: 940px;
+$bp-xxxsmall: 705px;
+$bp-xxxxsmall: 410px;

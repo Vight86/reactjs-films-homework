@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render GenreList component render with props 1`] = `
+<ul
+  className="class"
+  style={
+    Object {
+      "order": null,
+    }
+  }
+>
+  <li>
+    item1
+  </li>
+  <li>
+    item2
+  </li>
+</ul>
+`;
+
+exports[`render GenreList component render without props 1`] = `
+<ul
+  className=""
+  style={
+    Object {
+      "order": null,
+    }
+  }
+>
+  <li>
+    
+  </li>
+</ul>
+`;

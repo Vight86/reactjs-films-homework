@@ -1,0 +1,57 @@
+@import '../../utils/variables';
+
+.preloader {
+  width: 12em;
+  margin: 1em auto;
+  text-align: center;
+
+  &__circles {
+    position: relative;
+    width: 12em;
+    height: 3em;
+  }
+
+  &__circle {
+    position: absolute;
+    left: 1.1em;
+    display: inline-block;
+    width: 1.8em;
+    height: 1.8em;
+    margin-top: 1em;
+    background-color: $color-secondary;
+    border-radius: 50%;
+    transform: translateX(0) scale(0);
+
+    &:nth-child(1) {
+      animation: loading 2.5s ease-in-out infinite;
+    }
+
+    &:nth-child(2) {
+      animation: loading 2s ease-in-out 0.5s infinite;
+    }
+
+    &:nth-child(3) {
+      animation: loading 2s ease-in-out 0.7s infinite;
+    }
+  }
+
+  &__text {
+    margin: 1em 0 2em;
+    color: $text-tertiary;
+    font-size: 2.2em;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    opacity: 0.35;
+    text-transform: uppercase;
+  }
+}
+
+@keyframes loading {
+  50% {
+    transform: translateX(4em) scale(1);
+  }
+
+  100% {
+    transform: translateX(8em) scale(0);
+  }
+}

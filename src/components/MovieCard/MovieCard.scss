@@ -1,0 +1,100 @@
+@import '../../utils/variables';
+
+.viewInfo {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 21%;
+  background-color: transparentize($color: $color-dark, $amount: 0.16);
+  opacity: 0;
+  text-align: center;
+  transform: scale(1.25);
+  transition: all 0.3s;
+}
+
+.movieCard {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 3.6em;
+  background-color: $color-light;
+  border-radius: 0.6em;
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.04);
+  font-size: 1rem;
+
+  &:hover {
+    .viewInfo {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @media screen and (max-width: $bp-medium) {
+    font-size: 0.8rem;
+  }
+
+  @media screen and (max-width: $bp-xsmall) {
+    font-size: 1.2rem;
+  }
+
+  @media screen and (max-width: $bp-xxsmall) {
+    font-size: 0.8rem;
+  }
+
+  @media screen and (max-width: $bp-xxxsmall) {
+    font-size: 1.2rem;
+  }
+
+  @media screen and (max-width: $bp-xxxxsmall) {
+    font-size: 0.8rem;
+  }
+}
+
+.poster {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 0 5.5em 0;
+}
+
+.watchNowText {
+  display: block;
+  margin-bottom: 11%;
+  color: $bg-color;
+  font-size: 2.8em;
+  letter-spacing: 0.04em;
+}
+
+.generalInfo {
+  display: grid;
+  padding: 0 8% 0 8%;
+  grid-template-columns: 1fr 20%;
+  grid-template-rows: 1fr 1fr;
+}
+
+.infoBlock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 24.3%;
+  background:
+    linear-gradient(
+      transparentize($color: $color-dark, $amount: 0.36),
+      transparentize($color: $color-dark, $amount: 0.36)
+    ),
+    url('./movieStab.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto, cover;
+  opacity: 0;
+  transition: all 0.5s;
+  visibility: hidden;
+
+  &_active {
+    opacity: 1;
+    visibility: visible;
+  }
+}

@@ -1,0 +1,37 @@
+@import '../../utils/variables';
+
+.movieList {
+  display: grid;
+  gap: 4em;
+  grid-template-columns: repeat(auto-fit, minmax(40em, 1fr));
+  grid-template-rows: auto;
+
+  & > * {
+    justify-items: stretch;
+  }
+
+  @media screen and (max-width: $bp-medium) {
+    grid-template-columns: repeat(auto-fit, minmax(35em, 1fr));
+    grid-template-rows: auto;
+  }
+
+  @media screen and (max-width: $bp-small) {
+    grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
+    grid-template-rows: auto;
+  }
+
+  @media screen and (max-width: $bp-xsmall) {
+    grid-template-columns: repeat(auto-fit, minmax(45em, 1fr));
+    grid-template-rows: auto;
+  }
+
+  @media screen and (max-width: $bp-xxsmall) {
+    grid-template-columns: repeat(auto-fit, minmax(40em, 1fr));
+    grid-template-rows: auto;
+  }
+
+  @media screen and (max-width: $bp-xxxxsmall) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}

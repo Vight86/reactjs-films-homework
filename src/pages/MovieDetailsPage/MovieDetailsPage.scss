@@ -1,0 +1,76 @@
+@import '../../utils/variables';
+
+.movieDetails {
+  position: relative;
+  width: 100%;
+}
+
+.movieInfo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: $pr;
+  padding-bottom: 3%;
+  padding-left: $pl;
+  grid-template-columns: minmax(0, 5fr) 1fr 45em;
+  grid-template-rows: auto;
+
+  @media screen and (max-width: $bp-xxlarge) {
+    padding-right: $pr-small;
+    padding-left: $pl-small;
+  }
+
+  @media screen and (max-width: $bp-xsmall) {
+    font-size: 0.8rem;
+  }
+
+  @media screen and (max-width: $bp-xxsmall) {
+    height: 80%;
+    font-size: 0.8rem;
+    grid-template-columns: minmax(0, 1fr) 30em;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  &__right {
+    position: relative;
+    display: flex;
+    align-self: end;
+    justify-content: space-between;
+    grid-column-start: 3;
+
+    button {
+      margin: 0;
+    }
+
+    @media screen and (max-width: $bp-xxsmall) {
+      flex-direction: column-reverse;
+      align-self: start;
+      grid-column-start: 2;
+      grid-row-start: 1;
+      justify-self: end;
+
+      button {
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+  &__left {
+    @media screen and (max-width: $bp-xxsmall) {
+      align-self: end;
+      grid-row-start: 2;
+    }
+
+    @media screen and (max-width: $bp-xxxsmall) {
+      grid-column-end: 3;
+      grid-column-start: 1;
+    }
+  }
+}
+
+.movieSubInfo {
+  display: flex;
+}

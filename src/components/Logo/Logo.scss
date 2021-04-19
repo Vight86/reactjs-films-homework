@@ -1,0 +1,28 @@
+@import '../../utils/variables';
+
+.logo {
+  margin: 0;
+  font-family: $font-secondary;
+  font-size: 5em;
+  letter-spacing: 0.04em;
+
+  & > a {
+    text-decoration: none;
+  }
+}
+
+.primary {
+  @extend .logo;
+
+  & > a {
+    color: $color-light;
+  }
+}
+
+.secondary {
+  @extend .logo;
+
+  & > a {
+    color: $color-secondary;
+  }
+}

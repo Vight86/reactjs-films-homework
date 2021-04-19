@@ -1,0 +1,461 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render MovieCard component render View Info button clicks 1`] = `
+<article
+  className="movieCard"
+>
+  <section
+    className="poster"
+  >
+    <figure
+      className="inCard"
+    >
+      <img
+        alt=""
+        src={
+          Object {
+            "src": "",
+          }
+        }
+      />
+    </figure>
+    <div
+      className="viewInfo"
+    >
+      <button
+        className="playButton"
+        onClick={[Function]}
+        type="button"
+      >
+        
+      </button>
+      <span
+        className="watchNowText"
+      >
+        Watch Now
+      </span>
+      <button
+        className="primary"
+        onClick={[Function]}
+        type="button"
+      >
+        View Info
+      </button>
+    </div>
+  </section>
+  <section
+    className="generalInfo"
+  >
+    <h3
+      className="secondary"
+    >
+      
+    </h3>
+    <ul
+      className="secondary"
+      style={
+        Object {
+          "order": 3,
+        }
+      }
+    />
+    <span
+      className="secondary"
+    >
+      0
+    </span>
+  </section>
+  <section
+    className="infoBlock infoBlock_active"
+  >
+    <button
+      className="closeButton"
+      onClick={[Function]}
+      type="button"
+    >
+      ×
+    </button>
+    <section
+      className="generalInfo"
+    >
+      <h3
+        className="tertiary"
+      >
+        
+      </h3>
+      <ul
+        className="secondary"
+        style={
+          Object {
+            "order": 3,
+          }
+        }
+      />
+      <span
+        className="secondary"
+      >
+        0
+      </span>
+    </section>
+    <p
+      className="secondary"
+    >
+      <span>
+        
+      </span>
+    </p>
+    <button
+      className="secondary"
+      onClick={[Function]}
+      type="button"
+    >
+      Watch Now
+    </button>
+  </section>
+</article>
+`;
+
+exports[`render MovieCard component render component with props 1`] = `
+<article
+  className="movieCard"
+>
+  <section
+    className="poster"
+  >
+    <figure
+      className="inCard"
+    >
+      <img
+        alt=""
+        src={
+          Object {
+            "src": "",
+          }
+        }
+      />
+    </figure>
+    <div
+      className="viewInfo"
+    >
+      <button
+        className="playButton"
+        onClick={[Function]}
+        type="button"
+      >
+        
+      </button>
+      <span
+        className="watchNowText"
+      >
+        Watch Now
+      </span>
+      <button
+        className="primary"
+        onClick={[Function]}
+        type="button"
+      >
+        View Info
+      </button>
+    </div>
+  </section>
+  <section
+    className="generalInfo"
+  >
+    <h3
+      className="secondary"
+    >
+      
+    </h3>
+    <ul
+      className="secondary"
+      style={
+        Object {
+          "order": 3,
+        }
+      }
+    />
+    <span
+      className="secondary"
+    >
+      0
+    </span>
+  </section>
+  <section
+    className="infoBlock"
+  >
+    <button
+      className="closeButton"
+      onClick={[Function]}
+      type="button"
+    >
+      ×
+    </button>
+    <section
+      className="generalInfo"
+    >
+      <h3
+        className="tertiary"
+      >
+        
+      </h3>
+      <ul
+        className="secondary"
+        style={
+          Object {
+            "order": 3,
+          }
+        }
+      />
+      <span
+        className="secondary"
+      >
+        0
+      </span>
+    </section>
+    <p
+      className="secondary"
+    >
+      <span>
+        
+      </span>
+    </p>
+    <button
+      className="secondary"
+      onClick={[Function]}
+      type="button"
+    >
+      Watch Now
+    </button>
+  </section>
+</article>
+`;
+
+exports[`render MovieCard component render component without props 1`] = `
+<article
+  className="movieCard"
+>
+  <section
+    className="poster"
+  >
+    <figure
+      className="inCard"
+    >
+      <img
+        alt=""
+        src={
+          Object {
+            "src": "",
+          }
+        }
+      />
+    </figure>
+    <div
+      className="viewInfo"
+    >
+      <button
+        className="playButton"
+        onClick={[Function]}
+        type="button"
+      >
+        
+      </button>
+      <span
+        className="watchNowText"
+      >
+        Watch Now
+      </span>
+      <button
+        className="primary"
+        onClick={[Function]}
+        type="button"
+      >
+        View Info
+      </button>
+    </div>
+  </section>
+  <section
+    className="generalInfo"
+  >
+    <h3
+      className="secondary"
+    >
+      
+    </h3>
+    <ul
+      className="secondary"
+      style={
+        Object {
+          "order": 3,
+        }
+      }
+    />
+    <span
+      className="secondary"
+    >
+      0
+    </span>
+  </section>
+  <section
+    className="infoBlock"
+  >
+    <button
+      className="closeButton"
+      onClick={[Function]}
+      type="button"
+    >
+      ×
+    </button>
+    <section
+      className="generalInfo"
+    >
+      <h3
+        className="tertiary"
+      >
+        
+      </h3>
+      <ul
+        className="secondary"
+        style={
+          Object {
+            "order": 3,
+          }
+        }
+      />
+      <span
+        className="secondary"
+      >
+        0
+      </span>
+    </section>
+    <p
+      className="secondary"
+    >
+      <span>
+        
+      </span>
+    </p>
+    <button
+      className="secondary"
+      onClick={[Function]}
+      type="button"
+    >
+      Watch Now
+    </button>
+  </section>
+</article>
+`;
+
+exports[`render MovieCard component render infoBlock closeButton clicks 1`] = `
+<article
+  className="movieCard"
+>
+  <section
+    className="poster"
+  >
+    <figure
+      className="inCard"
+    >
+      <img
+        alt=""
+        src={
+          Object {
+            "src": "",
+          }
+        }
+      />
+    </figure>
+    <div
+      className="viewInfo"
+    >
+      <button
+        className="playButton"
+        onClick={[Function]}
+        type="button"
+      >
+        
+      </button>
+      <span
+        className="watchNowText"
+      >
+        Watch Now
+      </span>
+      <button
+        className="primary"
+        onClick={[Function]}
+        type="button"
+      >
+        View Info
+      </button>
+    </div>
+  </section>
+  <section
+    className="generalInfo"
+  >
+    <h3
+      className="secondary"
+    >
+      
+    </h3>
+    <ul
+      className="secondary"
+      style={
+        Object {
+          "order": 3,
+        }
+      }
+    />
+    <span
+      className="secondary"
+    >
+      0
+    </span>
+  </section>
+  <section
+    className="infoBlock"
+  >
+    <button
+      className="closeButton"
+      onClick={[Function]}
+      type="button"
+    >
+      ×
+    </button>
+    <section
+      className="generalInfo"
+    >
+      <h3
+        className="tertiary"
+      >
+        
+      </h3>
+      <ul
+        className="secondary"
+        style={
+          Object {
+            "order": 3,
+          }
+        }
+      />
+      <span
+        className="secondary"
+      >
+        0
+      </span>
+    </section>
+    <p
+      className="secondary"
+    >
+      <span>
+        
+      </span>
+    </p>
+    <button
+      className="secondary"
+      onClick={[Function]}
+      type="button"
+    >
+      Watch Now
+    </button>
+  </section>
+</article>
+`;

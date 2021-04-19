@@ -1,0 +1,44 @@
+@import '../../utils/variables';
+
+.genreList {
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0 1em 0 0;
+  letter-spacing: 0.04em;
+  list-style-type: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.primary {
+  @extend .genreList;
+
+  border-right: 1px solid currentColor;
+  margin: 0 1em 2.1em 0;
+  color: $color-light;
+  font-size: 2.4em;
+  font-weight: normal;
+
+  & > li {
+    display: inline;
+    margin-right: 4ch;
+  }
+}
+
+.secondary {
+  @extend .genreList;
+
+  margin: 0;
+  color: $color-tertiary;
+  font-size: 2.2em;
+  font-weight: 500;
+
+  & > li {
+    display: inline;
+    margin-right: 1ch;
+
+    &:not(:last-child)::after {
+      content: ',';
+    }
+  }
+}

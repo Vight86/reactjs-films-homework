@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Rating component render with props 1`] = `
+<div
+  className="rating"
+>
+  <span
+    className="stars"
+    style={
+      Object {
+        "width": "20.8em",
+      }
+    }
+  />
+  <span
+    className="class"
+  >
+    3.8
+  </span>
+</div>
+`;
+
+exports[`render Rating component render without props 1`] = `
+<span
+  className=""
+>
+  0
+</span>
+`;

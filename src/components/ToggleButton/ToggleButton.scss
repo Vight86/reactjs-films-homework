@@ -1,0 +1,55 @@
+@import '../../utils/variables';
+
+.toggleGridButton {
+  position: relative;
+  width: 86px;
+  height: 32px;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  background: transparentize($color: $text-tertiary, $amount: 0.85);
+  cursor: pointer;
+  outline: none;
+
+  @media screen and (max-width: $bp-xxxsmall) {
+    align-items: flex-end;
+    margin-bottom: 2em;
+    margin-left: auto;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    display: block;
+    width: 50%;
+    height: 50%;
+    background: transparentize($color: $color-secondary, $amount: 0.2);
+    content: '';
+    transition: transform 0.3s;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+    transition-delay: 0.15s;
+  }
+}
+
+.active {
+  &::before,
+  &::after {
+    transform: translateX(-100%);
+  }
+}
+
+.toggleGridButtonMask {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url('./toggleGridButtonMask.svg');
+}

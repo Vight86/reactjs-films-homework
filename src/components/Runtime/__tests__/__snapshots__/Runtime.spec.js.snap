@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Runtime component render with props 1`] = `
+<span
+  className="runtime"
+>
+  2h 3m
+</span>
+`;
+
+exports[`render Runtime component render without props 1`] = `
+<span
+  className="runtime"
+>
+  
+</span>
+`;
