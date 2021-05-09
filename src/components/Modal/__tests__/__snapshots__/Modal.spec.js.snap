@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Modal component render component with props 1`] = `
+Object {
+  "$$typeof": Symbol(react.portal),
+  "children": <div
+    className="modalWrapper"
+  >
+    <div
+      className="modalVideo"
+    >
+      <Button
+        className="closeButton_inModal"
+        onClick={[Function]}
+      >
+        ×
+      </Button>
+      <iframe
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen={true}
+        className="modalIframe"
+        frameBorder="0"
+        src="https://www.youtube.com/embed/testKey"
+        title="YouTube video player"
+      />
+      <Preloader
+        className="inModal"
+      />
+    </div>
+  </div>,
+  "containerInfo": <div
+    id="modal"
+  />,
+  "implementation": null,
+  "key": null,
+}
+`;
+
+exports[`render Modal component render component without props 1`] = `null`;
