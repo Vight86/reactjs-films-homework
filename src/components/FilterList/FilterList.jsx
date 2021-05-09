@@ -3,9 +3,9 @@ import propTypes from 'prop-types';
 import styles from './FilterList.scss';
 
 const FilterList = ({ children }) => (
-  <ul className={styles.filterList}>
-    {children.map((item) => <li key={item}>{item}</li>)}
-  </ul>
+  <nav className={styles.filterList}>
+    {children.map((item) => item)}
+  </nav>
 );
 
 FilterList.propTypes = {
@@ -14,8 +14,8 @@ FilterList.propTypes = {
 
 FilterList.defaultProps = {
   children: [
-    <button type="button">Button</button>,
-    <button type="button">Button</button>,
+    <button type="button" key="key1">Button</button>,
+    <button type="button" key="key2">Button</button>,
   ],
 };
 export default FilterList;

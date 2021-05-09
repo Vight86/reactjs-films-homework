@@ -1,57 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`render FilterList component render with props 1`] = `
-<ul
+<nav
   className="filterList"
 >
-  <li>
-    <button
-      type="button"
-    >
-      Button 1
-    </button>
-  </li>
-  <li>
-    <button
-      type="button"
-    >
-      Button 2
-    </button>
-  </li>
-  <li>
-    <button
-      type="button"
-    >
-      Button 3
-    </button>
-  </li>
-  <li>
-    <button
-      type="button"
-    >
-      Button 4
-    </button>
-  </li>
-</ul>
+  <button
+    type="button"
+  >
+    Button 1
+  </button>
+  <button
+    type="button"
+  >
+    Button 2
+  </button>
+  <button
+    type="button"
+  >
+    Button 3
+  </button>
+  <button
+    type="button"
+  >
+    Button 4
+  </button>
+</nav>
 `;
 
 exports[`render FilterList component render without props 1`] = `
-<ul
+<nav
   className="filterList"
 >
-  <li>
-    <button
-      type="button"
-    >
-      Button
-    </button>
-  </li>
-  <li>
-    <button
-      type="button"
-    >
-      Button
-    </button>
-  </li>
-</ul>
+  <button
+    type="button"
+  >
+    Button
+  </button>
+  <button
+    type="button"
+  >
+    Button
+  </button>
+</nav>
 `;
