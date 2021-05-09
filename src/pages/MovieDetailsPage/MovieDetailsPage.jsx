@@ -6,11 +6,10 @@ import GenreList from '../../components/GenreList/index';
 import Runtime from '../../components/Runtime/index';
 import Rating from '../../components/Rating/index';
 import Button from '../../components/Button/index';
-import image from '../../components/MovieCard/movieStab.jpg';
 import MovieSynopsis from '../../components/MovieSynopsis/index';
 
 const stab = {
-  image,
+  image: './testurl',
   title: 'Independance day',
   runtime: 240,
   rating: 1.9,
