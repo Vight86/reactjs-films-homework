@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render toggleGridButton component render component with props 1`] = `
+exports[`render toggleGridButton component render click correctly 1`] = `
 <button
-  className="testClass"
+  className="test"
   onClick={[Function]}
   type="button"
 >
@@ -12,9 +12,21 @@ exports[`render toggleGridButton component render component with props 1`] = `
 </button>
 `;
 
-exports[`render toggleGridButton component render component without props 1`] = `
+exports[`render toggleGridButton component render component grid view correctly 1`] = `
 <button
-  className="undefined"
+  className="test active"
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="toggleGridButtonMask"
+  />
+</button>
+`;
+
+exports[`render toggleGridButton component render component table view correctly 1`] = `
+<button
+  className="test"
   onClick={[Function]}
   type="button"
 >
