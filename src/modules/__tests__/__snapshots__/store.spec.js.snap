@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing redux store redux store is setup correctly 1`] = `
+Object {
+  "filters": Object {
+    "genreId": 0,
+  },
+  "genres": Array [],
+  "movies": Object {
+    "currentMovieTrailerKey": "",
+    "movies": Array [],
+    "page": 1,
+    "pageSize": 16,
+    "totalPages": 0,
+  },
+  "query": Object {
+    "adult": false,
+    "apiKey": "e5dc29ce2b6d31bb5c5306f6a7469ba2",
+    "apiPath": "/movie/popular",
+    "basePath": "https://api.themoviedb.org/3",
+    "genresPath": "/genre/movie/list",
+    "lang": "en-US",
+    "searchQuery": "",
+  },
+  "status": Object {
+    "status": "loading",
+  },
+}
+`;
