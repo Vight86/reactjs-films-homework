@@ -2,8 +2,15 @@ import React from 'react';
 import propTypes from 'prop-types';
 import styles from './Button.scss';
 
-const Button = ({ className, onClick, children }) => (
-  <button type="button" className={styles[className]} onClick={onClick}>
+const Button = ({
+  className, onClick, children,
+}) => (
+  <button
+    type="button"
+    className={styles[className]}
+    onClick={onClick}
+    data-text={children}
+  >
     {children}
   </button>
 );

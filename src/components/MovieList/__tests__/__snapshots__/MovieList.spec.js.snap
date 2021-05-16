@@ -1,366 +1,167 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render MovieList component render component with props 1`] = `
+exports[`render MovieList component render grid layout correctly 1`] = `
 <section
-  className="movieList"
+  className="movieListGrid"
 >
   <MovieCard
+    genres={
+      Array [
+        Object {
+          "id": 1,
+          "name": "Action",
+        },
+        Object {
+          "id": 2,
+          "name": "SciFi",
+        },
+      ]
+    }
+    isGrid={true}
     movie={
       Object {
-        "genre": Array [
-          "scifi",
-          "comedy",
+        "adult": false,
+        "backdropPath": "/test.jpg",
+        "genreIds": Array [
+          1,
+          2,
         ],
-        "image": Object {
-          "canInstrument": true,
-          "createTransformer": [Function],
-          "getCacheKey": [Function],
-          "process": [Function],
-        },
-        "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-        "rating": 3.9,
-        "title": "Independance day",
+        "id": 1,
+        "originalLanguage": "en",
+        "originalTitle": "test",
+        "overview": "test",
+        "popularity": 1,
+        "posterPath": "/test.jpg",
+        "releaseDate": "1",
+        "title": "test",
+        "video": false,
+        "voteAverage": 1,
+        "voteCount": 1,
       }
     }
+    movieTrailerKey="test"
+    updateMovieTrailerKey={[MockFunction]}
   />
   <MovieCard
+    genres={
+      Array [
+        Object {
+          "id": 1,
+          "name": "Action",
+        },
+        Object {
+          "id": 2,
+          "name": "SciFi",
+        },
+      ]
+    }
+    isGrid={true}
     movie={
       Object {
-        "genre": Array [
-          "scifi",
-          "comedy",
+        "adult": false,
+        "backdropPath": "/test.jpg",
+        "genreIds": Array [
+          1,
+          2,
         ],
-        "image": Object {
-          "canInstrument": true,
-          "createTransformer": [Function],
-          "getCacheKey": [Function],
-          "process": [Function],
-        },
-        "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-        "rating": 3.9,
-        "title": "Independance day",
+        "id": 1,
+        "originalLanguage": "en",
+        "originalTitle": "test",
+        "overview": "test",
+        "popularity": 1,
+        "posterPath": "/test.jpg",
+        "releaseDate": "1",
+        "title": "test",
+        "video": false,
+        "voteAverage": 1,
+        "voteCount": 1,
       }
     }
-  />
-  <MovieCard
-    movie={
-      Object {
-        "genre": Array [
-          "scifi",
-          "comedy",
-        ],
-        "image": Object {
-          "canInstrument": true,
-          "createTransformer": [Function],
-          "getCacheKey": [Function],
-          "process": [Function],
-        },
-        "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-        "rating": 3.9,
-        "title": "Independance day",
-      }
-    }
-  />
-  <MovieCard
-    movie={
-      Object {
-        "genre": Array [
-          "scifi",
-          "comedy",
-        ],
-        "image": Object {
-          "canInstrument": true,
-          "createTransformer": [Function],
-          "getCacheKey": [Function],
-          "process": [Function],
-        },
-        "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-        "rating": 3.9,
-        "title": "Independance day",
-      }
-    }
-  />
-  <MovieCard
-    movie={
-      Object {
-        "genre": Array [
-          "scifi",
-          "comedy",
-        ],
-        "image": Object {
-          "canInstrument": true,
-          "createTransformer": [Function],
-          "getCacheKey": [Function],
-          "process": [Function],
-        },
-        "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-        "rating": 3.9,
-        "title": "Independance day",
-      }
-    }
-  />
-  <MovieCard
-    movie={
-      Object {
-        "genre": Array [
-          "scifi",
-          "comedy",
-        ],
-        "image": Object {
-          "canInstrument": true,
-          "createTransformer": [Function],
-          "getCacheKey": [Function],
-          "process": [Function],
-        },
-        "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-        "rating": 3.9,
-        "title": "Independance day",
-      }
-    }
-  />
-  <MovieCard
-    movie={
-      Object {
-        "genre": Array [
-          "scifi",
-          "comedy",
-        ],
-        "image": Object {
-          "canInstrument": true,
-          "createTransformer": [Function],
-          "getCacheKey": [Function],
-          "process": [Function],
-        },
-        "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-        "rating": 3.9,
-        "title": "Independance day",
-      }
-    }
-  />
-  <MovieCard
-    movie={
-      Object {
-        "genre": Array [
-          "scifi",
-          "comedy",
-        ],
-        "image": Object {
-          "canInstrument": true,
-          "createTransformer": [Function],
-          "getCacheKey": [Function],
-          "process": [Function],
-        },
-        "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-        "rating": 3.9,
-        "title": "Independance day",
-      }
-    }
-  />
-  <MovieCard
-    movie={
-      Object {
-        "genre": Array [
-          "scifi",
-          "comedy",
-        ],
-        "image": Object {
-          "canInstrument": true,
-          "createTransformer": [Function],
-          "getCacheKey": [Function],
-          "process": [Function],
-        },
-        "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-        "rating": 3.9,
-        "title": "Independance day",
-      }
-    }
-  />
-  <MovieCard
-    movie={
-      Object {
-        "genre": Array [
-          "scifi",
-          "comedy",
-        ],
-        "image": Object {
-          "canInstrument": true,
-          "createTransformer": [Function],
-          "getCacheKey": [Function],
-          "process": [Function],
-        },
-        "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-        "rating": 3.9,
-        "title": "Independance day",
-      }
-    }
-  />
-  <MovieCard
-    movie={
-      Object {
-        "genre": Array [
-          "scifi",
-          "comedy",
-        ],
-        "image": Object {
-          "canInstrument": true,
-          "createTransformer": [Function],
-          "getCacheKey": [Function],
-          "process": [Function],
-        },
-        "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-        "rating": 3.9,
-        "title": "Independance day",
-      }
-    }
-  />
-  <MovieCard
-    movie={
-      Object {
-        "genre": Array [
-          "scifi",
-          "comedy",
-        ],
-        "image": Object {
-          "canInstrument": true,
-          "createTransformer": [Function],
-          "getCacheKey": [Function],
-          "process": [Function],
-        },
-        "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-        "rating": 3.9,
-        "title": "Independance day",
-      }
-    }
-  />
-  <MovieCard
-    movie={
-      Object {
-        "genre": Array [
-          "scifi",
-          "comedy",
-        ],
-        "image": Object {
-          "canInstrument": true,
-          "createTransformer": [Function],
-          "getCacheKey": [Function],
-          "process": [Function],
-        },
-        "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-        "rating": 3.9,
-        "title": "Independance day",
-      }
-    }
-  />
-  <MovieCard
-    movie={
-      Object {
-        "genre": Array [
-          "scifi",
-          "comedy",
-        ],
-        "image": Object {
-          "canInstrument": true,
-          "createTransformer": [Function],
-          "getCacheKey": [Function],
-          "process": [Function],
-        },
-        "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-        "rating": 3.9,
-        "title": "Independance day",
-      }
-    }
-  />
-  <MovieCard
-    movie={
-      Object {
-        "genre": Array [
-          "scifi",
-          "comedy",
-        ],
-        "image": Object {
-          "canInstrument": true,
-          "createTransformer": [Function],
-          "getCacheKey": [Function],
-          "process": [Function],
-        },
-        "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-        "rating": 3.9,
-        "title": "Independance day",
-      }
-    }
-  />
-  <MovieCard
-    movie={
-      Object {
-        "genre": Array [
-          "scifi",
-          "comedy",
-        ],
-        "image": Object {
-          "canInstrument": true,
-          "createTransformer": [Function],
-          "getCacheKey": [Function],
-          "process": [Function],
-        },
-        "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-        "rating": 3.9,
-        "title": "Independance day",
-      }
-    }
+    movieTrailerKey="test"
+    updateMovieTrailerKey={[MockFunction]}
   />
 </section>
 `;
 
-exports[`render MovieList component render component without props 1`] = `
+exports[`render MovieList component render table layout correctly 1`] = `
 <section
-  className="movieList"
-/>
+  className="movieListTable"
+>
+  <MovieCard
+    genres={
+      Array [
+        Object {
+          "id": 1,
+          "name": "Action",
+        },
+        Object {
+          "id": 2,
+          "name": "SciFi",
+        },
+      ]
+    }
+    isGrid={false}
+    movie={
+      Object {
+        "adult": false,
+        "backdropPath": "/test.jpg",
+        "genreIds": Array [
+          1,
+          2,
+        ],
+        "id": 1,
+        "originalLanguage": "en",
+        "originalTitle": "test",
+        "overview": "test",
+        "popularity": 1,
+        "posterPath": "/test.jpg",
+        "releaseDate": "1",
+        "title": "test",
+        "video": false,
+        "voteAverage": 1,
+        "voteCount": 1,
+      }
+    }
+    movieTrailerKey="test"
+    updateMovieTrailerKey={[MockFunction]}
+  />
+  <MovieCard
+    genres={
+      Array [
+        Object {
+          "id": 1,
+          "name": "Action",
+        },
+        Object {
+          "id": 2,
+          "name": "SciFi",
+        },
+      ]
+    }
+    isGrid={false}
+    movie={
+      Object {
+        "adult": false,
+        "backdropPath": "/test.jpg",
+        "genreIds": Array [
+          1,
+          2,
+        ],
+        "id": 1,
+        "originalLanguage": "en",
+        "originalTitle": "test",
+        "overview": "test",
+        "popularity": 1,
+        "posterPath": "/test.jpg",
+        "releaseDate": "1",
+        "title": "test",
+        "video": false,
+        "voteAverage": 1,
+        "voteCount": 1,
+      }
+    }
+    movieTrailerKey="test"
+    updateMovieTrailerKey={[MockFunction]}
+  />
+</section>
 `;

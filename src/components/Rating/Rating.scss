@@ -43,3 +43,9 @@
   margin: 0 0 0 auto;
   color: $color-tertiary;
 }
+
+.secondary_table {
+  @extend .secondary;
+
+  vertical-align: top;
+}

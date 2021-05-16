@@ -79,9 +79,11 @@
   }
 }
 
-.secondary {
+.secondary_grid {
   @extend .movieSynopsis;
 
+  position: relative;
+  z-index: 10;
   overflow: hidden;
   max-height: 8.1em;
   padding: 0 8% 0 8%;
@@ -90,4 +92,24 @@
   @media screen and (max-width: $bp-xlarge) {
     margin: 0 0 8% 0;
   }
+}
+
+.secondary_table {
+  @extend .secondary_grid;
+
+  margin: 70px 0 40px;
+
+  @media screen and (max-width: $bp-xlarge) {
+    margin: 20px 0;
+  }
+}
+
+.tertiary {
+  @extend .movieSynopsis;
+
+  overflow: hidden;
+  max-height: 8.1em;
+  margin-top: 2em;
+  color: $text-tertiary;
+  font-size: 2em;
 }

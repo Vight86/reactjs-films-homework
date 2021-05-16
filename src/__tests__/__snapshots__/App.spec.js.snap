@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App renders correctly 1`] = `
+exports[`render App component App renders correctly 1`] = `
 <React.Fragment>
   <Header
     className="primary"
@@ -8,10 +8,28 @@ exports[`App renders correctly 1`] = `
     <Logo
       theme="primary"
     />
-    <SearchForm />
+    <SearchForm
+      handleSearchSubmit={[Function]}
+    />
   </Header>
-  <SearchResultsPage />
-  <MovieDetailsPage />
+  <SearchResultsPageContainer />
+  <Footer />
+</React.Fragment>
+`;
+
+exports[`render App component App renders handleSearchSubmit correctly 1`] = `
+<React.Fragment>
+  <Header
+    className="primary"
+  >
+    <Logo
+      theme="primary"
+    />
+    <SearchForm
+      handleSearchSubmit={[Function]}
+    />
+  </Header>
+  <SearchResultsPageContainer />
   <Footer />
 </React.Fragment>
 `;

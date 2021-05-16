@@ -3,6 +3,7 @@
 exports[`render Button component render component with props 1`] = `
 <button
   className="class"
+  data-text="test"
   onClick={null}
   type="button"
 >
@@ -13,6 +14,7 @@ exports[`render Button component render component with props 1`] = `
 exports[`render Button component render component without props 1`] = `
 <button
   className=""
+  data-text=""
   onClick={[Function]}
   type="button"
 >

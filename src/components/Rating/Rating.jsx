@@ -6,6 +6,7 @@ const Rating = ({
   className, withStars, children,
 }) => {
   const width = (26 / 5) * Number(parseFloat(children).toFixed());
+  const ratingNumber = Number(((children / 10) * 5).toFixed(1));
   let rating;
 
   if (withStars === true) {
@@ -13,14 +14,14 @@ const Rating = ({
       <div className={styles.rating}>
         <span className={styles.stars} style={{ width: `${width}em` }} />
         <span className={styles[className]}>
-          {children}
+          {ratingNumber}
         </span>
       </div>
     );
   } else {
     rating = (
       <span className={styles[className]}>
-        {children}
+        {ratingNumber}
       </span>
     );
   }

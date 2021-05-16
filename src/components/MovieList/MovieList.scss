@@ -1,9 +1,10 @@
 @import '../../utils/variables';
 
-.movieList {
+.movieListGrid {
   display: grid;
+  margin-bottom: 4em;
   gap: 4em;
-  grid-template-columns: repeat(auto-fit, minmax(40em, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
 
   & > * {
@@ -11,22 +12,12 @@
   }
 
   @media screen and (max-width: $bp-medium) {
-    grid-template-columns: repeat(auto-fit, minmax(35em, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
   }
 
-  @media screen and (max-width: $bp-small) {
-    grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
-    grid-template-rows: auto;
-  }
-
-  @media screen and (max-width: $bp-xsmall) {
-    grid-template-columns: repeat(auto-fit, minmax(45em, 1fr));
-    grid-template-rows: auto;
-  }
-
-  @media screen and (max-width: $bp-xxsmall) {
-    grid-template-columns: repeat(auto-fit, minmax(40em, 1fr));
+  @media screen and (max-width: $bp-xxxsmall) {
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
 
@@ -34,4 +25,9 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
+}
+
+.movieListTable {
+  display: block;
+  margin-bottom: 4em;
 }

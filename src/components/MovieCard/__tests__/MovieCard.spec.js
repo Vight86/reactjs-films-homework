@@ -1,49 +1,91 @@
 import React from 'react';
-import Renderer, { act } from 'react-test-renderer';
+import ShallowRenderer from 'react-test-renderer/shallow';
 import MovieCard from '../index';
-import image from '../movieStab.jpg';
 
-const data = {
-  image,
-  title: 'Independance day',
-  rating: 3.9,
-  genre: ['scifi', 'comedy'],
+const mockMovie = {
+  adult: false,
+  backdropPath: '/test.jpg',
+  genreIds: [1, 2],
+  id: 1,
+  originalLanguage: 'en',
+  originalTitle: 'test',
+  overview: 'test',
+  popularity: 1,
+  posterPath: '/test.jpg',
+  releaseDate: '1',
+  title: 'test',
+  video: false,
+  voteAverage: 1,
+  voteCount: 1,
 };
+const mockGenres = [{
+  id: 1,
+  name: 'Action',
+},
+{
+  id: 2,
+  name: 'SciFi',
+}];
+const mockMovieTrailerKey = 'test';
+const mockUpdateMovieTrailerKey = jest.fn(() => 'tested');
 
-const setUp = (movieData) => {
-  const renderer = Renderer.create(<MovieCard movieData={movieData} />);
-  return renderer;
-};
+let renderer;
+let result;
+
+beforeEach(() => {
+  renderer = new ShallowRenderer();
+  renderer.render(
+    <MovieCard
+      movie={mockMovie}
+      genres={mockGenres}
+      isGrid={false}
+      movieTrailerKey={mockMovieTrailerKey}
+      updateMovieTrailerKey={mockUpdateMovieTrailerKey}
+    />,
+  );
+  result = renderer.getRenderOutput();
+});
+
+afterEach(() => {
+  renderer = null;
+  result = null;
+  jest.clearAllMocks();
+});
 
 describe('render MovieCard component', () => {
-  it('should be article tag', () => {
-    const result = setUp();
-    expect(result.toJSON().type).toBe('article');
+  it('render table layout correctly', () => {
+    expect(result).toMatchSnapshot();
   });
 
-  it('render component without props', () => {
-    const result = setUp();
-    expect(result.toJSON()).toMatchSnapshot();
+  it('render grid layout correctly', () => {
+    renderer.render(
+      <MovieCard
+        movie={mockMovie}
+        genres={mockGenres}
+        isGrid
+        movieTrailerKey={mockMovieTrailerKey}
+        updateMovieTrailerKey={mockUpdateMovieTrailerKey}
+      />,
+    );
+    result = renderer.getRenderOutput();
+    expect(result).toMatchSnapshot();
   });
 
-  it('render component with props', () => {
-    const result = setUp(data);
-    expect(result.toJSON()).toMatchSnapshot();
+  it('render handleModalToggle click correctly', () => {
+    jest.useFakeTimers();
+    const { handleModalToggle } = result.props.data;
+    handleModalToggle('test', true);
+    expect(document.body.style).toHaveProperty('overflow', '');
+    handleModalToggle(null, false);
+    jest.runAllTimers();
+    expect(document.body.style).toHaveProperty('overflow', 'hidden');
+    expect(setTimeout).toHaveBeenCalledTimes(2);
   });
 
-  it('render View Info button clicks', () => {
-    const result = setUp();
-    const viewInfoButton = result.root.findByProps({ children: 'View Info' });
-    act(() => viewInfoButton.props.onClick());
-    expect(result.toJSON()).toMatchSnapshot();
-  });
-
-  it('render infoBlock closeButton clicks', () => {
-    const result = setUp();
-    const viewInfoButton = result.root.findByProps({ children: 'View Info' });
-    act(() => viewInfoButton.props.onClick());
-    const closeButton = result.root.findByProps({ className: 'closeButton' });
-    act(() => closeButton.props.onClick());
-    expect(result.toJSON()).toMatchSnapshot();
+  it('render handleShowInfo click correctly', () => {
+    const { handleShowInfo } = result.props.data;
+    handleShowInfo();
+    result = renderer.getRenderOutput();
+    expect(result).toMatchSnapshot();
   });
 });

@@ -9,14 +9,7 @@ exports[`render MovieDetailsPage component render <View Info> button clicks corr
   >
     <img
       alt="Independance day"
-      src={
-        Object {
-          "canInstrument": true,
-          "createTransformer": [Function],
-          "getCacheKey": [Function],
-          "process": [Function],
-        }
-      }
+      src="./testurl"
     />
   </figure>
   <div
@@ -68,7 +61,7 @@ exports[`render MovieDetailsPage component render <View Info> button clicks corr
         <span
           className="primary"
         >
-          1.9
+          0.9
         </span>
       </div>
     </div>
@@ -87,6 +80,7 @@ exports[`render MovieDetailsPage component render <View Info> button clicks corr
     >
       <button
         className="secondary"
+        data-text="Watch Now"
         onClick={[Function]}
         type="button"
       >
@@ -94,6 +88,7 @@ exports[`render MovieDetailsPage component render <View Info> button clicks corr
       </button>
       <button
         className="secondary"
+        data-text="View Info"
         onClick={[Function]}
         type="button"
       >
@@ -113,14 +108,7 @@ exports[`render MovieDetailsPage component render <View Info> button clicks corr
   >
     <img
       alt="Independance day"
-      src={
-        Object {
-          "canInstrument": true,
-          "createTransformer": [Function],
-          "getCacheKey": [Function],
-          "process": [Function],
-        }
-      }
+      src="./testurl"
     />
   </figure>
   <div
@@ -172,7 +160,7 @@ exports[`render MovieDetailsPage component render <View Info> button clicks corr
         <span
           className="primary"
         >
-          1.9
+          0.9
         </span>
       </div>
     </div>
@@ -191,6 +179,7 @@ exports[`render MovieDetailsPage component render <View Info> button clicks corr
     >
       <button
         className="secondary"
+        data-text="Watch Now"
         onClick={[Function]}
         type="button"
       >
@@ -198,6 +187,7 @@ exports[`render MovieDetailsPage component render <View Info> button clicks corr
       </button>
       <button
         className="secondary"
+        data-text="View Info"
         onClick={[Function]}
         type="button"
       >
@@ -217,14 +207,7 @@ exports[`render MovieDetailsPage component render component correctly 1`] = `
   >
     <img
       alt="Independance day"
-      src={
-        Object {
-          "canInstrument": true,
-          "createTransformer": [Function],
-          "getCacheKey": [Function],
-          "process": [Function],
-        }
-      }
+      src="./testurl"
     />
   </figure>
   <div
@@ -276,7 +259,7 @@ exports[`render MovieDetailsPage component render component correctly 1`] = `
         <span
           className="primary"
         >
-          1.9
+          0.9
         </span>
       </div>
     </div>
@@ -295,6 +278,7 @@ exports[`render MovieDetailsPage component render component correctly 1`] = `
     >
       <button
         className="secondary"
+        data-text="Watch Now"
         onClick={[Function]}
         type="button"
       >
@@ -302,6 +286,7 @@ exports[`render MovieDetailsPage component render component correctly 1`] = `
       </button>
       <button
         className="secondary"
+        data-text="View Info"
         onClick={[Function]}
         type="button"
       >

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render SelectButton component render with props 1`] = `
+exports[`render SelectButton component render component correctly 1`] = `
 <span
   className="selectButton"
 >
@@ -8,7 +8,7 @@ exports[`render SelectButton component render with props 1`] = `
     className="filterButton"
     onClick={[Function]}
   >
-    Genre
+    Title
   </Button>
   <span
     className="selectArrow"
@@ -18,35 +18,50 @@ exports[`render SelectButton component render with props 1`] = `
   >
     <li
       className="selectOption"
-      data-value="Genre"
     >
-      Genre
+      <button
+        data-value=""
+        onClick={[Function]}
+        type="button"
+      >
+        All genres
+      </button>
     </li>
     <li
       className="selectOption"
-      data-value="item1"
     >
-      item1
+      <button
+        data-value={1}
+        onClick={[Function]}
+        type="button"
+      >
+        Action
+      </button>
     </li>
     <li
       className="selectOption"
-      data-value="item2"
     >
-      item2
+      <button
+        data-value={2}
+        onClick={[Function]}
+        type="button"
+      >
+        Scifi
+      </button>
     </li>
   </ul>
 </span>
 `;
 
-exports[`render SelectButton component render without props 1`] = `
+exports[`render SelectButton component render filterButton opening click correctly 1`] = `
 <span
-  className="selectButton"
+  className="selectButton active"
 >
   <Button
     className="filterButton"
     onClick={[Function]}
   >
-    Genre
+    Title
   </Button>
   <span
     className="selectArrow"
@@ -56,21 +71,89 @@ exports[`render SelectButton component render without props 1`] = `
   >
     <li
       className="selectOption"
-      data-value="Genre"
     >
-      Genre
+      <button
+        data-value=""
+        onClick={[Function]}
+        type="button"
+      >
+        All genres
+      </button>
     </li>
     <li
       className="selectOption"
-      data-value=""
     >
-      
+      <button
+        data-value={1}
+        onClick={[Function]}
+        type="button"
+      >
+        Action
+      </button>
     </li>
     <li
       className="selectOption"
-      data-value=""
     >
-      
+      <button
+        data-value={2}
+        onClick={[Function]}
+        type="button"
+      >
+        Scifi
+      </button>
+    </li>
+  </ul>
+</span>
+`;
+
+exports[`render SelectButton component render handleClick correctly 1`] = `
+<span
+  className="selectButton active"
+>
+  <Button
+    className="filterButton"
+    onClick={[Function]}
+  >
+    tested
+  </Button>
+  <span
+    className="selectArrow"
+  />
+  <ul
+    className="selectOptionsList"
+  >
+    <li
+      className="selectOption"
+    >
+      <button
+        data-value=""
+        onClick={[Function]}
+        type="button"
+      >
+        All genres
+      </button>
+    </li>
+    <li
+      className="selectOption"
+    >
+      <button
+        data-value={1}
+        onClick={[Function]}
+        type="button"
+      >
+        Action
+      </button>
+    </li>
+    <li
+      className="selectOption"
+    >
+      <button
+        data-value={2}
+        onClick={[Function]}
+        type="button"
+      >
+        Scifi
+      </button>
     </li>
   </ul>
 </span>

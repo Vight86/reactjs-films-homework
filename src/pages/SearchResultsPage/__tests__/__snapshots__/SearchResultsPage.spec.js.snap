@@ -1,337 +1,344 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render SearchResultsPage component render component without props 1`] = `
-<main
-  className="main"
->
-  <Header
-    className="secondary"
+exports[`render SearchResultsPage component render SearchResultsPage grid view correctly 1`] = `
+<React.Fragment>
+  <main
+    className="main"
   >
-    <FilterList>
-      <Button
-        className="filterButton"
-        onClick={[Function]}
-      >
-        Trending
-      </Button>
-      <Button
-        className="filterButton"
-        onClick={[Function]}
-      >
-        Top rated
-      </Button>
-      <Button
-        className="filterButton"
-        onClick={[Function]}
-      >
-        Coming soon
-      </Button>
-      <SelectButton
-        genres={
-          Array [
-            "action",
-            "scifi",
-          ]
-        }
+    <Header
+      className="secondary"
+    >
+      <FilterList>
+        <Button
+          className="filterButton"
+          onClick={[MockFunction]}
+        >
+          Trending
+        </Button>
+        <Button
+          className="filterButton"
+          onClick={[MockFunction]}
+        >
+          Top rated
+        </Button>
+        <Button
+          className="filterButton"
+          onClick={[MockFunction]}
+        >
+          Coming soon
+        </Button>
+        <SelectButton
+          filterMovies={[MockFunction]}
+          genres={
+            Array [
+              Object {
+                "id": 1,
+                "name": "Action",
+              },
+              Object {
+                "id": 2,
+                "name": "SciFi",
+              },
+            ]
+          }
+        >
+          Genre
+        </SelectButton>
+      </FilterList>
+      <ToggleButton
+        className="toggleGridButton"
+        handleGridToggle={[MockFunction]}
+        isGrid={true}
       />
-    </FilterList>
-    <ToggleButton
-      className="toggleGridButton"
+    </Header>
+    <MovieList
+      genres={
+        Array [
+          Object {
+            "id": 1,
+            "name": "Action",
+          },
+          Object {
+            "id": 2,
+            "name": "SciFi",
+          },
+        ]
+      }
+      isGrid={true}
+      movieTrailerKey="testMovieTrailerKey"
+      movies={
+        Array [
+          Object {
+            "adult": false,
+            "backdropPath": "/test.jpg",
+            "genreIds": Array [
+              1,
+              2,
+            ],
+            "id": 1,
+            "originalLanguage": "en",
+            "originalTitle": "test",
+            "overview": "test",
+            "popularity": 1,
+            "posterPath": "/test.jpg",
+            "releaseDate": "1",
+            "title": "test",
+            "video": false,
+            "voteAverage": 1,
+            "voteCount": 1,
+          },
+          Object {
+            "adult": false,
+            "backdropPath": "/test.jpg",
+            "genreIds": Array [
+              1,
+              2,
+            ],
+            "id": 1,
+            "originalLanguage": "en",
+            "originalTitle": "test",
+            "overview": "test",
+            "popularity": 1,
+            "posterPath": "/test.jpg",
+            "releaseDate": "1",
+            "title": "test",
+            "video": false,
+            "voteAverage": 1,
+            "voteCount": 1,
+          },
+        ]
+      }
+      updateMovieTrailerKey={[MockFunction]}
     />
-  </Header>
-  <MovieList
-    movies={
-      Array [
-        Object {
-          "genre": Array [
-            "scifi",
-            "comedy",
-          ],
-          "image": Object {
-            "canInstrument": true,
-            "createTransformer": [Function],
-            "getCacheKey": [Function],
-            "process": [Function],
+  </main>
+</React.Fragment>
+`;
+
+exports[`render SearchResultsPage component render SearchResultsPage table view correctly 1`] = `
+<React.Fragment>
+  <main
+    className="main"
+  >
+    <Header
+      className="secondary"
+    >
+      <FilterList>
+        <Button
+          className="filterButton"
+          onClick={[MockFunction]}
+        >
+          Trending
+        </Button>
+        <Button
+          className="filterButton"
+          onClick={[MockFunction]}
+        >
+          Top rated
+        </Button>
+        <Button
+          className="filterButton"
+          onClick={[MockFunction]}
+        >
+          Coming soon
+        </Button>
+        <SelectButton
+          filterMovies={[MockFunction]}
+          genres={
+            Array [
+              Object {
+                "id": 1,
+                "name": "Action",
+              },
+              Object {
+                "id": 2,
+                "name": "SciFi",
+              },
+            ]
+          }
+        >
+          Genre
+        </SelectButton>
+      </FilterList>
+      <ToggleButton
+        className="toggleGridButton"
+        handleGridToggle={[MockFunction]}
+        isGrid={false}
+      />
+    </Header>
+    <MovieList
+      genres={
+        Array [
+          Object {
+            "id": 1,
+            "name": "Action",
           },
-          "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-          "rating": 3.9,
-          "title": "Independance day",
-        },
-        Object {
-          "genre": Array [
-            "scifi",
-            "comedy",
-          ],
-          "image": Object {
-            "canInstrument": true,
-            "createTransformer": [Function],
-            "getCacheKey": [Function],
-            "process": [Function],
+          Object {
+            "id": 2,
+            "name": "SciFi",
           },
-          "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-          "rating": 3.9,
-          "title": "Independance day",
-        },
-        Object {
-          "genre": Array [
-            "scifi",
-            "comedy",
-          ],
-          "image": Object {
-            "canInstrument": true,
-            "createTransformer": [Function],
-            "getCacheKey": [Function],
-            "process": [Function],
+        ]
+      }
+      isGrid={false}
+      movieTrailerKey="testMovieTrailerKey"
+      movies={
+        Array [
+          Object {
+            "adult": false,
+            "backdropPath": "/test.jpg",
+            "genreIds": Array [
+              1,
+              2,
+            ],
+            "id": 1,
+            "originalLanguage": "en",
+            "originalTitle": "test",
+            "overview": "test",
+            "popularity": 1,
+            "posterPath": "/test.jpg",
+            "releaseDate": "1",
+            "title": "test",
+            "video": false,
+            "voteAverage": 1,
+            "voteCount": 1,
           },
-          "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-          "rating": 3.9,
-          "title": "Independance day",
-        },
-        Object {
-          "genre": Array [
-            "scifi",
-            "comedy",
-          ],
-          "image": Object {
-            "canInstrument": true,
-            "createTransformer": [Function],
-            "getCacheKey": [Function],
-            "process": [Function],
+          Object {
+            "adult": false,
+            "backdropPath": "/test.jpg",
+            "genreIds": Array [
+              1,
+              2,
+            ],
+            "id": 1,
+            "originalLanguage": "en",
+            "originalTitle": "test",
+            "overview": "test",
+            "popularity": 1,
+            "posterPath": "/test.jpg",
+            "releaseDate": "1",
+            "title": "test",
+            "video": false,
+            "voteAverage": 1,
+            "voteCount": 1,
           },
-          "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-          "rating": 3.9,
-          "title": "Independance day",
-        },
-        Object {
-          "genre": Array [
-            "scifi",
-            "comedy",
-          ],
-          "image": Object {
-            "canInstrument": true,
-            "createTransformer": [Function],
-            "getCacheKey": [Function],
-            "process": [Function],
+        ]
+      }
+      updateMovieTrailerKey={[MockFunction]}
+    />
+  </main>
+</React.Fragment>
+`;
+
+exports[`render SearchResultsPage component render loading status correctly 1`] = `
+<React.Fragment>
+  <main
+    className="main"
+  >
+    <Header
+      className="secondary"
+    >
+      <FilterList>
+        <Button
+          className="filterButton"
+          onClick={[MockFunction]}
+        >
+          Trending
+        </Button>
+        <Button
+          className="filterButton"
+          onClick={[MockFunction]}
+        >
+          Top rated
+        </Button>
+        <Button
+          className="filterButton"
+          onClick={[MockFunction]}
+        >
+          Coming soon
+        </Button>
+        <SelectButton
+          filterMovies={[MockFunction]}
+          genres={
+            Array [
+              Object {
+                "id": 1,
+                "name": "Action",
+              },
+              Object {
+                "id": 2,
+                "name": "SciFi",
+              },
+            ]
+          }
+        >
+          Genre
+        </SelectButton>
+      </FilterList>
+      <ToggleButton
+        className="toggleGridButton"
+        handleGridToggle={[MockFunction]}
+        isGrid={false}
+      />
+    </Header>
+    <MovieList
+      genres={
+        Array [
+          Object {
+            "id": 1,
+            "name": "Action",
           },
-          "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-          "rating": 3.9,
-          "title": "Independance day",
-        },
-        Object {
-          "genre": Array [
-            "scifi",
-            "comedy",
-          ],
-          "image": Object {
-            "canInstrument": true,
-            "createTransformer": [Function],
-            "getCacheKey": [Function],
-            "process": [Function],
+          Object {
+            "id": 2,
+            "name": "SciFi",
           },
-          "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-          "rating": 3.9,
-          "title": "Independance day",
-        },
-        Object {
-          "genre": Array [
-            "scifi",
-            "comedy",
-          ],
-          "image": Object {
-            "canInstrument": true,
-            "createTransformer": [Function],
-            "getCacheKey": [Function],
-            "process": [Function],
+        ]
+      }
+      isGrid={false}
+      movieTrailerKey="testMovieTrailerKey"
+      movies={
+        Array [
+          Object {
+            "adult": false,
+            "backdropPath": "/test.jpg",
+            "genreIds": Array [
+              1,
+              2,
+            ],
+            "id": 1,
+            "originalLanguage": "en",
+            "originalTitle": "test",
+            "overview": "test",
+            "popularity": 1,
+            "posterPath": "/test.jpg",
+            "releaseDate": "1",
+            "title": "test",
+            "video": false,
+            "voteAverage": 1,
+            "voteCount": 1,
           },
-          "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-          "rating": 3.9,
-          "title": "Independance day",
-        },
-        Object {
-          "genre": Array [
-            "scifi",
-            "comedy",
-          ],
-          "image": Object {
-            "canInstrument": true,
-            "createTransformer": [Function],
-            "getCacheKey": [Function],
-            "process": [Function],
+          Object {
+            "adult": false,
+            "backdropPath": "/test.jpg",
+            "genreIds": Array [
+              1,
+              2,
+            ],
+            "id": 1,
+            "originalLanguage": "en",
+            "originalTitle": "test",
+            "overview": "test",
+            "popularity": 1,
+            "posterPath": "/test.jpg",
+            "releaseDate": "1",
+            "title": "test",
+            "video": false,
+            "voteAverage": 1,
+            "voteCount": 1,
           },
-          "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-          "rating": 3.9,
-          "title": "Independance day",
-        },
-        Object {
-          "genre": Array [
-            "scifi",
-            "comedy",
-          ],
-          "image": Object {
-            "canInstrument": true,
-            "createTransformer": [Function],
-            "getCacheKey": [Function],
-            "process": [Function],
-          },
-          "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-          "rating": 3.9,
-          "title": "Independance day",
-        },
-        Object {
-          "genre": Array [
-            "scifi",
-            "comedy",
-          ],
-          "image": Object {
-            "canInstrument": true,
-            "createTransformer": [Function],
-            "getCacheKey": [Function],
-            "process": [Function],
-          },
-          "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-          "rating": 3.9,
-          "title": "Independance day",
-        },
-        Object {
-          "genre": Array [
-            "scifi",
-            "comedy",
-          ],
-          "image": Object {
-            "canInstrument": true,
-            "createTransformer": [Function],
-            "getCacheKey": [Function],
-            "process": [Function],
-          },
-          "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-          "rating": 3.9,
-          "title": "Independance day",
-        },
-        Object {
-          "genre": Array [
-            "scifi",
-            "comedy",
-          ],
-          "image": Object {
-            "canInstrument": true,
-            "createTransformer": [Function],
-            "getCacheKey": [Function],
-            "process": [Function],
-          },
-          "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-          "rating": 3.9,
-          "title": "Independance day",
-        },
-        Object {
-          "genre": Array [
-            "scifi",
-            "comedy",
-          ],
-          "image": Object {
-            "canInstrument": true,
-            "createTransformer": [Function],
-            "getCacheKey": [Function],
-            "process": [Function],
-          },
-          "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-          "rating": 3.9,
-          "title": "Independance day",
-        },
-        Object {
-          "genre": Array [
-            "scifi",
-            "comedy",
-          ],
-          "image": Object {
-            "canInstrument": true,
-            "createTransformer": [Function],
-            "getCacheKey": [Function],
-            "process": [Function],
-          },
-          "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-          "rating": 3.9,
-          "title": "Independance day",
-        },
-        Object {
-          "genre": Array [
-            "scifi",
-            "comedy",
-          ],
-          "image": Object {
-            "canInstrument": true,
-            "createTransformer": [Function],
-            "getCacheKey": [Function],
-            "process": [Function],
-          },
-          "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-          "rating": 3.9,
-          "title": "Independance day",
-        },
-        Object {
-          "genre": Array [
-            "scifi",
-            "comedy",
-          ],
-          "image": Object {
-            "canInstrument": true,
-            "createTransformer": [Function],
-            "getCacheKey": [Function],
-            "process": [Function],
-          },
-          "info": "There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding",
-          "rating": 3.9,
-          "title": "Independance day",
-        },
-      ]
-    }
-  />
-</main>
+        ]
+      }
+      updateMovieTrailerKey={[MockFunction]}
+    />
+  </main>
+  <Preloader />
+</React.Fragment>
 `;
