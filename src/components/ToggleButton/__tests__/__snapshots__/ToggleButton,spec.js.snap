@@ -3,6 +3,7 @@
 exports[`render toggleGridButton component render component with props 1`] = `
 <button
   className="testClass"
+  onClick={[Function]}
   type="button"
 >
   <span
@@ -13,7 +14,8 @@ exports[`render toggleGridButton component render component with props 1`] = `
 
 exports[`render toggleGridButton component render component without props 1`] = `
 <button
-  className="toggleGridButton"
+  className="undefined"
+  onClick={[Function]}
   type="button"
 >
   <span
