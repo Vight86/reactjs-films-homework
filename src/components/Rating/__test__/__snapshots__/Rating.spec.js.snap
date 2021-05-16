@@ -15,7 +15,7 @@ exports[`render Rating component render with props 1`] = `
   <span
     className="class"
   >
-    3.8
+    1.9
   </span>
 </div>
 `;
