@@ -3,6 +3,7 @@
 exports[`render form component handle onChange event correctly 1`] = `
 <form
   className="searchForm"
+  onSubmit={[Function]}
 >
   <input
     className="searchForm__input"
@@ -17,9 +18,28 @@ exports[`render form component handle onChange event correctly 1`] = `
 </form>
 `;
 
+exports[`render form component handle submit event correctly 1`] = `
+<form
+  className="searchForm"
+  onSubmit={[Function]}
+>
+  <input
+    className="searchForm__input"
+    onChange={[Function]}
+    value=""
+  />
+  <button
+    aria-label="Search"
+    className="searchForm__button"
+    type="submit"
+  />
+</form>
+`;
+
 exports[`render form component render component correctly 1`] = `
 <form
   className="searchForm"
+  onSubmit={[Function]}
 >
   <input
     className="searchForm__input"
