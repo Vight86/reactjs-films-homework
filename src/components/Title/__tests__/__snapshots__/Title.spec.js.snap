@@ -1,11 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render Title component render with props 1`] = `
-<h1
-  className="class"
+exports[`render Title component render className secondary correctly 1`] = `
+<h3
+  className="secondary"
 >
   title
-</h1>
+</h3>
+`;
+
+exports[`render Title component render className tertiary correctly 1`] = `
+<h3
+  className="tertiary"
+>
+  title
+</h3>
 `;
 
 exports[`render Title component render without props 1`] = `
