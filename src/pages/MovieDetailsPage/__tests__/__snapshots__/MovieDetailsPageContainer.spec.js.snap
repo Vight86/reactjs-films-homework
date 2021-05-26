@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render MovieDetailsPageContainer component render component correctly 1`] = `
+<MovieDetailsPage
+  currentMovieDetails={
+    Object {
+      "backdroPath": "/tested",
+      "genres": Array [],
+      "overview": "Tested overview",
+      "runtime": 0,
+      "title": "tested Title",
+      "voteAverage": 0,
+    }
+  }
+  handleModalToggle={[MockFunction]}
+  id="2"
+  isModalOpened={false}
+/>
+`;
+
+exports[`render MovieDetailsPageContainer component renders Preloader while getting data 1`] = `
+<MovieDetailsPage
+  currentMovieDetails={
+    Object {
+      "backdroPath": "/tested",
+      "genres": Array [],
+      "overview": "Tested overview",
+      "runtime": 0,
+      "title": "",
+      "voteAverage": 0,
+    }
+  }
+  handleModalToggle={[MockFunction]}
+  id="2"
+  isModalOpened={false}
+/>
+`;
