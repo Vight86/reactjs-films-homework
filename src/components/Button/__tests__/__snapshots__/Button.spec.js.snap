@@ -1,25 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render Button component render component with props 1`] = `
+exports[`render Button component render correctly 1`] = `
 <button
-  className="class"
+  className="primary"
   data-text="test"
-  onClick={null}
+  onClick={[MockFunction]}
   type="button"
 >
   test
 </button>
 `;
-
-exports[`render Button component render component without props 1`] = `
-<button
-  className=""
-  data-text=""
-  onClick={[Function]}
-  type="button"
->
-  
-</button>
-`;
-
-exports[`render Button component render onClick without props 1`] = `undefined`;
