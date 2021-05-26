@@ -2,22 +2,32 @@ import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import MovieSynopsis from '../index';
 
-const setUp = (className, isShown, children) => {
-  const renderer = new ShallowRenderer();
-  renderer.render(
-    <MovieSynopsis className={className} isShown={isShown}>{children}</MovieSynopsis>,
-  );
-  return renderer.getRenderOutput();
-};
+let renderer;
+let result;
 
-describe('render MovieList component', () => {
-  it('render component without props', () => {
-    const result = setUp();
+beforeEach(() => {
+  renderer = new ShallowRenderer();
+  renderer.render(
+    <MovieSynopsis className="test" isShown={false}>Text</MovieSynopsis>,
+  );
+  result = renderer.getRenderOutput();
+});
+
+afterEach(() => {
+  renderer = null;
+  result = null;
+});
+
+describe('render MovieSynopsis component', () => {
+  it('render correctly', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('render component with props', () => {
-    const result = setUp('class', true, 'children');
+  it('render correctly if info is shown', () => {
+    renderer.render(
+      <MovieSynopsis className="test" isShown>Text</MovieSynopsis>,
+    );
+    result = renderer.getRenderOutput();
     expect(result).toMatchSnapshot();
   });
 });

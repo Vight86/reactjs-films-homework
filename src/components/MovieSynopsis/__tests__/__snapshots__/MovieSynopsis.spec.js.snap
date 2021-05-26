@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render MovieList component render component with props 1`] = `
+exports[`render MovieSynopsis component render correctly 1`] = `
 <p
-  className="class active"
+  className="test"
 >
   <span>
-    children
+    Text
   </span>
 </p>
 `;
 
-exports[`render MovieList component render component without props 1`] = `
+exports[`render MovieSynopsis component render correctly if info is shown 1`] = `
 <p
-  className="primary"
+  className="test active"
 >
   <span>
-    
+    Text
   </span>
 </p>
 `;
