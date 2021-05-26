@@ -1,23 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render Button component render with props 1`] = `
+exports[`render Button component render correctly 1`] = `
 <figure
-  className="class"
+  className="test"
 >
   <img
     alt="test"
-    src="test"
-  />
-</figure>
-`;
-
-exports[`render Button component render without props 1`] = `
-<figure
-  className="inCard"
->
-  <img
-    alt=""
-    src=""
+    src="#"
   />
 </figure>
 `;
