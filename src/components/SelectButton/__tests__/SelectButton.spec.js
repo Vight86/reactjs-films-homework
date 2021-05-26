@@ -2,21 +2,27 @@ import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import SelectButton from '../index';
 
+const mockUseRouteMatchObject = {
+  url: '/1',
+  params: { id: '1' },
+};
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useRouteMatch: jest.fn(() => mockUseRouteMatchObject),
+}));
+
 const mockGenres = [
   { id: 1, name: 'Action' },
   { id: 2, name: 'Scifi' },
 ];
-const mockFiterMovies = jest.fn(() => 'tested');
 
 let renderer;
 let result;
+
 beforeEach(() => {
   renderer = new ShallowRenderer();
   renderer.render(
-    <SelectButton
-      genres={mockGenres}
-      filterMovies={mockFiterMovies}
-    >
+    <SelectButton genres={mockGenres}>
       Title
     </SelectButton>,
   );
@@ -29,28 +35,33 @@ afterEach(() => {
 });
 
 describe('render SelectButton component', () => {
-  it('render component correctly', () => {
+  it('render correctly', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('render handleClick correctly', () => {
-    const selectOptionButton = result.props.children[2].props.children[1][1].props.children;
-    const mockEvent = {
-      target: {
-        innerHTML: 'tested',
-        dataset: {
-          value: '2',
-        },
-      },
-    };
-    selectOptionButton.props.onClick(mockEvent);
+  it('render component correctly without movie id', () => {
+    mockUseRouteMatchObject.params.id = '';
     result = renderer.getRenderOutput();
     expect(result).toMatchSnapshot();
   });
 
-  it('render filterButton opening click correctly', () => {
+  it('render select genre opening click correctly', () => {
     const filterButton = result.props.children[0];
     filterButton.props.onClick();
+    result = renderer.getRenderOutput();
+    expect(result).toMatchSnapshot();
+  });
+
+  it('render select genre button active state correctly', () => {
+    mockUseRouteMatchObject.url = 'test';
+    result = renderer.getRenderOutput();
+    expect(result).toMatchSnapshot();
+  });
+
+  it('render handleClick correctly', () => {
+    const selectOption = result.props.children[2].props.children[0].props;
+    const { onClick } = selectOption.children.props;
+    onClick();
     result = renderer.getRenderOutput();
     expect(result).toMatchSnapshot();
   });

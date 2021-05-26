@@ -1,15 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render SelectButton component render component correctly 1`] = `
+exports[`render SelectButton component render component correctly without movie id 1`] = `
 <span
   className="selectButton"
 >
-  <Button
-    className="filterButton"
+  <NavLink
+    activeClassName="selectedOption_active"
+    className="selectedOption"
     onClick={[Function]}
+    to="/1/movie/1"
   >
-    Title
-  </Button>
+    Action
+  </NavLink>
   <span
     className="selectArrow"
   />
@@ -19,50 +21,45 @@ exports[`render SelectButton component render component correctly 1`] = `
     <li
       className="selectOption"
     >
-      <button
-        data-value=""
-        onClick={[Function]}
-        type="button"
-      >
-        All genres
-      </button>
-    </li>
-    <li
-      className="selectOption"
-    >
-      <button
+      <NavLink
+        className="selectOptionLink"
+        data-text="Action"
         data-value={1}
         onClick={[Function]}
-        type="button"
+        to="/1/movie/1"
       >
         Action
-      </button>
+      </NavLink>
     </li>
     <li
       className="selectOption"
     >
-      <button
+      <NavLink
+        className="selectOptionLink"
+        data-text="Scifi"
         data-value={2}
         onClick={[Function]}
-        type="button"
+        to="/2/movie/1"
       >
         Scifi
-      </button>
+      </NavLink>
     </li>
   </ul>
 </span>
 `;
 
-exports[`render SelectButton component render filterButton opening click correctly 1`] = `
+exports[`render SelectButton component render correctly 1`] = `
 <span
-  className="selectButton active"
+  className="selectButton"
 >
-  <Button
-    className="filterButton"
+  <NavLink
+    activeClassName="selectedOption_active"
+    className="selectedOption"
     onClick={[Function]}
+    to="/1/movie/1"
   >
-    Title
-  </Button>
+    Action
+  </NavLink>
   <span
     className="selectArrow"
   />
@@ -72,35 +69,28 @@ exports[`render SelectButton component render filterButton opening click correct
     <li
       className="selectOption"
     >
-      <button
-        data-value=""
-        onClick={[Function]}
-        type="button"
-      >
-        All genres
-      </button>
-    </li>
-    <li
-      className="selectOption"
-    >
-      <button
+      <NavLink
+        className="selectOptionLink"
+        data-text="Action"
         data-value={1}
         onClick={[Function]}
-        type="button"
+        to="/1/movie/1"
       >
         Action
-      </button>
+      </NavLink>
     </li>
     <li
       className="selectOption"
     >
-      <button
+      <NavLink
+        className="selectOptionLink"
+        data-text="Scifi"
         data-value={2}
         onClick={[Function]}
-        type="button"
+        to="/2/movie/1"
       >
         Scifi
-      </button>
+      </NavLink>
     </li>
   </ul>
 </span>
@@ -110,12 +100,14 @@ exports[`render SelectButton component render handleClick correctly 1`] = `
 <span
   className="selectButton active"
 >
-  <Button
-    className="filterButton"
+  <NavLink
+    activeClassName={null}
+    className="selectedOption"
     onClick={[Function]}
+    to="test"
   >
-    tested
-  </Button>
+    Title
+  </NavLink>
   <span
     className="selectArrow"
   />
@@ -125,35 +117,124 @@ exports[`render SelectButton component render handleClick correctly 1`] = `
     <li
       className="selectOption"
     >
-      <button
-        data-value=""
-        onClick={[Function]}
-        type="button"
-      >
-        All genres
-      </button>
-    </li>
-    <li
-      className="selectOption"
-    >
-      <button
+      <NavLink
+        className="selectOptionLink"
+        data-text="Action"
         data-value={1}
         onClick={[Function]}
-        type="button"
+        to="/1"
       >
         Action
-      </button>
+      </NavLink>
     </li>
     <li
       className="selectOption"
     >
-      <button
+      <NavLink
+        className="selectOptionLink"
+        data-text="Scifi"
         data-value={2}
         onClick={[Function]}
-        type="button"
+        to="/2"
       >
         Scifi
-      </button>
+      </NavLink>
+    </li>
+  </ul>
+</span>
+`;
+
+exports[`render SelectButton component render select genre button active state correctly 1`] = `
+<span
+  className="selectButton"
+>
+  <NavLink
+    activeClassName="selectedOption_active"
+    className="selectedOption"
+    onClick={[Function]}
+    to="/1"
+  >
+    Action
+  </NavLink>
+  <span
+    className="selectArrow"
+  />
+  <ul
+    className="selectOptionsList"
+  >
+    <li
+      className="selectOption"
+    >
+      <NavLink
+        className="selectOptionLink"
+        data-text="Action"
+        data-value={1}
+        onClick={[Function]}
+        to="/1"
+      >
+        Action
+      </NavLink>
+    </li>
+    <li
+      className="selectOption"
+    >
+      <NavLink
+        className="selectOptionLink"
+        data-text="Scifi"
+        data-value={2}
+        onClick={[Function]}
+        to="/2"
+      >
+        Scifi
+      </NavLink>
+    </li>
+  </ul>
+</span>
+`;
+
+exports[`render SelectButton component render select genre opening click correctly 1`] = `
+<span
+  className="selectButton active"
+>
+  <NavLink
+    activeClassName="selectedOption_active"
+    className="selectedOption"
+    onClick={[Function]}
+    to="/1"
+  >
+    Action
+  </NavLink>
+  <span
+    className="selectArrow"
+  />
+  <ul
+    className="selectOptionsList"
+  >
+    <li
+      className="selectOption"
+    >
+      <NavLink
+        className="selectOptionLink"
+        data-text="Action"
+        data-value={1}
+        onClick={[Function]}
+        to="/1"
+      >
+        Action
+      </NavLink>
+    </li>
+    <li
+      className="selectOption"
+    >
+      <NavLink
+        className="selectOptionLink"
+        data-text="Scifi"
+        data-value={2}
+        onClick={[Function]}
+        to="/2"
+      >
+        Scifi
+      </NavLink>
     </li>
   </ul>
 </span>
