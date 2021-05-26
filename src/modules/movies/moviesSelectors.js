@@ -1,2 +1,2 @@
-// eslint-disable-next-line import/prefer-default-export
 export const selectMovies = (state) => state.movies;
+export const selectMovieDetails = (state) => state.movies.currentMovieDetails;

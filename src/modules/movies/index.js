@@ -1,5 +1,11 @@
 export { default } from './moviesReducer';
 export {
-  loadMovies, addMovies, currentMovieTrailerKeyAdded, addCurrentMovieTrailerKey,
+  MOVIES_LOADED,
+  MOVIES_ADDED,
+  loadMovies,
+  addMovies,
+  currentMovieTrailerKeyAdded,
+  addCurrentMovieTrailerKey,
+  loadMovieDetails,
 } from './moviesActions';
-export { selectMovies } from './moviesSelectors';
+export { selectMovies, selectMovieDetails } from './moviesSelectors';

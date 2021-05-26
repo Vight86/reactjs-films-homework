@@ -1,7 +1,18 @@
 import { createStore } from 'redux';
-import { MOVIES_LOADED, MOVIES_ADDED, MOVIE_TRAILER_KEY_ADDED } from '../moviesActions';
+import {
+  MOVIES_LOADED,
+  MOVIES_ADDED,
+  MOVIE_TRAILER_KEY_ADDED,
+  MOVIE_DETAILS_LOADED,
+} from '../moviesActions';
+
 import moviesReducer, {
-  loadMovies, addMovies, addCurrentMovieTrailerKey, selectMovies,
+  loadMovies,
+  addMovies,
+  loadMovieDetails,
+  addCurrentMovieTrailerKey,
+  selectMovies,
+  selectMovieDetails,
 } from '../index';
 
 let mockMovie;
@@ -9,6 +20,8 @@ let mockMovies;
 let initialState;
 let mockMoviesLoaded;
 let expectedStateAfterMoviesLoaded;
+let mockMovieDetailsLoaded;
+let expectedStateAfterMovieDetailsLoaded;
 
 beforeEach(() => {
   mockMovie = {
@@ -36,6 +49,14 @@ beforeEach(() => {
       pageSize: 16,
       totalPages: 0,
       currentMovieTrailerKey: '',
+      currentMovieDetails: {
+        title: '',
+        backdroPath: '',
+        genres: [],
+        runtime: 0,
+        voteAverage: 0,
+        overview: '',
+      },
       movies: [],
     },
   };
@@ -55,7 +76,48 @@ beforeEach(() => {
       pageSize: 16,
       totalPages: 2,
       currentMovieTrailerKey: '',
+      currentMovieDetails: {
+        title: '',
+        backdroPath: '',
+        genres: [],
+        runtime: 0,
+        voteAverage: 0,
+        overview: '',
+      },
       movies: mockMovies,
+    },
+  };
+
+  mockMovieDetailsLoaded = {
+    type: MOVIE_DETAILS_LOADED,
+    payload: {
+      movieDetails: {
+        title: 'test',
+        backdroPath: '/test',
+        genres: [1, 2],
+        runtime: 100,
+        voteAverage: 5,
+        overview: 'test overview',
+      },
+    },
+  };
+
+  expectedStateAfterMovieDetailsLoaded = {
+    movies: {
+      page: 1,
+      pageSize: 16,
+      totalPages: 0,
+      currentMovieTrailerKey: '',
+      currentMovieDetails: {
+        title: 'test',
+        backdroPath: '/test',
+        genres: [1, 2],
+        runtime: 100,
+        voteAverage: 5,
+        overview: 'test overview',
+      },
+      movies: [],
+
     },
   };
 });
@@ -66,6 +128,8 @@ afterEach(() => {
   initialState = null;
   mockMoviesLoaded = null;
   expectedStateAfterMoviesLoaded = null;
+  mockMovieDetailsLoaded = null;
+  expectedStateAfterMovieDetailsLoaded = null;
 });
 
 describe('test movies actions', () => {
@@ -82,11 +146,18 @@ describe('test movies actions', () => {
     const mockDispatch = jest.fn(() => store.dispatch(mockMoviesLoaded));
 
     global.fetch = jest.fn(() => Promise.resolve({
-      json: () => Promise.resolve(expectedStateAfterMoviesLoaded),
+      json: () => Promise.resolve(expectedStateAfterMoviesLoaded.movies),
     }));
 
     await loadMovies()(mockDispatch);
     expect(store.getState()).toEqual(expectedStateAfterMoviesLoaded.movies);
+  });
+
+  it('handles loadMovies action with error correctly', async () => {
+    const mockDispatch = jest.fn();
+    global.fetch = jest.fn(() => { throw new Error('tested'); });
+    await loadMovies()(mockDispatch);
+    expect(global.fetch).toThrow('tested');
   });
 
   it('handles addMovies action correctly', async () => {
@@ -104,7 +175,15 @@ describe('test movies actions', () => {
         pageSize: 16,
         totalPages: 0,
         currentMovieTrailerKey: '',
-        movies: mockMovies,
+        currentMovieDetails: {
+          title: '',
+          backdroPath: '',
+          genres: [],
+          runtime: 0,
+          voteAverage: 0,
+          overview: '',
+        },
+        movies: [...mockMovies, ...mockMovies],
       },
     };
 
@@ -115,6 +194,13 @@ describe('test movies actions', () => {
 
     await addMovies()(mockDispatch);
     expect(store.getState()).toEqual(expectedStateAfterMoviesAdded.movies);
+  });
+
+  it('handles addMovies action with error correctly', async () => {
+    const mockDispatch = jest.fn();
+    global.fetch = jest.fn(() => { throw new Error('tested'); });
+    await addMovies()(mockDispatch);
+    expect(global.fetch).toThrow('tested');
   });
 
   it('handles addCurrentMovieTrailerKey action correctly with Trailer type in results', async () => {
@@ -131,6 +217,14 @@ describe('test movies actions', () => {
         pageSize: 16,
         totalPages: 0,
         currentMovieTrailerKey: 'testKey',
+        currentMovieDetails: {
+          title: '',
+          backdroPath: '',
+          genres: [],
+          runtime: 0,
+          voteAverage: 0,
+          overview: '',
+        },
         movies: [],
       },
     };
@@ -170,6 +264,14 @@ describe('test movies actions', () => {
         pageSize: 16,
         totalPages: 0,
         currentMovieTrailerKey: 'noTrailerTestKey',
+        currentMovieDetails: {
+          title: '',
+          backdroPath: '',
+          genres: [],
+          runtime: 0,
+          voteAverage: 0,
+          overview: '',
+        },
         movies: [],
       },
     };
@@ -181,7 +283,7 @@ describe('test movies actions', () => {
           key: 'noTrailerTestKey',
         },
         {
-          type: 'NotTrailer',
+          type: 'NotTrailerType',
           key: 'testkey2',
         },
       ],
@@ -193,6 +295,17 @@ describe('test movies actions', () => {
     const mockDispatch = jest.fn(() => store.dispatch(mockCurrentMovieTrailerKeyAdded));
     await addCurrentMovieTrailerKey()(mockDispatch);
     expect(store.getState()).toEqual(expectedStateAfterTrailerKeyAdded.movies);
+  });
+
+  it('handles loadMovieDetails action correctly', async () => {
+    const mockDispatch = jest.fn(() => store.dispatch(mockMovieDetailsLoaded));
+
+    global.fetch = jest.fn(() => Promise.resolve({
+      json: () => Promise.resolve(expectedStateAfterMovieDetailsLoaded),
+    }));
+
+    await loadMovieDetails()(mockDispatch);
+    expect(store.getState()).toEqual(expectedStateAfterMovieDetailsLoaded.movies);
   });
 });
 
@@ -207,9 +320,19 @@ describe('test moviesReducer', () => {
   });
 });
 
+it('moviesReducer handles movieDtailsLoaded action correctly', () => {
+  expect(moviesReducer(initialState.movies, mockMovieDetailsLoaded))
+    .toEqual(expectedStateAfterMovieDetailsLoaded.movies);
+});
+
 describe('test movies selectors', () => {
   it('handles selectMovies selector correctly', () => {
     expect(selectMovies(initialState))
       .toEqual(initialState.movies);
+  });
+
+  it('handles selectMovieDetails selector correctly', () => {
+    expect(selectMovieDetails(initialState))
+      .toEqual(initialState.movies.currentMovieDetails);
   });
 });
