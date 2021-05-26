@@ -4,7 +4,7 @@ import MovieCard from '../MovieCard/index';
 import styles from './MovieList.scss';
 
 const MovieList = ({
-  movies, genres, isGrid, movieTrailerKey, updateMovieTrailerKey,
+  movies, genres, isGrid, isModalOpened, handleModalToggle,
 }) => {
   const list = movies.map((movie) => (
     <MovieCard
@@ -12,8 +12,8 @@ const MovieList = ({
       movie={movie}
       genres={genres}
       isGrid={isGrid}
-      movieTrailerKey={movieTrailerKey}
-      updateMovieTrailerKey={updateMovieTrailerKey}
+      isModalOpened={isModalOpened}
+      handleModalToggle={handleModalToggle}
     />
   ));
 
@@ -28,12 +28,8 @@ MovieList.propTypes = {
   movies: propTypes.arrayOf(propTypes.object).isRequired,
   genres: propTypes.arrayOf(propTypes.object).isRequired,
   isGrid: propTypes.bool.isRequired,
-  movieTrailerKey: propTypes.string,
-  updateMovieTrailerKey: propTypes.func.isRequired,
-};
-
-MovieList.defaultProps = {
-  movieTrailerKey: null,
+  isModalOpened: propTypes.bool.isRequired,
+  handleModalToggle: propTypes.func.isRequired,
 };
 
 export default MovieList;

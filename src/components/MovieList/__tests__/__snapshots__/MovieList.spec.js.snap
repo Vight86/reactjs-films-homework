@@ -17,7 +17,9 @@ exports[`render MovieList component render grid layout correctly 1`] = `
         },
       ]
     }
+    handleModalToggle={[MockFunction]}
     isGrid={true}
+    isModalOpened={false}
     movie={
       Object {
         "adult": false,
@@ -39,8 +41,6 @@ exports[`render MovieList component render grid layout correctly 1`] = `
         "voteCount": 1,
       }
     }
-    movieTrailerKey="test"
-    updateMovieTrailerKey={[MockFunction]}
   />
   <MovieCard
     genres={
@@ -55,7 +55,9 @@ exports[`render MovieList component render grid layout correctly 1`] = `
         },
       ]
     }
+    handleModalToggle={[MockFunction]}
     isGrid={true}
+    isModalOpened={false}
     movie={
       Object {
         "adult": false,
@@ -77,8 +79,6 @@ exports[`render MovieList component render grid layout correctly 1`] = `
         "voteCount": 1,
       }
     }
-    movieTrailerKey="test"
-    updateMovieTrailerKey={[MockFunction]}
   />
 </section>
 `;
@@ -100,7 +100,9 @@ exports[`render MovieList component render table layout correctly 1`] = `
         },
       ]
     }
+    handleModalToggle={[MockFunction]}
     isGrid={false}
+    isModalOpened={false}
     movie={
       Object {
         "adult": false,
@@ -122,8 +124,6 @@ exports[`render MovieList component render table layout correctly 1`] = `
         "voteCount": 1,
       }
     }
-    movieTrailerKey="test"
-    updateMovieTrailerKey={[MockFunction]}
   />
   <MovieCard
     genres={
@@ -138,7 +138,9 @@ exports[`render MovieList component render table layout correctly 1`] = `
         },
       ]
     }
+    handleModalToggle={[MockFunction]}
     isGrid={false}
+    isModalOpened={false}
     movie={
       Object {
         "adult": false,
@@ -160,8 +162,6 @@ exports[`render MovieList component render table layout correctly 1`] = `
         "voteCount": 1,
       }
     }
-    movieTrailerKey="test"
-    updateMovieTrailerKey={[MockFunction]}
   />
 </section>
 `;
