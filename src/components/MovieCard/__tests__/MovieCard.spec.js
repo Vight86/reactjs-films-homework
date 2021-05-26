@@ -2,54 +2,59 @@ import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import MovieCard from '../index';
 
-const mockMovie = {
-  adult: false,
-  backdropPath: '/test.jpg',
-  genreIds: [1, 2],
-  id: 1,
-  originalLanguage: 'en',
-  originalTitle: 'test',
-  overview: 'test',
-  popularity: 1,
-  posterPath: '/test.jpg',
-  releaseDate: '1',
-  title: 'test',
-  video: false,
-  voteAverage: 1,
-  voteCount: 1,
-};
-const mockGenres = [{
-  id: 1,
-  name: 'Action',
-},
-{
-  id: 2,
-  name: 'SciFi',
-}];
-const mockMovieTrailerKey = 'test';
-const mockUpdateMovieTrailerKey = jest.fn(() => 'tested');
-
+let mockMovie;
+let mockGenres;
+let mockHandleModalToggle;
 let renderer;
 let result;
 
 beforeEach(() => {
+  mockMovie = {
+    adult: false,
+    backdropPath: '/test.jpg',
+    genreIds: [1, 2],
+    id: 1,
+    originalLanguage: 'en',
+    originalTitle: 'test',
+    overview: 'test',
+    popularity: 1,
+    posterPath: '/test.jpg',
+    releaseDate: '1',
+    title: 'test',
+    video: false,
+    voteAverage: 1,
+    voteCount: 1,
+  };
+  mockGenres = [{
+    id: 1,
+    name: 'Action',
+  },
+  {
+    id: 2,
+    name: 'SciFi',
+  }];
+  mockHandleModalToggle = jest.fn(() => 'tested');
+
   renderer = new ShallowRenderer();
   renderer.render(
     <MovieCard
+      key={mockMovie.id}
       movie={mockMovie}
       genres={mockGenres}
       isGrid={false}
-      movieTrailerKey={mockMovieTrailerKey}
-      updateMovieTrailerKey={mockUpdateMovieTrailerKey}
+      isModalOpened={false}
+      handleModalToggle={mockHandleModalToggle}
     />,
   );
   result = renderer.getRenderOutput();
 });
 
 afterEach(() => {
+  mockMovie = null;
+  mockGenres = null;
+  mockHandleModalToggle.mockClear();
   renderer = null;
   result = null;
-  jest.clearAllMocks();
 });
 
 describe('render MovieCard component', () => {
@@ -60,11 +65,12 @@ describe('render MovieCard component', () => {
   it('render grid layout correctly', () => {
     renderer.render(
       <MovieCard
+        key={mockMovie.id}
         movie={mockMovie}
         genres={mockGenres}
         isGrid
-        movieTrailerKey={mockMovieTrailerKey}
-        updateMovieTrailerKey={mockUpdateMovieTrailerKey}
+        isModalOpened={false}
+        handleModalToggle={mockHandleModalToggle}
       />,
     );
     result = renderer.getRenderOutput();
@@ -72,14 +78,11 @@ describe('render MovieCard component', () => {
   });
 
   it('render handleModalToggle click correctly', () => {
-    jest.useFakeTimers();
     const { handleModalToggle } = result.props.data;
     handleModalToggle('test', true);
-    expect(document.body.style).toHaveProperty('overflow', '');
+    expect(mockHandleModalToggle).toHaveBeenCalled();
     handleModalToggle(null, false);
-    jest.runAllTimers();
-    expect(document.body.style).toHaveProperty('overflow', 'hidden');
-    expect(setTimeout).toHaveBeenCalledTimes(2);
+    expect(mockHandleModalToggle).toHaveBeenCalled();
   });
 
   it('render handleShowInfo click correctly', () => {

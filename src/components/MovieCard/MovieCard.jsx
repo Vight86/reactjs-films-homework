@@ -4,26 +4,14 @@ import MovieCardGrid from './MovieCardGrid/index';
 import MovieCardTable from './MovieCardTable/index';
 
 const MovieCard = ({
-  movie, genres, isGrid, movieTrailerKey, updateMovieTrailerKey,
+  movie, genres, isGrid, isModalOpened, handleModalToggle,
 }) => {
   const [isInfoShown, setIsInfoShown] = useState(false);
   const handleShowInfo = () => setIsInfoShown(!isInfoShown);
 
-  const [isModalOpened, setIsModalOpened] = useState(false);
-
-  const handleModalToggle = (movieId, isOpened) => {
-    const paddingRight = window.innerWidth - document.documentElement.clientWidth;
-    updateMovieTrailerKey(movieId);
-    setTimeout(() => { setIsModalOpened(!isOpened); }, 0);
-    document.body.style.overflow = !isOpened ? 'hidden' : '';
-    document.body.style.paddingRight = !isOpened ? `${paddingRight}px` : '0px';
-  };
-
   const data = {
     movie,
     genres,
-    movieTrailerKey,
-    updateMovieTrailerKey,
     isInfoShown,
     handleShowInfo,
     isModalOpened,
@@ -54,8 +42,8 @@ MovieCard.propTypes = {
   }).isRequired,
   genres: propTypes.arrayOf(propTypes.object).isRequired,
   isGrid: propTypes.bool.isRequired,
-  movieTrailerKey: propTypes.string,
-  updateMovieTrailerKey: propTypes.func,
+  isModalOpened: propTypes.bool.isRequired,
+  handleModalToggle: propTypes.func.isRequired,
 };
 
 export default MovieCard;
