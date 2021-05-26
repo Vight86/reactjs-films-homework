@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render form component handle onChange event correctly 1`] = `
+exports[`render SearchForm component handle onChange event correctly 1`] = `
 <form
   className="searchForm"
   onSubmit={[Function]}
@@ -18,7 +18,7 @@ exports[`render form component handle onChange event correctly 1`] = `
 </form>
 `;
 
-exports[`render form component handle submit event correctly 1`] = `
+exports[`render SearchForm component handle submit event correctly 1`] = `
 <form
   className="searchForm"
   onSubmit={[Function]}
@@ -36,7 +36,7 @@ exports[`render form component handle submit event correctly 1`] = `
 </form>
 `;
 
-exports[`render form component render component correctly 1`] = `
+exports[`render SearchForm component render correctly 1`] = `
 <form
   className="searchForm"
   onSubmit={[Function]}

@@ -9,15 +9,14 @@ const GenreList = ({ className, order, children }) => (
 );
 
 GenreList.propTypes = {
-  className: propTypes.string,
+  className: propTypes.string.isRequired,
   order: propTypes.number,
-  children: propTypes.arrayOf(propTypes.string),
+  children: propTypes.arrayOf(propTypes.string).isRequired,
 };
 
 GenreList.defaultProps = {
-  className: '',
   order: null,
-  children: [''],
+
 };
 
 export default GenreList;

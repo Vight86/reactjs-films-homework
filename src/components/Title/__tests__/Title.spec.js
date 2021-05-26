@@ -2,25 +2,24 @@ import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import Title from '../index';
 
-const setUp = (className, title) => {
-  const renderer = new ShallowRenderer();
-  renderer.render(<Title className={className}>{title}</Title>);
-  return renderer.getRenderOutput();
-};
+let renderer;
+let result;
+
+beforeEach(() => {
+  renderer = new ShallowRenderer();
+  renderer.render(<Title className="primary">Test Title</Title>);
+  result = renderer.getRenderOutput();
+});
+
+afterEach(() => {
+  renderer = null;
+  result = null;
+});
 
 describe('render Title component', () => {
-  it('render without props', () => {
-    const result = setUp();
-    expect(result).toMatchSnapshot();
-  });
-
   it('render className secondary correctly', () => {
-    const result = setUp('secondary', 'title');
-    expect(result).toMatchSnapshot();
-  });
-
-  it('render className tertiary correctly', () => {
-    const result = setUp('tertiary', 'title');
+    renderer.render(<Title className="secondary">Test Title</Title>);
+    result = renderer.getRenderOutput();
     expect(result).toMatchSnapshot();
   });
 });

@@ -2,11 +2,19 @@
 
 exports[`testing redux store redux store is setup correctly 1`] = `
 Object {
-  "filters": Object {
-    "genreId": 0,
-  },
   "genres": Array [],
+  "isGrid": Object {
+    "isGrid": true,
+  },
   "movies": Object {
+    "currentMovieDetails": Object {
+      "backdroPath": "",
+      "genres": Array [],
+      "overview": "",
+      "runtime": 0,
+      "title": "",
+      "voteAverage": 0,
+    },
     "currentMovieTrailerKey": "",
     "movies": Array [],
     "page": 1,
@@ -16,11 +24,18 @@ Object {
   "query": Object {
     "adult": false,
     "apiKey": "e5dc29ce2b6d31bb5c5306f6a7469ba2",
-    "apiPath": "/movie/popular",
     "basePath": "https://api.themoviedb.org/3",
-    "genresPath": "/genre/movie/list",
     "lang": "en-US",
-    "searchQuery": "",
+  },
+  "router": Object {
+    "action": "POP",
+    "location": Object {
+      "hash": "",
+      "pathname": "/",
+      "query": Object {},
+      "search": "",
+      "state": undefined,
+    },
   },
   "status": Object {
     "status": "loading",

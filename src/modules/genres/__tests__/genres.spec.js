@@ -2,23 +2,37 @@ import { createStore } from 'redux';
 import { GENRES_LOADED } from '../genresActions';
 import genresReducer, { loadGenres, selectGenres } from '../index';
 
-const genres = [{ id: 1, name: 'Action' }];
-const expectedAction = {
-  type: GENRES_LOADED,
-  payload: {
-    genres,
-  },
-};
-const initialState = {
-  genres: [],
-};
-const expectedState = {
-  genres,
-};
+let genres;
+let expectedAction;
+let initialState;
+let expectedState;
 
 global.fetch = jest.fn(() => Promise.resolve({
   json: () => Promise.resolve({ genres }),
 }));
+
+beforeEach(() => {
+  genres = [{ id: 1, name: 'Action' }];
+  expectedAction = {
+    type: GENRES_LOADED,
+    payload: {
+      genres,
+    },
+  };
+  initialState = {
+    genres: [],
+  };
+  expectedState = {
+    genres,
+  };
+});
+
+afterEach(() => {
+  genres = null;
+  expectedAction = null;
+  initialState = null;
+  expectedState = null;
+});
 
 describe('test genres actions', () => {
   it('handles loadGenres action correctly', async () => {

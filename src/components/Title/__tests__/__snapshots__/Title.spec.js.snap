@@ -4,22 +4,6 @@ exports[`render Title component render className secondary correctly 1`] = `
 <h3
   className="secondary"
 >
-  title
+  Test Title
 </h3>
-`;
-
-exports[`render Title component render className tertiary correctly 1`] = `
-<h3
-  className="tertiary"
->
-  title
-</h3>
-`;
-
-exports[`render Title component render without props 1`] = `
-<h1
-  className=""
->
-  
-</h1>
 `;

@@ -9,12 +9,11 @@ const Cover = ({ className, children }) => (
 );
 
 Cover.propTypes = {
-  className: propTypes.string,
+  className: propTypes.string.isRequired,
   children: propTypes.element,
 };
 
 Cover.defaultProps = {
-  className: 'inCard',
   children: <img src="" alt="" />,
 };
 

@@ -2,34 +2,247 @@
 
 exports[`render App component App renders correctly 1`] = `
 <React.Fragment>
-  <Header
-    className="primary"
-  >
-    <Logo
-      theme="primary"
-    />
-    <SearchForm
-      handleSearchSubmit={[Function]}
-    />
-  </Header>
-  <SearchResultsPageContainer />
+  <ErrorBoundary>
+    <Header
+      className="primary"
+    >
+      <Logo
+        className="primary"
+      >
+        Films
+      </Logo>
+      <SearchForm
+        handleSearchSubmit={[Function]}
+      />
+    </Header>
+  </ErrorBoundary>
+  <ErrorBoundary>
+    <mockConstructor
+      path="/:category/movie/:id"
+    >
+      <MovieDetailsPageContainer
+        handleModalToggle={[Function]}
+        isModalOpened={false}
+      />
+    </mockConstructor>
+  </ErrorBoundary>
+  <ErrorBoundary>
+    <mockConstructor
+      path="/:category"
+    >
+      <SearchResultsPageContainer
+        handleModalToggle={[Function]}
+        isModalOpened={false}
+      />
+    </mockConstructor>
+  </ErrorBoundary>
   <Footer />
+  <ErrorBoundary>
+    <Modal
+      handleModalToggle={[Function]}
+      isModalOpened={false}
+      movieTrailerKey="test"
+    />
+  </ErrorBoundary>
+  <mockConstructor
+    to="/popular"
+  />
 </React.Fragment>
 `;
 
-exports[`render App component App renders handleSearchSubmit correctly 1`] = `
+exports[`render App component renders handleModalToggle to close modal correctly 1`] = `
 <React.Fragment>
-  <Header
-    className="primary"
-  >
-    <Logo
-      theme="primary"
-    />
-    <SearchForm
-      handleSearchSubmit={[Function]}
-    />
-  </Header>
-  <SearchResultsPageContainer />
+  <ErrorBoundary>
+    <Header
+      className="primary"
+    >
+      <Logo
+        className="primary"
+      >
+        Films
+      </Logo>
+      <SearchForm
+        handleSearchSubmit={[Function]}
+      />
+    </Header>
+  </ErrorBoundary>
+  <ErrorBoundary>
+    <mockConstructor
+      path="/:category/movie/:id"
+    >
+      <MovieDetailsPageContainer
+        handleModalToggle={[Function]}
+        isModalOpened={true}
+      />
+    </mockConstructor>
+  </ErrorBoundary>
+  <ErrorBoundary>
+    <mockConstructor
+      path="/:category"
+    >
+      <SearchResultsPageContainer
+        handleModalToggle={[Function]}
+        isModalOpened={true}
+      />
+    </mockConstructor>
+  </ErrorBoundary>
   <Footer />
+  <ErrorBoundary>
+    <Modal
+      handleModalToggle={[Function]}
+      isModalOpened={true}
+      movieTrailerKey="test"
+    />
+  </ErrorBoundary>
+  <mockConstructor
+    to="/popular"
+  />
+</React.Fragment>
+`;
+
+exports[`render App component renders handleModalToggle to open modal correctly 1`] = `
+<React.Fragment>
+  <ErrorBoundary>
+    <Header
+      className="primary"
+    >
+      <Logo
+        className="primary"
+      >
+        Films
+      </Logo>
+      <SearchForm
+        handleSearchSubmit={[Function]}
+      />
+    </Header>
+  </ErrorBoundary>
+  <ErrorBoundary>
+    <mockConstructor
+      path="/:category/movie/:id"
+    >
+      <MovieDetailsPageContainer
+        handleModalToggle={[Function]}
+        isModalOpened={false}
+      />
+    </mockConstructor>
+  </ErrorBoundary>
+  <ErrorBoundary>
+    <mockConstructor
+      path="/:category"
+    >
+      <SearchResultsPageContainer
+        handleModalToggle={[Function]}
+        isModalOpened={false}
+      />
+    </mockConstructor>
+  </ErrorBoundary>
+  <Footer />
+  <ErrorBoundary>
+    <Modal
+      handleModalToggle={[Function]}
+      isModalOpened={false}
+      movieTrailerKey="test"
+    />
+  </ErrorBoundary>
+  <mockConstructor
+    to="/popular"
+  />
+</React.Fragment>
+`;
+
+exports[`render App component renders handleSearchSubmit correctly 1`] = `
+<React.Fragment>
+  <ErrorBoundary>
+    <Header
+      className="primary"
+    >
+      <Logo
+        className="primary"
+      >
+        Films
+      </Logo>
+      <SearchForm
+        handleSearchSubmit={[Function]}
+      />
+    </Header>
+  </ErrorBoundary>
+  <ErrorBoundary>
+    <mockConstructor
+      path="/:category/movie/:id"
+    >
+      <MovieDetailsPageContainer
+        handleModalToggle={[Function]}
+        isModalOpened={false}
+      />
+    </mockConstructor>
+  </ErrorBoundary>
+  <ErrorBoundary>
+    <mockConstructor
+      path="/:category"
+    >
+      <SearchResultsPageContainer
+        handleModalToggle={[Function]}
+        isModalOpened={false}
+      />
+    </mockConstructor>
+  </ErrorBoundary>
+  <Footer />
+  <ErrorBoundary>
+    <Modal
+      handleModalToggle={[Function]}
+      isModalOpened={false}
+      movieTrailerKey="test"
+    />
+  </ErrorBoundary>
+  <mockConstructor
+    to="/popular"
+  />
+</React.Fragment>
+`;
+
+exports[`render App component renders no redirect from inner routes 1`] = `
+<React.Fragment>
+  <ErrorBoundary>
+    <Header
+      className="primary"
+    >
+      <Logo
+        className="primary"
+      >
+        Films
+      </Logo>
+      <SearchForm
+        handleSearchSubmit={[Function]}
+      />
+    </Header>
+  </ErrorBoundary>
+  <ErrorBoundary>
+    <mockConstructor
+      path="/:category/movie/:id"
+    >
+      <MovieDetailsPageContainer
+        handleModalToggle={[Function]}
+        isModalOpened={false}
+      />
+    </mockConstructor>
+  </ErrorBoundary>
+  <ErrorBoundary>
+    <mockConstructor
+      path="/:category"
+    >
+      <SearchResultsPageContainer
+        handleModalToggle={[Function]}
+        isModalOpened={false}
+      />
+    </mockConstructor>
+  </ErrorBoundary>
+  <Footer />
+  <ErrorBoundary>
+    <Modal
+      handleModalToggle={[Function]}
+      isModalOpened={false}
+      movieTrailerKey="test"
+    />
+  </ErrorBoundary>
 </React.Fragment>
 `;

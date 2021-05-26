@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render NoDataToShow component render component correctly 1`] = `
+<div
+  className="noMoviesWrapper"
+>
+  <div
+    className="noMoviesImage"
+  />
+  <p
+    className="noMoviesTitle"
+  >
+    We're sorry. We have 't found any movies to match your request.
+  </p>
+</div>
+`;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render Rating component render with props 1`] = `
+exports[`render Rating component render with stars correctly 1`] = `
 <div
   className="rating"
 >
@@ -13,17 +13,17 @@ exports[`render Rating component render with props 1`] = `
     }
   />
   <span
-    className="class"
+    className="test"
   >
-    1.9
+    2
   </span>
 </div>
 `;
 
-exports[`render Rating component render without props 1`] = `
+exports[`render Rating component render without stars correctly 1`] = `
 <span
-  className=""
+  className="test"
 >
-  0
+  2
 </span>
 `;

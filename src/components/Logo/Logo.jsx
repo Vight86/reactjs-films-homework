@@ -2,16 +2,17 @@ import React from 'react';
 import propTypes from 'prop-types';
 import styles from './Logo.scss';
 
-const Logo = ({ theme }) => (
-  <p className={styles[theme]}><a href="/" title="Films">Films</a></p>
+const Logo = ({ className, children }) => (
+  <p className={styles[className]}>
+    <a href="/" title="Films">
+      {children}
+    </a>
+  </p>
 );
 
 Logo.propTypes = {
-  theme: propTypes.string,
-};
-
-Logo.defaultProps = {
-  theme: 'primary',
+  className: propTypes.string.isRequired,
+  children: propTypes.string.isRequired,
 };
 
 export default Logo;

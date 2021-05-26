@@ -1,0 +1,274 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Navigation component render component correctly 1`] = `
+<React.Fragment>
+  <button
+    className="mobileMenuButton"
+    onClick={[Function]}
+    type="button"
+  >
+    <svg
+      className="line"
+      preserveAspectRatio="none"
+      viewBox="0 0 32 7"
+    >
+      <line
+        x1={4}
+        x2={28}
+        y1={4}
+        y2={4}
+      />
+    </svg>
+    <svg
+      className="line"
+      preserveAspectRatio="none"
+      viewBox="0 0 32 7"
+    >
+      <line
+        x1={4}
+        x2={28}
+        y1={4}
+        y2={4}
+      />
+    </svg>
+    <svg
+      className="line"
+      preserveAspectRatio="none"
+      viewBox="0 0 32 7"
+    >
+      <line
+        x1={4}
+        x2={28}
+        y1={4}
+        y2={4}
+      />
+    </svg>
+  </button>
+  <nav
+    className="navigation"
+  >
+    <NavLink
+      activeClassName="navItem_active"
+      className="navItem"
+      data-text="Trending"
+      onClick={[Function]}
+      to="/popular/movie/111"
+    >
+      Trending
+    </NavLink>
+    <NavLink
+      activeClassName="navItem_active"
+      className="navItem"
+      data-text="Top rated"
+      onClick={[Function]}
+      to="/top_rated/movie/111"
+    >
+      Top rated
+    </NavLink>
+    <NavLink
+      activeClassName="navItem_active"
+      className="navItem"
+      data-text="ComingSoon"
+      onClick={[Function]}
+      to="/upcoming/movie/111"
+    >
+      Coming soon
+    </NavLink>
+    <SelectButton
+      genres={
+        Array [
+          Object {
+            "id": 1,
+            "name": "Action",
+          },
+        ]
+      }
+      onClick={[Function]}
+    >
+      Genre
+    </SelectButton>
+  </nav>
+</React.Fragment>
+`;
+
+exports[`render Navigation component render if MovieDetailsPage is opened 1`] = `
+<React.Fragment>
+  <button
+    className="mobileMenuButton"
+    onClick={[Function]}
+    type="button"
+  >
+    <svg
+      className="line"
+      preserveAspectRatio="none"
+      viewBox="0 0 32 7"
+    >
+      <line
+        x1={4}
+        x2={28}
+        y1={4}
+        y2={4}
+      />
+    </svg>
+    <svg
+      className="line"
+      preserveAspectRatio="none"
+      viewBox="0 0 32 7"
+    >
+      <line
+        x1={4}
+        x2={28}
+        y1={4}
+        y2={4}
+      />
+    </svg>
+    <svg
+      className="line"
+      preserveAspectRatio="none"
+      viewBox="0 0 32 7"
+    >
+      <line
+        x1={4}
+        x2={28}
+        y1={4}
+        y2={4}
+      />
+    </svg>
+  </button>
+  <nav
+    className="navigation"
+  >
+    <NavLink
+      activeClassName="navItem_active"
+      className="navItem"
+      data-text="Trending"
+      onClick={[Function]}
+      to="/popular"
+    >
+      Trending
+    </NavLink>
+    <NavLink
+      activeClassName="navItem_active"
+      className="navItem"
+      data-text="Top rated"
+      onClick={[Function]}
+      to="/top_rated"
+    >
+      Top rated
+    </NavLink>
+    <NavLink
+      activeClassName="navItem_active"
+      className="navItem"
+      data-text="ComingSoon"
+      onClick={[Function]}
+      to="/upcoming"
+    >
+      Coming soon
+    </NavLink>
+    <SelectButton
+      genres={
+        Array [
+          Object {
+            "id": 1,
+            "name": "Action",
+          },
+        ]
+      }
+      onClick={[Function]}
+    >
+      Genre
+    </SelectButton>
+  </nav>
+</React.Fragment>
+`;
+
+exports[`render Navigation component render mobile menu button clicks 1`] = `
+<React.Fragment>
+  <button
+    className="mobileMenuButton active"
+    onClick={[Function]}
+    type="button"
+  >
+    <svg
+      className="line"
+      preserveAspectRatio="none"
+      viewBox="0 0 32 7"
+    >
+      <line
+        x1={4}
+        x2={28}
+        y1={4}
+        y2={4}
+      />
+    </svg>
+    <svg
+      className="line"
+      preserveAspectRatio="none"
+      viewBox="0 0 32 7"
+    >
+      <line
+        x1={4}
+        x2={28}
+        y1={4}
+        y2={4}
+      />
+    </svg>
+    <svg
+      className="line"
+      preserveAspectRatio="none"
+      viewBox="0 0 32 7"
+    >
+      <line
+        x1={4}
+        x2={28}
+        y1={4}
+        y2={4}
+      />
+    </svg>
+  </button>
+  <nav
+    className="navigation active"
+  >
+    <NavLink
+      activeClassName="navItem_active"
+      className="navItem"
+      data-text="Trending"
+      onClick={[Function]}
+      to="/popular/movie/111"
+    >
+      Trending
+    </NavLink>
+    <NavLink
+      activeClassName="navItem_active"
+      className="navItem"
+      data-text="Top rated"
+      onClick={[Function]}
+      to="/top_rated/movie/111"
+    >
+      Top rated
+    </NavLink>
+    <NavLink
+      activeClassName="navItem_active"
+      className="navItem"
+      data-text="ComingSoon"
+      onClick={[Function]}
+      to="/upcoming/movie/111"
+    >
+      Coming soon
+    </NavLink>
+    <SelectButton
+      genres={
+        Array [
+          Object {
+            "id": 1,
+            "name": "Action",
+          },
+        ]
+      }
+      onClick={[Function]}
+    >
+      Genre
+    </SelectButton>
+  </nav>
+</React.Fragment>
+`;

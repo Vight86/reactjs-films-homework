@@ -1,12 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders Footer correctly should render children correctly 1`] = `
+exports[`render Footer component render correctly 1`] = `
 <footer
   className="footer"
 >
   <Logo
-    theme="secondary"
-  />
+    className="secondary"
+  >
+    Films
+  </Logo>
   <p
     className="footer__copyRight"
   >

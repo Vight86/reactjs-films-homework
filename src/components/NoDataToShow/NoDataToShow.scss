@@ -1,0 +1,25 @@
+@import '../../utils/variables';
+
+.noMoviesWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.noMoviesTitle {
+  color: $color-secondary;
+  font-size: 4em;
+  line-height: auto;
+  text-align: center;
+}
+
+.noMoviesImage {
+  width: 96%;
+  max-width: 400px;
+  padding-top: min(400px, 96%);
+  margin: 10px auto;
+  background-image: url('no-movies.svg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

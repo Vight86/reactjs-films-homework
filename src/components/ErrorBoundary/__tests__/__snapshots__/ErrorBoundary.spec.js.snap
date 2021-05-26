@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test ErrorBoundary component component renders correctly after errors are cought 1`] = `
+<div
+  className="errorWrapper"
+>
+  <h1
+    className="errorTitle"
+  >
+    Error
+  </h1>
+  <p
+    className="errorText"
+  >
+    Please try to reload this page
+  </p>
+</div>
+`;
+
+exports[`test ErrorBoundary component renders component correctly 1`] = `<MockReactElem />`;

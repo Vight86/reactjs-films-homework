@@ -1,5 +1,5 @@
 import {
-  MOVIES_LOADED, MOVIES_ADDED, MOVIE_TRAILER_KEY_ADDED,
+  MOVIES_LOADED, MOVIES_ADDED, MOVIE_TRAILER_KEY_ADDED, MOVIE_DETAILS_LOADED,
 } from './moviesActions';
 
 const initialState = {
@@ -7,6 +7,14 @@ const initialState = {
   pageSize: 16,
   totalPages: 0,
   currentMovieTrailerKey: '',
+  currentMovieDetails: {
+    title: '',
+    backdroPath: '',
+    genres: [],
+    runtime: 0,
+    voteAverage: 0,
+    overview: '',
+  },
   movies: [],
 };
 
@@ -32,6 +40,15 @@ const moviesReducer = (state = initialState, action) => {
       return {
         ...state,
         ...action.payload,
+      };
+    }
+    case MOVIE_DETAILS_LOADED: {
+      return {
+        ...state,
+        currentMovieDetails: {
+          ...state.currentMovieDetails,
+          ...action.payload.movieDetails,
+        },
       };
     }
     default:

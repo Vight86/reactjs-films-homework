@@ -1,120 +1,112 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import propTypes from 'prop-types';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux';
+import { useRouteMatch } from 'react-router-dom';
 
-import { apiPathUpdated, selectQuery } from '../../modules/query/index';
+import { selectQuery } from '../../modules/query/index';
 import {
-  selectMovies, loadMovies, addMovies, currentMovieTrailerKeyAdded, addCurrentMovieTrailerKey,
+  selectMovies, loadMovies, addMovies,
 } from '../../modules/movies/index';
 import { loadGenres, selectGenres } from '../../modules/genres/index';
-import { updateStatus, selectStatus } from '../../modules/status/index';
-import { genreFilterUpdated, selectGenreId } from '../../modules/filters/index';
+import { selectStatus } from '../../modules/status/index';
+import { isGridUpdated, selectIsGrid } from '../../modules/isGrid/index';
+import store from '../../modules/store';
 
 import SearchResultsPage from './SearchResultsPage';
 
-const SearchResultsPageContainer = () => {
+const SearchResultsPageContainer = ({ isModalOpened, handleModalToggle }) => {
+  useEffect(() => {
+    localStorage.setItem('movieDBState', JSON.stringify(store.getState()));
+  });
+
   const dispatch = useDispatch();
 
   const {
-    basePath, apiPath, apiKey, lang, genresPath, adult, searchQuery,
+    basePath, apiKey, lang, adult,
   } = useSelector(selectQuery);
-
   const genres = useSelector(selectGenres, shallowEqual);
-  useEffect(() => {
-    const fetchGenresUrl = `${basePath}${genresPath}?api_key=${apiKey}&language=${lang}`;
-    dispatch(loadGenres(fetchGenresUrl));
-  }, []);
+  const { status } = useSelector(selectStatus);
 
-  const getFetchUrl = (query, pageNumber) => {
-    let fetchMoviesUrl;
-    if (query !== '') {
-      fetchMoviesUrl = `${basePath}${apiPath}?api_key=${apiKey}&language=${lang}&query=${searchQuery}&page=${pageNumber}&include_adult=${adult}`;
-    } else {
-      fetchMoviesUrl = `${basePath}${apiPath}?api_key=${apiKey}&language=${lang}&page=${pageNumber}`;
+  const getFetchUrl = (query, movieCategory, movieGenreId, page) => {
+    if (query !== '' && query !== undefined && query !== null) {
+      const fetchMoviesUrl = new URL(
+        `${basePath}/search/movie?api_key=${apiKey}&language=${lang}&page=${page}&include_adult=${adult}`,
+      );
+      fetchMoviesUrl.searchParams.set('query', query);
+      return fetchMoviesUrl;
     }
 
-    return fetchMoviesUrl;
+    if (movieGenreId) {
+      return `${basePath}/discover/movie?api_key=${apiKey}&language=${lang}&page=${page}&with_genres=${movieGenreId}`;
+    }
+
+    return `${basePath}/movie/${movieCategory}?api_key=${apiKey}&language=${lang}&page=${page}`;
   };
 
-  const { movies, pageSize } = useSelector(selectMovies, shallowEqual);
-  let { page } = useSelector(selectMovies);
-  const genreId = useSelector(selectGenreId);
-  let moviesToRender = movies.filter((_, index) => index < page * pageSize);
-
-  moviesToRender = (genreId === 0)
-    ? moviesToRender
-    : moviesToRender.filter((movie) => movie.genreIds.includes(genreId));
+  const category = useRouteMatch('/:category')?.params?.category;
+  const genreId = (Number(category));
+  const searchQuery = useSelector((state) => state.router.location.query.query);
 
   useEffect(() => {
-    page = 1;
-    let fetchUrl = getFetchUrl(searchQuery, page);
-    dispatch(loadMovies(fetchUrl));
+    const fetchGenresUrl = `${basePath}/genre/movie/list?api_key=${apiKey}&language=${lang}`;
 
+    const getInitialData = async () => {
+      await new Promise((resolve) => {
+        resolve(dispatch(loadGenres(fetchGenresUrl)));
+      });
+
+      const fetchMoviesUrl = getFetchUrl(searchQuery, category, genreId, 1);
+      dispatch(loadMovies(fetchMoviesUrl));
+    };
+    getInitialData();
+  }, [category, searchQuery, genreId]);
+
+  const { movies, pageSize } = useSelector(selectMovies);
+  let { page } = useSelector(selectMovies);
+  const moviesToRender = movies.filter((_, index) => index < page * pageSize);
+
+  useEffect(() => {
     const handleScroll = () => {
-      const windowRelativeBottom = document.documentElement.getBoundingClientRect().bottom;
-      if (Math.trunc(windowRelativeBottom) <= document.documentElement.clientHeight + 5) {
+      const currentScroll = window.pageYOffset + document.documentElement.clientHeight;
+      let checkonce = false;
+
+      if (currentScroll === document.documentElement.scrollHeight && !checkonce) {
+        checkonce = true;
         page += 1;
-        fetchUrl = getFetchUrl(searchQuery, page);
-        dispatch(addMovies(fetchUrl));
+        const fetchUrl = getFetchUrl(searchQuery, category, genreId, page);
+        dispatch(addMovies(fetchUrl, page));
+      }
+      if (moviesToRender.length === movies.length) {
+        window.removeEventListener('scroll', handleScroll);
       }
     };
+
     window.addEventListener('scroll', handleScroll);
 
-    if (page * pageSize >= movies.length && movies.length !== 0) {
-      dispatch(updateStatus('loaded'));
-    }
-  }, [apiPath, searchQuery, genreId]);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [moviesToRender.length, category, searchQuery]);
 
-  const [isGrid, setIsGrid] = useState(true);
+  const isGrid = useSelector(selectIsGrid);
   const handleGridToggle = () => {
-    setIsGrid(!isGrid);
+    dispatch(isGridUpdated(!isGrid));
   };
 
-  const { currentMovieTrailerKey } = useSelector(selectMovies, shallowEqual);
-  const updateMovieTrailerKey = (id) => {
-    if (id === null) {
-      dispatch(currentMovieTrailerKeyAdded(id));
-      return;
-    }
-    const url = `${basePath}/movie/${id}/videos?api_key=${apiKey}`;
-    dispatch(addCurrentMovieTrailerKey(url));
-  };
-
-  const getTrending = useCallback(
-    () => dispatch(apiPathUpdated('/movie/popular')),
-    [dispatch],
-  );
-
-  const getTopRatedMovies = useCallback(
-    () => dispatch(apiPathUpdated('/movie/top_rated')),
-    [dispatch],
-  );
-
-  const getUpcoming = useCallback(
-    () => dispatch(apiPathUpdated('/movie/upcoming')),
-    [dispatch],
-  );
-
-  const filterMovies = useCallback(
-    (id) => dispatch(genreFilterUpdated(id)),
-    [dispatch],
-  );
-
-  const { status } = useSelector(selectStatus);
   return (
     <SearchResultsPage
       movies={moviesToRender}
       genres={genres}
       isGrid={isGrid}
       handleGridToggle={handleGridToggle}
-      movieTrailerKey={currentMovieTrailerKey}
-      updateMovieTrailerKey={updateMovieTrailerKey}
-      getTrending={getTrending}
-      getTopRatedMovies={getTopRatedMovies}
-      getUpcoming={getUpcoming}
-      filterMovies={filterMovies}
       status={status}
+      isModalOpened={isModalOpened}
+      handleModalToggle={handleModalToggle}
     />
   );
+};
+
+SearchResultsPageContainer.propTypes = {
+  isModalOpened: propTypes.bool.isRequired,
+  handleModalToggle: propTypes.func.isRequired,
 };
 
 export default SearchResultsPageContainer;

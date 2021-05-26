@@ -2,20 +2,22 @@ import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import Cover from '../index';
 
-const setUp = (className, children) => {
-  const renderer = new ShallowRenderer();
-  renderer.render(<Cover className={className}>{children}</Cover>);
-  return renderer.getRenderOutput();
-};
+let renderer;
+let result;
+
+beforeEach(() => {
+  renderer = new ShallowRenderer();
+  renderer.render(<Cover className="test"><img src="#" alt="test" /></Cover>);
+  result = renderer.getRenderOutput();
+});
+
+afterEach(() => {
+  renderer = null;
+  result = null;
+});
 
 describe('render Button component', () => {
-  it('render without props', () => {
-    const result = setUp();
-    expect(result).toMatchSnapshot();
-  });
-
-  it('render with props', () => {
-    const result = setUp('class', <img src="test" alt="test" />);
+  it('render correctly', () => {
     expect(result).toMatchSnapshot();
   });
 });

@@ -47,7 +47,7 @@
   padding-top: 23.4%;
   border: none;
   margin-bottom: 4%;
-  background: url('./playButton.svg') no-repeat center;
+  background: url('playButton.svg') no-repeat center;
   background-color: transparent;
   border-radius: 50%;
   color: transparent;
@@ -95,37 +95,4 @@
   top: calc(0% - 0.6em);
   left: calc(100% + 0.1em);
   font-size: 7em;
-}
-
-.filterButton {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 0.4em;
-  border: none;
-  border-bottom: 4px solid transparent;
-  margin-right: 1.8em;
-  background: none;
-  color: $color-secondary;
-  cursor: pointer;
-  font-family: $font-primary;
-  font-size: 2.8em;
-  letter-spacing: 0.04em;
-  transition: all 0.2s;
-
-  &::after {
-    overflow: hidden;
-    height: 0;
-    content: attr(data-text);
-    content: attr(data-text) / "";
-    font-weight: 700;
-    pointer-events: none;
-    user-select: none;
-    visibility: hidden;
-  }
-
-  &:focus {
-    border-bottom: 4px solid currentColor;
-    font-weight: 700;
-    outline: none;
-  }
 }

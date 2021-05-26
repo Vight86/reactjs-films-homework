@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 import styles from './MovieSynopsis.scss';
 
 const MovieSynopsis = ({ className, isShown, children }) => (
-  <p className={`${styles[className]}${isShown ? ` ${styles.active}` : ''}`}>
+  <p className={`${styles[className]} ${isShown ? styles.active : ''}`.trim()}>
     <span>
       {children}
     </span>
@@ -11,15 +11,9 @@ const MovieSynopsis = ({ className, isShown, children }) => (
 );
 
 MovieSynopsis.propTypes = {
-  className: propTypes.string,
-  isShown: propTypes.bool,
-  children: propTypes.string,
-};
-
-MovieSynopsis.defaultProps = {
-  className: 'primary',
-  isShown: false,
-  children: '',
+  className: propTypes.string.isRequired,
+  isShown: propTypes.bool.isRequired,
+  children: propTypes.string.isRequired,
 };
 
 export default MovieSynopsis;

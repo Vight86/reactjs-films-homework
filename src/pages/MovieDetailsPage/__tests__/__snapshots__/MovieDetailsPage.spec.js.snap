@@ -8,8 +8,8 @@ exports[`render MovieDetailsPage component render <View Info> button clicks corr
     className="inHeroSection"
   >
     <img
-      alt="Independance day"
-      src="./testurl"
+      alt="test title"
+      src="https://image.tmdb.org/t/p/original/path"
     />
   </figure>
   <div
@@ -21,7 +21,7 @@ exports[`render MovieDetailsPage component render <View Info> button clicks corr
       <h1
         className="primary"
       >
-        Independance day
+        test title
       </h1>
       <div
         className="movieSubInfo"
@@ -35,16 +35,13 @@ exports[`render MovieDetailsPage component render <View Info> button clicks corr
           }
         >
           <li>
-            scifi
-          </li>
-          <li>
-            comedy
+            Action
           </li>
         </ul>
         <span
           className="runtime"
         >
-          4h
+          1h 40m
         </span>
       </div>
       <div
@@ -54,14 +51,14 @@ exports[`render MovieDetailsPage component render <View Info> button clicks corr
           className="stars"
           style={
             Object {
-              "width": "10.4em",
+              "width": "52em",
             }
           }
         />
         <span
           className="primary"
         >
-          0.9
+          5
         </span>
       </div>
     </div>
@@ -69,10 +66,7 @@ exports[`render MovieDetailsPage component render <View Info> button clicks corr
       className="primary active"
     >
       <span>
-        There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding
+        test overview
       </span>
     </p>
     <div
@@ -99,7 +93,7 @@ exports[`render MovieDetailsPage component render <View Info> button clicks corr
 </section>
 `;
 
-exports[`render MovieDetailsPage component render <View Info> button clicks correctly 2`] = `
+exports[`render MovieDetailsPage component render correctly 1`] = `
 <section
   className="movieDetails"
 >
@@ -107,8 +101,8 @@ exports[`render MovieDetailsPage component render <View Info> button clicks corr
     className="inHeroSection"
   >
     <img
-      alt="Independance day"
-      src="./testurl"
+      alt="test title"
+      src="https://image.tmdb.org/t/p/original/path"
     />
   </figure>
   <div
@@ -120,7 +114,7 @@ exports[`render MovieDetailsPage component render <View Info> button clicks corr
       <h1
         className="primary"
       >
-        Independance day
+        test title
       </h1>
       <div
         className="movieSubInfo"
@@ -134,16 +128,13 @@ exports[`render MovieDetailsPage component render <View Info> button clicks corr
           }
         >
           <li>
-            scifi
-          </li>
-          <li>
-            comedy
+            Action
           </li>
         </ul>
         <span
           className="runtime"
         >
-          4h
+          1h 40m
         </span>
       </div>
       <div
@@ -153,14 +144,14 @@ exports[`render MovieDetailsPage component render <View Info> button clicks corr
           className="stars"
           style={
             Object {
-              "width": "10.4em",
+              "width": "52em",
             }
           }
         />
         <span
           className="primary"
         >
-          0.9
+          5
         </span>
       </div>
     </div>
@@ -168,109 +159,7 @@ exports[`render MovieDetailsPage component render <View Info> button clicks corr
       className="primary"
     >
       <span>
-        There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding
-      </span>
-    </p>
-    <div
-      className="movieInfo__right"
-    >
-      <button
-        className="secondary"
-        data-text="Watch Now"
-        onClick={[Function]}
-        type="button"
-      >
-        Watch Now
-      </button>
-      <button
-        className="secondary"
-        data-text="View Info"
-        onClick={[Function]}
-        type="button"
-      >
-        View Info
-      </button>
-    </div>
-  </div>
-</section>
-`;
-
-exports[`render MovieDetailsPage component render component correctly 1`] = `
-<section
-  className="movieDetails"
->
-  <figure
-    className="inHeroSection"
-  >
-    <img
-      alt="Independance day"
-      src="./testurl"
-    />
-  </figure>
-  <div
-    className="movieInfo"
-  >
-    <div
-      className="movieInfo__left"
-    >
-      <h1
-        className="primary"
-      >
-        Independance day
-      </h1>
-      <div
-        className="movieSubInfo"
-      >
-        <ul
-          className="primary"
-          style={
-            Object {
-              "order": null,
-            }
-          }
-        >
-          <li>
-            scifi
-          </li>
-          <li>
-            comedy
-          </li>
-        </ul>
-        <span
-          className="runtime"
-        >
-          4h
-        </span>
-      </div>
-      <div
-        className="rating"
-      >
-        <span
-          className="stars"
-          style={
-            Object {
-              "width": "10.4em",
-            }
-          }
-        />
-        <span
-          className="primary"
-        >
-          0.9
-        </span>
-      </div>
-    </div>
-    <p
-      className="primary"
-    >
-      <span>
-        There are growing dangers in
-    the wizarding world of 1926 New York.
-    Something mysterious is leaving a path of destruction in the streets,
-    threatening to expose the wizarding
+        test overview
       </span>
     </p>
     <div

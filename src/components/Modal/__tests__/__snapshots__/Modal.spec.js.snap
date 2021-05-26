@@ -1,6 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render Modal component render component with props 1`] = `
+exports[`render Modal component render initial state correctly 1`] = `null`;
+
+exports[`render Modal component render modal open state correctly 1`] = `
 Object {
   "$$typeof": Symbol(react.portal),
   "children": <div
@@ -20,7 +22,7 @@ Object {
         allowFullScreen={true}
         className="modalIframe"
         frameBorder="0"
-        src="https://www.youtube.com/embed/testKey"
+        src="https://www.youtube.com/embed/test"
         title="YouTube video player"
       />
       <Preloader
@@ -35,5 +37,3 @@ Object {
   "key": null,
 }
 `;
-
-exports[`render Modal component render component without props 1`] = `null`;

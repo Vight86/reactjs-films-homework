@@ -1,19 +1,18 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import { Link, useRouteMatch } from 'react-router-dom';
 import Button from '../../Button/index';
 import Title from '../../Title/index';
 import GenreList from '../../GenreList/index';
 import Rating from '../../Rating/index';
 import Cover from '../../Cover/index';
 import MovieSynopsis from '../../MovieSynopsis/index';
-import Modal from '../../Modal/index';
 import styles from './MovieCardTable.scss';
 
 const MovieCardTable = ({ data }) => {
   const {
     movie,
     genres,
-    movieTrailerKey,
     isInfoShown,
     handleShowInfo,
     isModalOpened,
@@ -23,6 +22,8 @@ const MovieCardTable = ({ data }) => {
   const {
     id, title, voteAverage, posterPath, backdropPath, genreIds, overview,
   } = movie;
+
+  const { url } = useRouteMatch();
 
   const genreList = genreIds.map((genreId) => genres.find((item) => item.id === genreId).name);
 
@@ -39,10 +40,14 @@ const MovieCardTable = ({ data }) => {
         </div>
       </section>
       <section className={styles.generalInfo}>
-        <Title className="secondary_table">{title}</Title>
-        <Rating className="secondary_table">{voteAverage}</Rating>
+        <Title className="secondary_table">
+          <Link to={`${url}/movie/${id}`}>
+            {title}
+          </Link>
+        </Title>
+        <Rating className="secondary_table" withStars={false}>{voteAverage}</Rating>
         <GenreList className="secondary">{genreList}</GenreList>
-        <MovieSynopsis className="tertiary">{overview}</MovieSynopsis>
+        <MovieSynopsis className="tertiary" isShown>{overview}</MovieSynopsis>
       </section>
       <section
         className={`${styles.infoBlock} ${isInfoShown === true ? styles.infoBlock_active : ''}`.trim()}
@@ -52,18 +57,17 @@ const MovieCardTable = ({ data }) => {
         </Cover>
         <Button className="closeButton_inMovieCard" onClick={handleShowInfo}>&times;</Button>
         <section className={styles.generalInfo}>
-          <Title className="secondary_table-light">{title}</Title>
-          <Rating className="secondary_table">{voteAverage}</Rating>
+          <Title className="secondary_table-light">
+            <Link to={`${url}/movie/${id}`}>
+              {title}
+            </Link>
+          </Title>
+          <Rating className="secondary_table" withStars={false}>{voteAverage}</Rating>
           <GenreList className="secondary">{genreList}</GenreList>
         </section>
-        <MovieSynopsis className="secondary_table">{overview}</MovieSynopsis>
+        <MovieSynopsis className="secondary_table" isShown>{overview}</MovieSynopsis>
         <Button className="secondary" onClick={() => handleModalToggle(id, isModalOpened)}>Watch Now</Button>
       </section>
-      <Modal
-        isModalOpened={isModalOpened}
-        movieTrailerKey={movieTrailerKey}
-        handleModalToggle={handleModalToggle}
-      />
     </article>
   );
 };
@@ -87,7 +91,6 @@ MovieCardTable.propTypes = {
       voteCount: propTypes.number,
     }),
     genres: propTypes.arrayOf(propTypes.object),
-    movieTrailerKey: propTypes.string,
     isInfoShown: propTypes.bool,
     handleShowInfo: propTypes.func,
     isModalOpened: propTypes.bool,

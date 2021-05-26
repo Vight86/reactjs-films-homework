@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const express = require('express');
+const path = require('path');
 const open = require('open');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
@@ -19,7 +20,19 @@ app.use(
 
 app.use(webpackHotMiddleware(compiler));
 
+app.use('*', (req, res, next) => {
+  const filename = path.resolve(compiler.outputPath, 'index.html');
+  compiler.outputFileSystem.readFile(filename, (err, result) => {
+    if (err) {
+      return next(err);
+    }
+    res.set('content-type', 'text/html');
+    res.send(result);
+    res.end();
+  });
+});
+
 app.listen(PORT, () => {
-  console.log(`Serve is started at port ${PORT}...\n`);
+  console.info(`Serve is started at port ${PORT}...\n`);
   open(`http://localhost:${PORT}/`);
 });

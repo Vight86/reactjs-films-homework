@@ -14,11 +14,7 @@ const Runtime = ({ children }) => {
 };
 
 Runtime.propTypes = {
-  children: propTypes.number,
-};
-
-Runtime.defaultProps = {
-  children: 0,
+  children: propTypes.number.isRequired,
 };
 
 export default Runtime;

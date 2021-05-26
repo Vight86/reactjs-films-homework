@@ -67,6 +67,8 @@
 }
 
 .generalInfo {
+  position: relative;
+  z-index: 15;
   display: grid;
   padding: 0 8% 0 8%;
   grid-template-columns: 1fr 20%;
@@ -88,11 +90,6 @@
   transition: all 0.5s;
   visibility: hidden;
 
-  & > * {
-    position: relative;
-    z-index: 10;
-  }
-
   &::after {
     position: absolute;
     z-index: 7;
@@ -106,6 +103,7 @@
   }
 
   &_active {
+    z-index: 20;
     opacity: 1;
     visibility: visible;
   }

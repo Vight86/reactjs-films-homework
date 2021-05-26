@@ -16,14 +16,13 @@ const Button = ({
 );
 
 Button.propTypes = {
-  className: propTypes.string,
-  onClick: propTypes.func,
+  className: propTypes.string.isRequired,
+  onClick: propTypes.func.isRequired,
   children: propTypes.string,
 };
 
 Button.defaultProps = {
-  className: '',
-  onClick() { },
   children: '',
 };
+
 export default Button;

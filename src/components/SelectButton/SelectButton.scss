@@ -1,5 +1,48 @@
 @import '../../utils/variables';
 
+.selectedOption,
+.selectOptionLink {
+  display: flex;
+  flex-direction: column;
+  color: $color-secondary;
+  font-family: $font-primary;
+  font-size: 2.8em;
+  text-decoration: none;
+
+  &::after {
+    overflow: hidden;
+    height: 0;
+    content: attr(data-text);
+    content: attr(data-text) / "";
+    font-weight: 700;
+    pointer-events: none;
+    user-select: none;
+    visibility: hidden;
+  }
+}
+
+.selectedOption {
+  padding-bottom: 0.4em;
+  border-bottom: 4px solid transparent;
+  margin-right: 1.8em;
+  transition: all 0.2s;
+
+  &_active {
+    border-bottom: 4px solid currentColor;
+    font-weight: 700;
+  }
+}
+
+.selectOptionLink {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+
+  &:hover {
+    font-weight: 700;
+  }
+}
+
 .selectOptionsList {
   position: absolute;
   z-index: 1000;
@@ -12,12 +55,16 @@
   pointer-events: none;
   transition: all 0.3s;
   visibility: hidden;
+
+  @media screen and (max-width: $bp-xxxsmall) {
+    width: 100%;
+  }
 }
 
 .selectArrow {
   position: absolute;
-  top: 1em;
-  right: 3em;
+  top: 0.6em;
+  right: 2em;
   width: 13px;
   height: 13px;
   transform: rotate(180deg);
@@ -55,6 +102,10 @@
   position: relative;
   display: inline-block;
 
+  @media screen and (max-width: $bp-xxxsmall) {
+    width: 100%;
+  }
+
   &.active {
     & > .selectOptionsList {
       opacity: 1;
@@ -72,21 +123,4 @@
   padding: 10px;
   border-bottom: 1px solid transparentize($color: $text-tertiary, $amount: 0.9);
   background-color: $color-light;
-
-  & > button {
-    width: 100%;
-    height: 100%;
-    border: none;
-    background: none;
-    color: $color-secondary;
-    cursor: pointer;
-    font-family: $font-primary;
-    font-size: 2.8em;
-    outline: none;
-    text-align: left;
-
-    &:hover {
-      font-weight: 700;
-    }
-  }
 }

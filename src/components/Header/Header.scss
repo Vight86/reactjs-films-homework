@@ -1,6 +1,8 @@
 @import '../../utils/variables';
 
 .header {
+  position: relative;
+  z-index: 100;
   display: flex;
   box-sizing: border-box;
   justify-content: space-between;
@@ -30,6 +32,6 @@
 
   @media screen and (max-width: $bp-xxxsmall) {
     display: flex;
-    flex-direction: column-reverse;
+    padding-bottom: 10px;
   }
 }

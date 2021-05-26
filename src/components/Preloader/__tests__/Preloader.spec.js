@@ -2,15 +2,22 @@ import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import Preloader from '../index';
 
-const setUp = () => {
-  const renderer = new ShallowRenderer();
+let renderer;
+let result;
+
+beforeEach(() => {
+  renderer = new ShallowRenderer();
   renderer.render(<Preloader />);
-  return renderer.getRenderOutput();
-};
+  result = renderer.getRenderOutput();
+});
+
+afterEach(() => {
+  renderer = null;
+  result = null;
+});
 
 describe('render Preloader component', () => {
-  it('render component correctly', () => {
-    const result = setUp();
+  it('render correctly', () => {
     expect(result).toMatchSnapshot();
   });
 });

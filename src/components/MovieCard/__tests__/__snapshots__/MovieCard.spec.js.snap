@@ -14,7 +14,7 @@ exports[`render MovieCard component render grid layout correctly 1`] = `
           "name": "SciFi",
         },
       ],
-      "handleModalToggle": [Function],
+      "handleModalToggle": [MockFunction],
       "handleShowInfo": [Function],
       "isInfoShown": false,
       "isModalOpened": false,
@@ -37,8 +37,6 @@ exports[`render MovieCard component render grid layout correctly 1`] = `
         "voteAverage": 1,
         "voteCount": 1,
       },
-      "movieTrailerKey": "test",
-      "updateMovieTrailerKey": [MockFunction],
     }
   }
 />
@@ -58,7 +56,7 @@ exports[`render MovieCard component render handleShowInfo click correctly 1`] = 
           "name": "SciFi",
         },
       ],
-      "handleModalToggle": [Function],
+      "handleModalToggle": [MockFunction],
       "handleShowInfo": [Function],
       "isInfoShown": true,
       "isModalOpened": false,
@@ -81,8 +79,6 @@ exports[`render MovieCard component render handleShowInfo click correctly 1`] = 
         "voteAverage": 1,
         "voteCount": 1,
       },
-      "movieTrailerKey": "test",
-      "updateMovieTrailerKey": [MockFunction],
     }
   }
 />
@@ -102,7 +98,7 @@ exports[`render MovieCard component render table layout correctly 1`] = `
           "name": "SciFi",
         },
       ],
-      "handleModalToggle": [Function],
+      "handleModalToggle": [MockFunction],
       "handleShowInfo": [Function],
       "isInfoShown": false,
       "isModalOpened": false,
@@ -125,8 +121,6 @@ exports[`render MovieCard component render table layout correctly 1`] = `
         "voteAverage": 1,
         "voteCount": 1,
       },
-      "movieTrailerKey": "test",
-      "updateMovieTrailerKey": [MockFunction],
     }
   }
 />

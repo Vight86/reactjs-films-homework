@@ -2,24 +2,29 @@ import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import SearchForm from '../index';
 
-const mockHandleSearchSubmit = jest.fn(() => 'tested');
+let mockHandleSearchSubmit;
+let renderer;
+let result;
 
-const setUp = () => {
-  const renderer = new ShallowRenderer();
+beforeEach(() => {
+  mockHandleSearchSubmit = jest.fn();
+  renderer = new ShallowRenderer();
   renderer.render(<SearchForm handleSearchSubmit={mockHandleSearchSubmit} />);
-  return renderer.getRenderOutput();
-};
+  result = renderer.getRenderOutput();
+});
 
-describe('render form component', () => {
-  it('render component correctly', () => {
-    const result = setUp();
+afterEach(() => {
+  mockHandleSearchSubmit.mockClear();
+  renderer = null;
+  result = null;
+});
+
+describe('render SearchForm component', () => {
+  it('render correctly', () => {
     expect(result).toMatchSnapshot();
   });
 
   it('handle onChange event correctly', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(<SearchForm handleSearchSubmit={mockHandleSearchSubmit} />);
-    let result = renderer.getRenderOutput();
     const [input] = result.props.children;
     const mockEvent = { target: { value: 'test' } };
     input.props.onChange(mockEvent);
@@ -28,9 +33,6 @@ describe('render form component', () => {
   });
 
   it('handle submit event correctly', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(<SearchForm handleSearchSubmit={mockHandleSearchSubmit} />);
-    let result = renderer.getRenderOutput();
     result.props.onSubmit();
     result = renderer.getRenderOutput();
     expect(result).toMatchSnapshot();
