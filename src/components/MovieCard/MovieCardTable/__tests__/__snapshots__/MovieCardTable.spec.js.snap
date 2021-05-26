@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render MovieCardTable component render component with props 1`] = `
+exports[`render MovieCardTable component render correctly 1`] = `
 <article
   className="movieCard"
 >
@@ -43,7 +43,11 @@ exports[`render MovieCardTable component render component with props 1`] = `
     <Title
       className="secondary_table"
     >
-      test
+      <mockConstructor
+        to="/tested/movie/1"
+      >
+        test
+      </mockConstructor>
     </Title>
     <Rating
       className="secondary_table"
@@ -60,7 +64,7 @@ exports[`render MovieCardTable component render component with props 1`] = `
     </GenreList>
     <MovieSynopsis
       className="tertiary"
-      isShown={false}
+      isShown={true}
     >
       test
     </MovieSynopsis>
@@ -88,7 +92,11 @@ exports[`render MovieCardTable component render component with props 1`] = `
       <Title
         className="secondary_table-light"
       >
-        test
+        <mockConstructor
+          to="/tested/movie/1"
+        >
+          test
+        </mockConstructor>
       </Title>
       <Rating
         className="secondary_table"
@@ -106,7 +114,7 @@ exports[`render MovieCardTable component render component with props 1`] = `
     </section>
     <MovieSynopsis
       className="secondary_table"
-      isShown={false}
+      isShown={true}
     >
       test
     </MovieSynopsis>
@@ -117,11 +125,6 @@ exports[`render MovieCardTable component render component with props 1`] = `
       Watch Now
     </Button>
   </section>
-  <Modal
-    handleModalToggle={[Function]}
-    isModalOpened={false}
-    movieTrailerKey="test"
-  />
 </article>
 `;
 
@@ -168,7 +171,11 @@ exports[`render MovieCardTable component render playButton click 1`] = `
     <Title
       className="secondary_table"
     >
-      test
+      <mockConstructor
+        to="/tested/movie/1"
+      >
+        test
+      </mockConstructor>
     </Title>
     <Rating
       className="secondary_table"
@@ -185,7 +192,7 @@ exports[`render MovieCardTable component render playButton click 1`] = `
     </GenreList>
     <MovieSynopsis
       className="tertiary"
-      isShown={false}
+      isShown={true}
     >
       test
     </MovieSynopsis>
@@ -213,7 +220,11 @@ exports[`render MovieCardTable component render playButton click 1`] = `
       <Title
         className="secondary_table-light"
       >
-        test
+        <mockConstructor
+          to="/tested/movie/1"
+        >
+          test
+        </mockConstructor>
       </Title>
       <Rating
         className="secondary_table"
@@ -231,7 +242,7 @@ exports[`render MovieCardTable component render playButton click 1`] = `
     </section>
     <MovieSynopsis
       className="secondary_table"
-      isShown={false}
+      isShown={true}
     >
       test
     </MovieSynopsis>
@@ -242,11 +253,6 @@ exports[`render MovieCardTable component render playButton click 1`] = `
       Watch Now
     </Button>
   </section>
-  <Modal
-    handleModalToggle={[Function]}
-    isModalOpened={false}
-    movieTrailerKey="test"
-  />
 </article>
 `;
 
@@ -293,7 +299,11 @@ exports[`render MovieCardTable component render watchNow button click 1`] = `
     <Title
       className="secondary_table"
     >
-      test
+      <mockConstructor
+        to="/tested/movie/1"
+      >
+        test
+      </mockConstructor>
     </Title>
     <Rating
       className="secondary_table"
@@ -310,7 +320,7 @@ exports[`render MovieCardTable component render watchNow button click 1`] = `
     </GenreList>
     <MovieSynopsis
       className="tertiary"
-      isShown={false}
+      isShown={true}
     >
       test
     </MovieSynopsis>
@@ -338,7 +348,11 @@ exports[`render MovieCardTable component render watchNow button click 1`] = `
       <Title
         className="secondary_table-light"
       >
-        test
+        <mockConstructor
+          to="/tested/movie/1"
+        >
+          test
+        </mockConstructor>
       </Title>
       <Rating
         className="secondary_table"
@@ -356,7 +370,7 @@ exports[`render MovieCardTable component render watchNow button click 1`] = `
     </section>
     <MovieSynopsis
       className="secondary_table"
-      isShown={false}
+      isShown={true}
     >
       test
     </MovieSynopsis>
@@ -367,10 +381,5 @@ exports[`render MovieCardTable component render watchNow button click 1`] = `
       Watch Now
     </Button>
   </section>
-  <Modal
-    handleModalToggle={[Function]}
-    isModalOpened={false}
-    movieTrailerKey="test"
-  />
 </article>
 `;

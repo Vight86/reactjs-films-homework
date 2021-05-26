@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render MovieCardGrid component render component with props 1`] = `
+exports[`render MovieCardGrid component render correctly 1`] = `
 <article
   className="movieCard"
 >
@@ -43,7 +43,11 @@ exports[`render MovieCardGrid component render component with props 1`] = `
     <Title
       className="secondary"
     >
-      test
+      <mockConstructor
+        to="/tested/movie/1"
+      >
+        test
+      </mockConstructor>
     </Title>
     <GenreList
       className="secondary"
@@ -82,7 +86,11 @@ exports[`render MovieCardGrid component render component with props 1`] = `
       <Title
         className="tertiary"
       >
-        test
+        <mockConstructor
+          to="/tested/movie/1"
+        >
+          test
+        </mockConstructor>
       </Title>
       <GenreList
         className="secondary"
@@ -111,11 +119,6 @@ exports[`render MovieCardGrid component render component with props 1`] = `
       Watch Now
     </Button>
   </section>
-  <Modal
-    handleModalToggle={[Function]}
-    isModalOpened={false}
-    movieTrailerKey="test"
-  />
 </article>
 `;
 
@@ -162,7 +165,11 @@ exports[`render MovieCardGrid component render playButton click 1`] = `
     <Title
       className="secondary"
     >
-      test
+      <mockConstructor
+        to="/tested/movie/1"
+      >
+        test
+      </mockConstructor>
     </Title>
     <GenreList
       className="secondary"
@@ -201,7 +208,11 @@ exports[`render MovieCardGrid component render playButton click 1`] = `
       <Title
         className="tertiary"
       >
-        test
+        <mockConstructor
+          to="/tested/movie/1"
+        >
+          test
+        </mockConstructor>
       </Title>
       <GenreList
         className="secondary"
@@ -230,11 +241,6 @@ exports[`render MovieCardGrid component render playButton click 1`] = `
       Watch Now
     </Button>
   </section>
-  <Modal
-    handleModalToggle={[Function]}
-    isModalOpened={false}
-    movieTrailerKey="test"
-  />
 </article>
 `;
 
@@ -281,7 +287,11 @@ exports[`render MovieCardGrid component render watchNow button click 1`] = `
     <Title
       className="secondary"
     >
-      test
+      <mockConstructor
+        to="/tested/movie/1"
+      >
+        test
+      </mockConstructor>
     </Title>
     <GenreList
       className="secondary"
@@ -320,7 +330,11 @@ exports[`render MovieCardGrid component render watchNow button click 1`] = `
       <Title
         className="tertiary"
       >
-        test
+        <mockConstructor
+          to="/tested/movie/1"
+        >
+          test
+        </mockConstructor>
       </Title>
       <GenreList
         className="secondary"
@@ -349,10 +363,5 @@ exports[`render MovieCardGrid component render watchNow button click 1`] = `
       Watch Now
     </Button>
   </section>
-  <Modal
-    handleModalToggle={[Function]}
-    isModalOpened={false}
-    movieTrailerKey="test"
-  />
 </article>
 `;
