@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render Runtime component render with props 1`] = `
+exports[`render Runtime component render correctly 1`] = `
 <span
   className="runtime"
 >
-  2h 3m
+  1h 40m
 </span>
 `;
 
-exports[`render Runtime component render without props 1`] = `
+exports[`render Runtime component render zero hours and minutes 1`] = `
 <span
   className="runtime"
 >
