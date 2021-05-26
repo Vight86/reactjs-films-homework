@@ -11,7 +11,12 @@ const Modal = ({ isModalOpened, movieTrailerKey, handleModalToggle }) => {
   const modal = (
     <div className={styles.modalWrapper}>
       <div className={styles.modalVideo}>
-        <Button className="closeButton_inModal" onClick={() => handleModalToggle(null, isModalOpened)}>&times;</Button>
+        <Button
+          className="closeButton_inModal"
+          onClick={() => handleModalToggle(null, isModalOpened)}
+        >
+          &times;
+        </Button>
         {
           movieTrailerKey
           && (
@@ -34,9 +39,13 @@ const Modal = ({ isModalOpened, movieTrailerKey, handleModalToggle }) => {
 };
 
 Modal.propTypes = {
-  isModalOpened: propTypes.bool,
+  isModalOpened: propTypes.bool.isRequired,
   movieTrailerKey: propTypes.string,
-  handleModalToggle: propTypes.func,
+  handleModalToggle: propTypes.func.isRequired,
+};
+
+Modal.defaultProps = {
+  movieTrailerKey: null,
 };
 
 export default Modal;

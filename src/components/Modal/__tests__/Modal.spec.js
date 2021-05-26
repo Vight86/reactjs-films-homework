@@ -2,52 +2,62 @@ import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import Modal from '../index';
 
-const mockFn = jest.fn(() => 'clickHandled');
+let mockHandleModalToggle;
+let renderer;
+let result;
 
-const setUp = (isModalOpened, movieTrailerKey, handleModalToggle) => {
+beforeEach(() => {
   const container = document.createElement('div');
   container.id = 'modal';
   document.body.appendChild(container);
 
-  const renderer = new ShallowRenderer();
+  mockHandleModalToggle = jest.fn(() => 'test');
+
+  renderer = new ShallowRenderer();
   renderer.render(
     <Modal
-      isModalOpened={isModalOpened}
-      movieTrailerKey={movieTrailerKey}
-      handleModalToggle={handleModalToggle}
+      isModalOpened={false}
+      movieTrailerKey={null}
+      handleModalToggle={mockHandleModalToggle}
     />,
   );
-  return renderer.getRenderOutput();
-};
+  result = renderer.getRenderOutput();
+});
+
+afterEach(() => {
+  mockHandleModalToggle.mockClear();
+  renderer = null;
+  result = null;
+});
 
 describe('render Modal component', () => {
-  it('render component without props', () => {
-    const result = setUp();
+  it('render initial state correctly', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('render component with props', () => {
-    const result = setUp(true, 'testKey', mockFn);
+  it('render modal open state correctly', () => {
+    renderer.render(
+      <Modal
+        isModalOpened
+        movieTrailerKey="test"
+        handleModalToggle={mockHandleModalToggle}
+      />,
+    );
+    result = renderer.getRenderOutput();
     expect(result).toMatchSnapshot();
   });
 
   it('render handleModalToggle correctly', () => {
-    const container = document.createElement('div');
-    container.id = 'modal';
-    document.body.appendChild(container);
-
-    const renderer = new ShallowRenderer();
     renderer.render(
       <Modal
         isModalOpened
-        movieTrailerKey="testKey"
-        handleModalToggle={mockFn}
+        movieTrailerKey="test"
+        handleModalToggle={mockHandleModalToggle}
       />,
     );
-
-    const result = renderer.getRenderOutput();
+    result = renderer.getRenderOutput();
     const closeButton = result.children.props.children.props.children[0];
     closeButton.props.onClick();
-    expect(mockFn).toHaveBeenCalled();
+    expect(mockHandleModalToggle).toHaveBeenCalled();
   });
 });
