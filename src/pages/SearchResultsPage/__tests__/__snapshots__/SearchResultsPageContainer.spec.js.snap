@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render SearchResultsPage component handles scroll event triggers at bottom correctly 1`] = `
+exports[`render SearchResultsPage component handle cleanUp function in useEffect 1`] = `
 <SearchResultsPage
-  filterMovies={[Function]}
   genres={
     Array [
       Object {
@@ -11,14 +10,31 @@ exports[`render SearchResultsPage component handles scroll event triggers at bot
       },
     ]
   }
-  getTopRatedMovies={[Function]}
-  getTrending={[Function]}
-  getUpcoming={[Function]}
   handleGridToggle={[Function]}
+  handleModalToggle={[MockFunction]}
   isGrid={true}
-  movieTrailerKey="testMovieTrailerKey"
+  isModalOpened={false}
   movies={
     Array [
+      Object {
+        "adult": false,
+        "backdropPath": "/test.jpg",
+        "genreIds": Array [
+          1,
+          2,
+        ],
+        "id": 1,
+        "originalLanguage": "en",
+        "originalTitle": "test",
+        "overview": "test",
+        "popularity": 1,
+        "posterPath": "/test.jpg",
+        "releaseDate": "1",
+        "title": "test",
+        "video": false,
+        "voteAverage": 1,
+        "voteCount": 1,
+      },
       Object {
         "adult": false,
         "backdropPath": "/test.jpg",
@@ -307,13 +323,11 @@ exports[`render SearchResultsPage component handles scroll event triggers at bot
     ]
   }
   status="loading"
-  updateMovieTrailerKey={[Function]}
 />
 `;
 
-exports[`render SearchResultsPage component handles scroll event triggers not at bottom correctly 1`] = `
+exports[`render SearchResultsPage component removes scroll event listener when all movies are loaded 1`] = `
 <SearchResultsPage
-  filterMovies={[Function]}
   genres={
     Array [
       Object {
@@ -322,12 +336,10 @@ exports[`render SearchResultsPage component handles scroll event triggers not at
       },
     ]
   }
-  getTopRatedMovies={[Function]}
-  getTrending={[Function]}
-  getUpcoming={[Function]}
   handleGridToggle={[Function]}
+  handleModalToggle={[MockFunction]}
   isGrid={true}
-  movieTrailerKey="testMovieTrailerKey"
+  isModalOpened={false}
   movies={
     Array [
       Object {
@@ -618,13 +630,11 @@ exports[`render SearchResultsPage component handles scroll event triggers not at
     ]
   }
   status="loading"
-  updateMovieTrailerKey={[Function]}
 />
 `;
 
-exports[`render SearchResultsPage component render after dearch query submit correctly 1`] = `
+exports[`render SearchResultsPage component render after movie genre chosen correctly 1`] = `
 <SearchResultsPage
-  filterMovies={[Function]}
   genres={
     Array [
       Object {
@@ -633,14 +643,31 @@ exports[`render SearchResultsPage component render after dearch query submit cor
       },
     ]
   }
-  getTopRatedMovies={[Function]}
-  getTrending={[Function]}
-  getUpcoming={[Function]}
   handleGridToggle={[Function]}
+  handleModalToggle={[MockFunction]}
   isGrid={true}
-  movieTrailerKey="testMovieTrailerKey"
+  isModalOpened={false}
   movies={
     Array [
+      Object {
+        "adult": false,
+        "backdropPath": "/test.jpg",
+        "genreIds": Array [
+          1,
+          2,
+        ],
+        "id": 1,
+        "originalLanguage": "en",
+        "originalTitle": "test",
+        "overview": "test",
+        "popularity": 1,
+        "posterPath": "/test.jpg",
+        "releaseDate": "1",
+        "title": "test",
+        "video": false,
+        "voteAverage": 1,
+        "voteCount": 1,
+      },
       Object {
         "adult": false,
         "backdropPath": "/test.jpg",
@@ -929,13 +956,11 @@ exports[`render SearchResultsPage component render after dearch query submit cor
     ]
   }
   status="loading"
-  updateMovieTrailerKey={[Function]}
 />
 `;
 
-exports[`render SearchResultsPage component render after filtering by genre correctly 1`] = `
+exports[`render SearchResultsPage component render after search query submit correctly 1`] = `
 <SearchResultsPage
-  filterMovies={[Function]}
   genres={
     Array [
       Object {
@@ -944,14 +969,31 @@ exports[`render SearchResultsPage component render after filtering by genre corr
       },
     ]
   }
-  getTopRatedMovies={[Function]}
-  getTrending={[Function]}
-  getUpcoming={[Function]}
   handleGridToggle={[Function]}
+  handleModalToggle={[MockFunction]}
   isGrid={true}
-  movieTrailerKey="testMovieTrailerKey"
+  isModalOpened={false}
   movies={
     Array [
+      Object {
+        "adult": false,
+        "backdropPath": "/test.jpg",
+        "genreIds": Array [
+          1,
+          2,
+        ],
+        "id": 1,
+        "originalLanguage": "en",
+        "originalTitle": "test",
+        "overview": "test",
+        "popularity": 1,
+        "posterPath": "/test.jpg",
+        "releaseDate": "1",
+        "title": "test",
+        "video": false,
+        "voteAverage": 1,
+        "voteCount": 1,
+      },
       Object {
         "adult": false,
         "backdropPath": "/test.jpg",
@@ -1240,1257 +1282,11 @@ exports[`render SearchResultsPage component render after filtering by genre corr
     ]
   }
   status="loading"
-  updateMovieTrailerKey={[Function]}
-/>
-`;
-
-exports[`render SearchResultsPage component render filterMovies function correctly 1`] = `
-<SearchResultsPage
-  filterMovies={[Function]}
-  genres={
-    Array [
-      Object {
-        "id": 1,
-        "name": "Action",
-      },
-    ]
-  }
-  getTopRatedMovies={[Function]}
-  getTrending={[Function]}
-  getUpcoming={[Function]}
-  handleGridToggle={[Function]}
-  isGrid={true}
-  movieTrailerKey="testMovieTrailerKey"
-  movies={
-    Array [
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-    ]
-  }
-  status="loading"
-  updateMovieTrailerKey={[Function]}
-/>
-`;
-
-exports[`render SearchResultsPage component render getTopRatedMovies function correctly 1`] = `
-<SearchResultsPage
-  filterMovies={[Function]}
-  genres={
-    Array [
-      Object {
-        "id": 1,
-        "name": "Action",
-      },
-    ]
-  }
-  getTopRatedMovies={[Function]}
-  getTrending={[Function]}
-  getUpcoming={[Function]}
-  handleGridToggle={[Function]}
-  isGrid={true}
-  movieTrailerKey="testMovieTrailerKey"
-  movies={
-    Array [
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-    ]
-  }
-  status="loading"
-  updateMovieTrailerKey={[Function]}
-/>
-`;
-
-exports[`render SearchResultsPage component render getTrending function correctly 1`] = `
-<SearchResultsPage
-  filterMovies={[Function]}
-  genres={
-    Array [
-      Object {
-        "id": 1,
-        "name": "Action",
-      },
-    ]
-  }
-  getTopRatedMovies={[Function]}
-  getTrending={[Function]}
-  getUpcoming={[Function]}
-  handleGridToggle={[Function]}
-  isGrid={true}
-  movieTrailerKey="testMovieTrailerKey"
-  movies={
-    Array [
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-    ]
-  }
-  status="loading"
-  updateMovieTrailerKey={[Function]}
-/>
-`;
-
-exports[`render SearchResultsPage component render getUpcoming function correctly 1`] = `
-<SearchResultsPage
-  filterMovies={[Function]}
-  genres={
-    Array [
-      Object {
-        "id": 1,
-        "name": "Action",
-      },
-    ]
-  }
-  getTopRatedMovies={[Function]}
-  getTrending={[Function]}
-  getUpcoming={[Function]}
-  handleGridToggle={[Function]}
-  isGrid={true}
-  movieTrailerKey="testMovieTrailerKey"
-  movies={
-    Array [
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-    ]
-  }
-  status="loading"
-  updateMovieTrailerKey={[Function]}
 />
 `;
 
 exports[`render SearchResultsPage component render grid toggle correctly 1`] = `
 <SearchResultsPage
-  filterMovies={[Function]}
   genres={
     Array [
       Object {
@@ -2499,14 +1295,31 @@ exports[`render SearchResultsPage component render grid toggle correctly 1`] = `
       },
     ]
   }
-  getTopRatedMovies={[Function]}
-  getTrending={[Function]}
-  getUpcoming={[Function]}
   handleGridToggle={[Function]}
-  isGrid={false}
-  movieTrailerKey="testMovieTrailerKey"
+  handleModalToggle={[MockFunction]}
+  isGrid={true}
+  isModalOpened={false}
   movies={
     Array [
+      Object {
+        "adult": false,
+        "backdropPath": "/test.jpg",
+        "genreIds": Array [
+          1,
+          2,
+        ],
+        "id": 1,
+        "originalLanguage": "en",
+        "originalTitle": "test",
+        "overview": "test",
+        "popularity": 1,
+        "posterPath": "/test.jpg",
+        "releaseDate": "1",
+        "title": "test",
+        "video": false,
+        "voteAverage": 1,
+        "voteCount": 1,
+      },
       Object {
         "adult": false,
         "backdropPath": "/test.jpg",
@@ -2795,13 +1608,11 @@ exports[`render SearchResultsPage component render grid toggle correctly 1`] = `
     ]
   }
   status="loading"
-  updateMovieTrailerKey={[Function]}
 />
 `;
 
 exports[`render SearchResultsPage component render initial state correctly 1`] = `
 <SearchResultsPage
-  filterMovies={[Function]}
   genres={
     Array [
       Object {
@@ -2810,14 +1621,31 @@ exports[`render SearchResultsPage component render initial state correctly 1`] =
       },
     ]
   }
-  getTopRatedMovies={[Function]}
-  getTrending={[Function]}
-  getUpcoming={[Function]}
   handleGridToggle={[Function]}
+  handleModalToggle={[MockFunction]}
   isGrid={true}
-  movieTrailerKey="testMovieTrailerKey"
+  isModalOpened={false}
   movies={
     Array [
+      Object {
+        "adult": false,
+        "backdropPath": "/test.jpg",
+        "genreIds": Array [
+          1,
+          2,
+        ],
+        "id": 1,
+        "originalLanguage": "en",
+        "originalTitle": "test",
+        "overview": "test",
+        "popularity": 1,
+        "posterPath": "/test.jpg",
+        "releaseDate": "1",
+        "title": "test",
+        "video": false,
+        "voteAverage": 1,
+        "voteCount": 1,
+      },
       Object {
         "adult": false,
         "backdropPath": "/test.jpg",
@@ -3106,673 +1934,5 @@ exports[`render SearchResultsPage component render initial state correctly 1`] =
     ]
   }
   status="loading"
-  updateMovieTrailerKey={[Function]}
-/>
-`;
-
-exports[`render SearchResultsPage component render movie trailer key update correctly 1`] = `
-<SearchResultsPage
-  filterMovies={[Function]}
-  genres={
-    Array [
-      Object {
-        "id": 1,
-        "name": "Action",
-      },
-    ]
-  }
-  getTopRatedMovies={[Function]}
-  getTrending={[Function]}
-  getUpcoming={[Function]}
-  handleGridToggle={[Function]}
-  isGrid={true}
-  movieTrailerKey="testMovieTrailerKey"
-  movies={
-    Array [
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-    ]
-  }
-  status="loading"
-  updateMovieTrailerKey={[Function]}
-/>
-`;
-
-exports[`render SearchResultsPage component render movie trailer key update to null correctly 1`] = `
-<SearchResultsPage
-  filterMovies={[Function]}
-  genres={
-    Array [
-      Object {
-        "id": 1,
-        "name": "Action",
-      },
-    ]
-  }
-  getTopRatedMovies={[Function]}
-  getTrending={[Function]}
-  getUpcoming={[Function]}
-  handleGridToggle={[Function]}
-  isGrid={true}
-  movieTrailerKey="testMovieTrailerKey"
-  movies={
-    Array [
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-    ]
-  }
-  status="loading"
-  updateMovieTrailerKey={[Function]}
-/>
-`;
-
-exports[`render SearchResultsPage component updates status correctly when all movies are loaded 1`] = `
-<SearchResultsPage
-  filterMovies={[Function]}
-  genres={
-    Array [
-      Object {
-        "id": 1,
-        "name": "Action",
-      },
-    ]
-  }
-  getTopRatedMovies={[Function]}
-  getTrending={[Function]}
-  getUpcoming={[Function]}
-  handleGridToggle={[Function]}
-  isGrid={true}
-  movieTrailerKey="testMovieTrailerKey"
-  movies={
-    Array [
-      Object {
-        "adult": false,
-        "backdropPath": "/test.jpg",
-        "genreIds": Array [
-          1,
-          2,
-        ],
-        "id": 1,
-        "originalLanguage": "en",
-        "originalTitle": "test",
-        "overview": "test",
-        "popularity": 1,
-        "posterPath": "/test.jpg",
-        "releaseDate": "1",
-        "title": "test",
-        "video": false,
-        "voteAverage": 1,
-        "voteCount": 1,
-      },
-    ]
-  }
-  status="loading"
-  updateMovieTrailerKey={[Function]}
 />
 `;

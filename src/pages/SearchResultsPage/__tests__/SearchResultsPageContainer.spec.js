@@ -3,43 +3,39 @@ import ShallowRenderer from 'react-test-renderer/shallow';
 import SearchResultsPageContainer from '../index';
 
 const map = {};
-global.addEventListener = jest.fn((event, cb) => {
+window.addEventListener = jest.fn((event, cb) => {
   map[event] = cb;
 });
 
-const mockUseSelector = jest.fn();
+let cleanUp;
+jest.mock('react', () => ({
+  ...jest.requireActual('react'),
+  useEffect: jest.fn((f) => {
+    cleanUp = f();
+    return f();
+  }),
+}));
+
+let mockAppState;
 jest.mock('react-redux', () => ({
   ...jest.requireActual('react-redux'),
   useDispatch: jest.fn(() => jest.fn()),
-  useSelector: jest.fn(() => mockUseSelector()),
+  useSelector: jest.fn().mockImplementation((callback) => callback(mockAppState)),
 }));
 
-jest.mock('react', () => ({
-  ...jest.requireActual('react'),
-  useEffect: jest.fn((f) => f()),
+const mockUseRouteMatchObject = { params: { category: '' } };
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useRouteMatch: jest.fn(() => mockUseRouteMatchObject),
 }));
 
-let mockQuerySlice;
-let mockGenres;
-let mockMoviesSlice;
-let mockFiltersSlice;
-let mockStatusSlice;
-let triggerMockUseSelector;
+let mockMovies;
+let mockIsModalOpened;
+let mockHandleModalToggle;
 let renderer;
 let result;
 
 beforeEach(() => {
-  mockQuerySlice = {
-    basePath: 'testBasePath',
-    apiPath: 'testApiPath',
-    genresPath: 'testGenrePath',
-    apiKey: 'testApiKey',
-    lang: 'testAlng',
-    adult: false,
-    searchQuery: '',
-  };
-  mockGenres = [{ id: 1, name: 'Action' }];
-
   const mockMovie = {
     adult: false,
     backdropPath: '/test.jpg',
@@ -56,45 +52,50 @@ beforeEach(() => {
     voteAverage: 1,
     voteCount: 1,
   };
-
-  const mockMovies = Array(15).fill(mockMovie);
-  mockMoviesSlice = {
-    page: 1,
-    pageSize: 16,
-    totalPages: 5,
-    currentMovieTrailerKey: 'testMovieTrailerKey',
-    movies: mockMovies,
+  mockMovies = Array(20).fill(mockMovie);
+  mockAppState = {
+    query: {
+      basePath: 'http://testBasePath.com',
+      apiKey: 'testApiKey',
+      lang: 'testAlng',
+      adult: false,
+    },
+    genres: [{ id: 1, name: 'Action' }],
+    movies: {
+      page: 1,
+      pageSize: 16,
+      totalPages: 5,
+      movies: mockMovies,
+    },
+    isGrid: { isGrid: true },
+    status: { status: 'loading' },
+    router: {
+      location: {
+        query: {
+          query: '',
+        },
+      },
+    },
   };
-  mockFiltersSlice = 0;
 
-  mockStatusSlice = {
-    status: 'loading',
-  };
-
-  triggerMockUseSelector = () => {
-    mockUseSelector
-      .mockReturnValueOnce(mockQuerySlice)
-      .mockReturnValueOnce(mockGenres)
-      .mockReturnValueOnce(mockMoviesSlice)
-      .mockReturnValueOnce(mockMoviesSlice)
-      .mockReturnValueOnce(mockFiltersSlice)
-      .mockReturnValueOnce(mockMoviesSlice)
-      .mockReturnValueOnce(mockStatusSlice);
-  };
-  triggerMockUseSelector();
+  mockIsModalOpened = false;
+  mockHandleModalToggle = jest.fn();
 
   renderer = new ShallowRenderer();
-  renderer.render(<SearchResultsPageContainer />);
+  renderer.render(
+    <SearchResultsPageContainer
+      isModalOpened={mockIsModalOpened}
+      handleModalToggle={mockHandleModalToggle}
+    />,
+  );
   result = renderer.getRenderOutput();
 });
 
 afterEach(() => {
-  mockQuerySlice = null;
-  mockGenres = null;
-  mockMoviesSlice = null;
-  mockFiltersSlice = null;
-  mockStatusSlice = null;
-  triggerMockUseSelector = null;
+  mockAppState = null;
+  mockMovies = null;
+  mockIsModalOpened = null;
+  mockHandleModalToggle = null;
   renderer = null;
   result = null;
 });
@@ -104,95 +105,82 @@ describe('render SearchResultsPage component', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('render after dearch query submit correctly', () => {
-    mockQuerySlice.searchQuery = 'test query';
-    triggerMockUseSelector();
-    renderer.render(<SearchResultsPageContainer />);
+  it('render after search query submit correctly', () => {
+    mockAppState.router.location.query.query = 'test';
+    renderer.render(
+      <SearchResultsPageContainer
+        isModalOpened={mockIsModalOpened}
+        handleModalToggle={mockHandleModalToggle}
+      />,
+    );
     result = renderer.getRenderOutput();
     expect(result).toMatchSnapshot();
   });
 
-  it('render after filtering by genre correctly', () => {
-    mockFiltersSlice = 1;
-    triggerMockUseSelector();
-    renderer.render(<SearchResultsPageContainer />);
+  it('render after movie genre chosen correctly', () => {
+    mockUseRouteMatchObject.params.category = '1';
+    renderer.render(
+      <SearchResultsPageContainer
+        isModalOpened={mockIsModalOpened}
+        handleModalToggle={mockHandleModalToggle}
+      />,
+    );
     result = renderer.getRenderOutput();
     expect(result).toMatchSnapshot();
   });
 
   it('handles scroll event triggers at bottom correctly', () => {
-    map.scroll();
-    expect(result).toMatchSnapshot();
+    function main() {
+      document.addEventListener('scroll', () => {
+        map.scroll();
+      });
+    }
+    document.addEventListener = jest.fn().mockImplementationOnce((event, callback) => {
+      callback();
+    });
+    main();
+
+    expect(document.addEventListener).toHaveBeenCalledWith('scroll', expect.any(Function));
   });
 
   it('handles scroll event triggers not at bottom correctly', () => {
+    function main() {
+      document.addEventListener('scroll', () => {
+        map.scroll();
+      });
+    }
     jest
       .spyOn(document.documentElement, 'clientHeight', 'get')
-      .mockImplementation(() => -100);
-    map.scroll();
+      .mockImplementation(() => 100);
+    document.addEventListener = jest.fn().mockImplementationOnce((event, callback) => {
+      callback();
+    });
+    main();
+
+    expect(document.addEventListener).toHaveBeenCalledWith('scroll', expect.any(Function));
+  });
+
+  it('handle cleanUp function in useEffect', () => {
+    cleanUp();
     expect(result).toMatchSnapshot();
   });
 
-  it('updates status correctly when all movies are loaded', () => {
-    mockMoviesSlice.pageSize = 1;
-    triggerMockUseSelector();
-    renderer.render(<SearchResultsPageContainer />);
+  it('removes scroll event listener when all movies are loaded', () => {
+    mockMovies.length = 15;
+    renderer.render(
+      <SearchResultsPageContainer
+        isModalOpened={mockIsModalOpened}
+        handleModalToggle={mockHandleModalToggle}
+      />,
+    );
+    map.scroll();
     result = renderer.getRenderOutput();
     expect(result).toMatchSnapshot();
   });
 
   it('render grid toggle correctly', () => {
-    triggerMockUseSelector();
     const { handleGridToggle } = result.props;
     handleGridToggle();
-    result = renderer.getRenderOutput();
-    expect(result).toMatchSnapshot();
-  });
-
-  it('render movie trailer key update correctly', () => {
-    triggerMockUseSelector();
-    const { updateMovieTrailerKey } = result.props;
-    updateMovieTrailerKey('test key');
-    result = renderer.getRenderOutput();
-    expect(result).toMatchSnapshot();
-  });
-
-  it('render movie trailer key update to null correctly', () => {
-    triggerMockUseSelector();
-    const { updateMovieTrailerKey } = result.props;
-    updateMovieTrailerKey(null);
-    result = renderer.getRenderOutput();
-    expect(result).toMatchSnapshot();
-  });
-
-  it('render getTrending function correctly', () => {
-    triggerMockUseSelector();
-    const { getTrending } = result.props;
-    getTrending();
-    result = renderer.getRenderOutput();
-    expect(result).toMatchSnapshot();
-  });
-
-  it('render getTopRatedMovies function correctly', () => {
-    triggerMockUseSelector();
-    const { getTopRatedMovies } = result.props;
-    getTopRatedMovies();
-    result = renderer.getRenderOutput();
-    expect(result).toMatchSnapshot();
-  });
-
-  it('render getUpcoming function correctly', () => {
-    triggerMockUseSelector();
-    const { getUpcoming } = result.props;
-    getUpcoming();
-    result = renderer.getRenderOutput();
-    expect(result).toMatchSnapshot();
-  });
-
-  it('render filterMovies function correctly', () => {
-    triggerMockUseSelector();
-    const { filterMovies } = result.props;
-    filterMovies();
     result = renderer.getRenderOutput();
     expect(result).toMatchSnapshot();
   });

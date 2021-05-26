@@ -8,43 +8,20 @@ exports[`render SearchResultsPage component render SearchResultsPage grid view c
     <Header
       className="secondary"
     >
-      <FilterList>
-        <Button
-          className="filterButton"
-          onClick={[MockFunction]}
-        >
-          Trending
-        </Button>
-        <Button
-          className="filterButton"
-          onClick={[MockFunction]}
-        >
-          Top rated
-        </Button>
-        <Button
-          className="filterButton"
-          onClick={[MockFunction]}
-        >
-          Coming soon
-        </Button>
-        <SelectButton
-          filterMovies={[MockFunction]}
-          genres={
-            Array [
-              Object {
-                "id": 1,
-                "name": "Action",
-              },
-              Object {
-                "id": 2,
-                "name": "SciFi",
-              },
-            ]
-          }
-        >
-          Genre
-        </SelectButton>
-      </FilterList>
+      <Navigation
+        genres={
+          Array [
+            Object {
+              "id": 1,
+              "name": "Action",
+            },
+            Object {
+              "id": 2,
+              "name": "SciFi",
+            },
+          ]
+        }
+      />
       <ToggleButton
         className="toggleGridButton"
         handleGridToggle={[MockFunction]}
@@ -64,8 +41,9 @@ exports[`render SearchResultsPage component render SearchResultsPage grid view c
           },
         ]
       }
+      handleModalToggle={[MockFunction]}
       isGrid={true}
-      movieTrailerKey="testMovieTrailerKey"
+      isModalOpened={false}
       movies={
         Array [
           Object {
@@ -108,7 +86,6 @@ exports[`render SearchResultsPage component render SearchResultsPage grid view c
           },
         ]
       }
-      updateMovieTrailerKey={[MockFunction]}
     />
   </main>
 </React.Fragment>
@@ -122,43 +99,20 @@ exports[`render SearchResultsPage component render SearchResultsPage table view 
     <Header
       className="secondary"
     >
-      <FilterList>
-        <Button
-          className="filterButton"
-          onClick={[MockFunction]}
-        >
-          Trending
-        </Button>
-        <Button
-          className="filterButton"
-          onClick={[MockFunction]}
-        >
-          Top rated
-        </Button>
-        <Button
-          className="filterButton"
-          onClick={[MockFunction]}
-        >
-          Coming soon
-        </Button>
-        <SelectButton
-          filterMovies={[MockFunction]}
-          genres={
-            Array [
-              Object {
-                "id": 1,
-                "name": "Action",
-              },
-              Object {
-                "id": 2,
-                "name": "SciFi",
-              },
-            ]
-          }
-        >
-          Genre
-        </SelectButton>
-      </FilterList>
+      <Navigation
+        genres={
+          Array [
+            Object {
+              "id": 1,
+              "name": "Action",
+            },
+            Object {
+              "id": 2,
+              "name": "SciFi",
+            },
+          ]
+        }
+      />
       <ToggleButton
         className="toggleGridButton"
         handleGridToggle={[MockFunction]}
@@ -178,8 +132,9 @@ exports[`render SearchResultsPage component render SearchResultsPage table view 
           },
         ]
       }
+      handleModalToggle={[MockFunction]}
       isGrid={false}
-      movieTrailerKey="testMovieTrailerKey"
+      isModalOpened={false}
       movies={
         Array [
           Object {
@@ -222,7 +177,6 @@ exports[`render SearchResultsPage component render SearchResultsPage table view 
           },
         ]
       }
-      updateMovieTrailerKey={[MockFunction]}
     />
   </main>
 </React.Fragment>
@@ -236,47 +190,24 @@ exports[`render SearchResultsPage component render loading status correctly 1`] 
     <Header
       className="secondary"
     >
-      <FilterList>
-        <Button
-          className="filterButton"
-          onClick={[MockFunction]}
-        >
-          Trending
-        </Button>
-        <Button
-          className="filterButton"
-          onClick={[MockFunction]}
-        >
-          Top rated
-        </Button>
-        <Button
-          className="filterButton"
-          onClick={[MockFunction]}
-        >
-          Coming soon
-        </Button>
-        <SelectButton
-          filterMovies={[MockFunction]}
-          genres={
-            Array [
-              Object {
-                "id": 1,
-                "name": "Action",
-              },
-              Object {
-                "id": 2,
-                "name": "SciFi",
-              },
-            ]
-          }
-        >
-          Genre
-        </SelectButton>
-      </FilterList>
+      <Navigation
+        genres={
+          Array [
+            Object {
+              "id": 1,
+              "name": "Action",
+            },
+            Object {
+              "id": 2,
+              "name": "SciFi",
+            },
+          ]
+        }
+      />
       <ToggleButton
         className="toggleGridButton"
         handleGridToggle={[MockFunction]}
-        isGrid={false}
+        isGrid={true}
       />
     </Header>
     <MovieList
@@ -292,8 +223,9 @@ exports[`render SearchResultsPage component render loading status correctly 1`] 
           },
         ]
       }
-      isGrid={false}
-      movieTrailerKey="testMovieTrailerKey"
+      handleModalToggle={[MockFunction]}
+      isGrid={true}
+      isModalOpened={false}
       movies={
         Array [
           Object {
@@ -336,8 +268,41 @@ exports[`render SearchResultsPage component render loading status correctly 1`] 
           },
         ]
       }
-      updateMovieTrailerKey={[MockFunction]}
     />
+  </main>
+  <Preloader />
+</React.Fragment>
+`;
+
+exports[`render SearchResultsPage component render no-movies status correctly 1`] = `
+<React.Fragment>
+  <main
+    className="main"
+  >
+    <Header
+      className="secondary"
+    >
+      <Navigation
+        genres={
+          Array [
+            Object {
+              "id": 1,
+              "name": "Action",
+            },
+            Object {
+              "id": 2,
+              "name": "SciFi",
+            },
+          ]
+        }
+      />
+      <ToggleButton
+        className="toggleGridButton"
+        handleGridToggle={[MockFunction]}
+        isGrid={true}
+      />
+    </Header>
+    <NoDataToShow />
   </main>
   <Preloader />
 </React.Fragment>
