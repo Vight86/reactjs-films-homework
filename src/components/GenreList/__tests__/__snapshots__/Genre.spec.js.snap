@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render GenreList component render with props 1`] = `
+exports[`render GenreList component render correctly 1`] = `
 <ul
-  className="class"
+  className="test"
   style={
     Object {
       "order": null,
@@ -10,25 +10,10 @@ exports[`render GenreList component render with props 1`] = `
   }
 >
   <li>
-    item1
+    test
   </li>
   <li>
-    item2
-  </li>
-</ul>
-`;
-
-exports[`render GenreList component render without props 1`] = `
-<ul
-  className=""
-  style={
-    Object {
-      "order": null,
-    }
-  }
->
-  <li>
-    
+    test1
   </li>
 </ul>
 `;
