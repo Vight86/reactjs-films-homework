@@ -2,7 +2,7 @@
 
 .rating {
   display: flex;
-  width: 32em;
+  width: 36em;
   align-items: center;
   justify-content: space-between;
   margin: 0 0 1.5em 0;
@@ -22,7 +22,7 @@
 .stars {
   display: inline-block;
   height: 4em;
-  background: url('./stars.svg');
+  background: url('stars.svg');
   background-position: left center;
   background-repeat: no-repeat;
   background-size: auto 4em;

@@ -7,8 +7,8 @@ const Rating = ({
 }) => {
   const width = (26 / 5) * Number(parseFloat(children).toFixed());
   const ratingNumber = Number(((children / 10) * 5).toFixed(1));
-  let rating;
 
+  let rating;
   if (withStars === true) {
     rating = (
       <div className={styles.rating}>
@@ -30,15 +30,9 @@ const Rating = ({
 };
 
 Rating.propTypes = {
-  className: propTypes.string,
-  withStars: propTypes.bool,
-  children: propTypes.number,
-};
-
-Rating.defaultProps = {
-  className: '',
-  withStars: false,
-  children: 0,
+  className: propTypes.string.isRequired,
+  withStars: propTypes.bool.isRequired,
+  children: propTypes.number.isRequired,
 };
 
 export default Rating;
