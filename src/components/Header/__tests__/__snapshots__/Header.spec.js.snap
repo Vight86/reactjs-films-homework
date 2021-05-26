@@ -1,17 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render Header component render with props 1`] = `
+exports[`render Header component render correctly 1`] = `
 <header
   className="test"
 >
-  <p />
-</header>
-`;
-
-exports[`render Header component render without props 1`] = `
-<header
-  className=""
->
-  <span />
+  <h1>
+    title
+  </h1>
 </header>
 `;
