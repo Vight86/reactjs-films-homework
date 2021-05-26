@@ -6,11 +6,7 @@ const Signature = ({ name }) => (
 );
 
 Signature.propTypes = {
-  name: propTypes.string,
-};
-
-Signature.defaultProps = {
-  name: 'Vova Pekun',
+  name: propTypes.string.isRequired,
 };
 
 export default Signature;
