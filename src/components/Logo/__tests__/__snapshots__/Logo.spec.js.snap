@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render Logo component render with props 1`] = `
+exports[`render Logo component render correctly 1`] = `
 <p
   className="test"
 >
@@ -8,20 +8,7 @@ exports[`render Logo component render with props 1`] = `
     href="/"
     title="Films"
   >
-    Films
-  </a>
-</p>
-`;
-
-exports[`render Logo component render without props 1`] = `
-<p
-  className="primary"
->
-  <a
-    href="/"
-    title="Films"
-  >
-    Films
+    Title
   </a>
 </p>
 `;
