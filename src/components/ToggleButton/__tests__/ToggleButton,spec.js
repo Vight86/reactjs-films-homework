@@ -2,12 +2,12 @@ import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import ToggleButton from '../index';
 
-const mockhandleGridToggle = jest.fn(() => 'tested');
-
+let mockhandleGridToggle;
 let renderer;
 let result;
 
 beforeEach(() => {
+  mockhandleGridToggle = jest.fn();
   renderer = new ShallowRenderer();
   renderer.render(
     <ToggleButton
@@ -21,16 +21,17 @@ beforeEach(() => {
 });
 
 afterEach(() => {
+  mockhandleGridToggle.mockClear();
   renderer = null;
   result = null;
 });
 
 describe('render toggleGridButton component', () => {
-  it('render component table view correctly', () => {
+  it('render table view correctly', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('render component grid view correctly', () => {
+  it('render grid view correctly', () => {
     renderer.render(
       <ToggleButton
         className="test"

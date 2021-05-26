@@ -12,7 +12,7 @@ exports[`render toggleGridButton component render click correctly 1`] = `
 </button>
 `;
 
-exports[`render toggleGridButton component render component grid view correctly 1`] = `
+exports[`render toggleGridButton component render grid view correctly 1`] = `
 <button
   className="test active"
   onClick={[Function]}
@@ -24,7 +24,7 @@ exports[`render toggleGridButton component render component grid view correctly 
 </button>
 `;
 
-exports[`render toggleGridButton component render component table view correctly 1`] = `
+exports[`render toggleGridButton component render table view correctly 1`] = `
 <button
   className="test"
   onClick={[Function]}
