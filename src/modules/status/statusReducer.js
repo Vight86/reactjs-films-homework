@@ -1,4 +1,5 @@
 import { STATUS_UPDATED } from './statusActions';
+import { MOVIES_LOADED, MOVIES_ADDED } from '../movies/index';
 
 const initialState = {
   status: 'loading',
@@ -10,6 +11,21 @@ const statusReducer = (state = initialState, action) => {
       return {
         ...state,
         ...action.payload,
+      };
+    }
+    case MOVIES_LOADED: {
+      if (!action.payload.movies.length) {
+        return {
+          status: 'no-movies',
+        };
+      }
+      return {
+        status: 'loaded',
+      };
+    }
+    case MOVIES_ADDED: {
+      return {
+        status: 'loaded',
       };
     }
     default:
