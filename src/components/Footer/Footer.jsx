@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './Footer.scss';
 import Logo from '../Logo/index';
 import Signature from '../Signature/index';
+import styles from './Footer.scss';
 
 const Footer = () => (
   <footer className={styles.footer}>
-    <Logo theme="secondary" />
+    <Logo className="secondary">Films</Logo>
     <p className={styles.footer__copyRight}>
       Copyright © 2018 FILMS.
       {' '}

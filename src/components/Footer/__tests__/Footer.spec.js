@@ -2,20 +2,22 @@ import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import Footer from '../Footer';
 
-const setUp = () => {
-  const renderer = new ShallowRenderer();
+let renderer;
+let result;
+
+beforeEach(() => {
+  renderer = new ShallowRenderer();
   renderer.render(<Footer />);
-  return renderer.getRenderOutput();
-};
+  result = renderer.getRenderOutput();
+});
 
-describe('renders Footer correctly', () => {
-  it('should be footer tag', () => {
-    const result = setUp();
-    expect(result.type).toBe('footer');
-  });
+afterEach(() => {
+  renderer = null;
+  result = null;
+});
 
-  it('should render children correctly', () => {
-    const result = setUp();
+describe('render Footer component', () => {
+  it('render correctly', () => {
     expect(result).toMatchSnapshot();
   });
 });
