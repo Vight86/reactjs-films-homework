@@ -14,10 +14,16 @@ module.exports = merge(common, {
       {
         test: /\.(scss|css)$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../',
+            },
+          },
           {
             loader: 'css-loader',
             options: {
+              importLoaders: 2,
               modules: {
                 localIdentName: '[hash:base64]',
               },
@@ -31,14 +37,14 @@ module.exports = merge(common, {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/images/[name][hash][ext]',
+          filename: 'assets/images/[contenthash][ext]',
         },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/fonts/[name][hash][ext]',
+          filename: 'assets/fonts/[contenthash][ext]',
         },
       },
     ],
@@ -57,7 +63,6 @@ module.exports = merge(common, {
           ['svgo'],
         ],
       },
-      loader: false,
     }),
   ],
 });
